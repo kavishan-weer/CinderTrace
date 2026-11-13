@@ -1,0 +1,9 @@
+duckdb>=1.1
+polars
+pyarrow
+h3>=4
+numpy
+pandas
+scikit-learn
+lightgbm
+shapely
