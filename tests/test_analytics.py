@@ -64,7 +64,7 @@ class AnalyticsTests(unittest.TestCase):
     def test_now_comparison_excludes_current_and_provisional(self):
         monthly=pd.DataFrame({'month':pd.to_datetime([f'{year}-01-01' for year in range(2018,2025)]),'cat':'veg','conf':2,'harmonized':[1,2,3,4,5,6,999],'comparison_eligible':[True]*6+[False]})
         self.assertEqual(now_vs_history(monthly)['status'],'unavailable_or_provisional')
-        r=now_vs_history(monthly,'2023-01-01')
+        r=now_vs_history(monthly,'2023-01-01',confs=(2,))
         self.assertEqual(r['historical_median'],3)
         self.assertEqual(r['historical_years'],5)
 

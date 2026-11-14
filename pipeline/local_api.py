@@ -24,7 +24,7 @@ from shapely.geometry import Point, box, shape
 from shapely.prepared import prep
 
 from .analytics import load_region, selected_monthly
-from .export_web import COLS, records
+from .export_web import COLS, records, export_columns
 from .grid import H3_RESOLUTION
 from .regions import REGIONS
 
@@ -84,9 +84,11 @@ def area_result(request):
         out['source'] = 'missing'
         out['period_status'] = 'missing'
         out['comparison_eligible'] = False
+        out['slice_status'] = 'unavailable'
+        out['interval_status'] = 'unavailable'
     else:
         out = selected_monthly(cells, monthly, members, cell_ids=selected.h3_cell.tolist())
-    return {'rows': records(out[COLS]), 'cell_ids': selected.h3_cell.tolist(),
+    return {'rows': records(out[export_columns(out)]), 'cell_ids': selected.h3_cell.tolist(),
             'cell_count': len(selected), 'grid_area_km2': float(selected.area_km2.sum()),
             'selection_method': 'H3 cell centres; raw CSV uses exact point coordinates'}
 

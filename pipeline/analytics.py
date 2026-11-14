@@ -56,6 +56,10 @@ def selected_monthly(cells, monthly, members, *, sub=None, polygon=None, cell_id
             out[name]=out[name].mul(share).where(~observed,out.local_snpp)
     out['allocation_status']=np.where(observed,'local_observation',np.where(full,'regional_total',np.where(share.notna(),'regional_transfer','unallocatable_no_modis')))
     out.loc[out.harmonized.isna(),'comparison_eligible']=False
+    if 'slice_status' in out:
+        out.loc[out.harmonized.isna(),'slice_status']='unavailable'
+    if 'interval_status' in out:
+        out.loc[out.harmonized.isna(),'interval_status']='unavailable'
     out['modis_raw']=out.local_modis.where(out.modis_status!='missing')
     out['viirs_snpp_raw']=out.local_snpp.where(out.snpp_status!='missing')
     out['selected_cells']=len(selected)
@@ -73,6 +77,10 @@ def now_vs_history(monthly, target=None, cats=('veg',), confs=(2,3), min_years=5
     groups=s.groupby('month')
     values=groups.harmonized.agg(lambda x:x.sum(min_count=len(x)))
     eligible=groups.comparison_eligible.all() & values.notna()
+    expected=len(set(cats))*len(set(confs))
+    complete=groups.apply(lambda g:len(g)==expected and not g.duplicated(['cat','conf']).any(),include_groups=False)
+    values=values.where(complete)
+    eligible &= complete
     target=pd.Timestamp(target) if target is not None else values.index.max()
     target=target.replace(day=1)
     if target not in values.index or not eligible.get(target,False):
@@ -109,6 +117,8 @@ def export_subregions(region):
             f['period_status']='missing'
             f['comparison_eligible']=False
             f['allocation_status']='no_h3_centres'
+            f['slice_status']='unavailable'
+            f['interval_status']='unavailable'
             f['selected_cells']=0
             f['selected_grid_area_km2']=0.0
             f['activity_per_1000_km2']=np.nan

@@ -1,0 +1,4 @@
+# Optional Sri Lanka observation pilot: NASA download/authentication and HDF4 grids.
+-r requirements.txt
+pyhdf==0.11.7
+pyproj==3.8.0

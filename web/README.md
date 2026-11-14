@@ -32,6 +32,8 @@ a new machine; the build intentionally does not fabricate sample data.
 
 ## First app slice
 
+- Whole-region side-by-side comparison for Sri Lanka, California and NSW: harmonized activity per 1,000 km² of actual H3 grid area, common selected month/filters, explicit missing/provisional states and a comparison CSV. See [comparison method](../docs/region_comparison.md).
+
 - Three regions and all administrative selections, preserving no-grid-coverage states.
 - Polygon drawing with undo/finish/cancel, click-first-point closure, Enter/Escape/Backspace map shortcuts, plus latitude/longitude with a configurable 0.5–250 km radius.
 - Region-calibrated custom-area history and exact-coordinate polygon raw downloads.

@@ -4,6 +4,7 @@ Resumable: existing files are skipped.   Usage: python -m pipeline.fetch [lk ca 
 """
 import sys, time, argparse, pathlib, concurrent.futures as cf
 import duckdb
+import json, hashlib
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from .regions import REGIONS
@@ -35,7 +36,15 @@ def fetch_one(region, year, retries=3, refresh=False):
             c.execute("INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;")
             c.execute(SQL.format(url=BASE.format(y=year), x0=x0, y0=y0, x1=x1, y1=y1, out=tmp))
             n = c.execute(f"SELECT count(*) FROM read_parquet('{tmp}')").fetchone()[0]
+            # Persist ingestion evidence separately from observation completeness.
+            # A bbox hotspot query cannot establish a valid no-fire overpass.
+            manifest={'region':region,'year':year,'source':BASE.format(y=year),
+                'bbox':REGIONS[region]['bbox'],'retrieved_at':datetime.now(ZoneInfo('UTC')).isoformat(),
+                'rows':n,'archive_sha256':hashlib.sha256(tmp.read_bytes()).hexdigest(),
+                'ingestion_query_completed':True,'regional_observation_manifest_complete':False}
             tmp.rename(out)
+            out.with_suffix('.ingestion.json').write_text(json.dumps(manifest,indent=2)+'\n')
+            c.close()
             return region, year, "ok", n, round(time.time() - t, 1)
         except Exception as e:
             err = str(e)[:120]

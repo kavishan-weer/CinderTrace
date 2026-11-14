@@ -1,0 +1,27 @@
+{
+  "checked_at_utc": "2026-11-14T15:51:19.567260+00:00",
+  "acquisition": "2022355.1700",
+  "cmr_exact_query_matches": 0,
+  "cmr_exact_query_evidence": "data/observation_pilot/lk/exact_acquisition_2022355_1700.json",
+  "laads_listed_file": "MOD14.A2022355.1700.061.2022356032056.hdf",
+  "listed_bytes": 285635,
+  "science_file_url": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MOD14/2022/355/MOD14.A2022355.1700.061.2022356032056.hdf",
+  "status": "fire_product_listed_in_laads_despite_absence_from_cmr_query",
+  "observation_or_ingestion_completeness_verified": false,
+  "limits": [
+    "The file was listed, not downloaded or quality checked.",
+    "The CMR-only mismatch must not be classified as an unrecoverable satellite outage."
+  ],
+  "sources": [
+    {
+      "url": "https://ladsweb.modaps.eosdis.nasa.gov/api/v2/content/archives/allData/61/MOD14/2022/355/",
+      "cached_response": "data/observation_pilot/lk/laads_mod14_2022355_0.txt",
+      "sha256": "0e2365c9c717016a3cbfca8ac7b451f41582b64fc7e381e44a3993de3ec74687"
+    },
+    {
+      "url": "https://ladsweb.modaps.eosdis.nasa.gov/archive/allData/61/MOD14/2022/355/",
+      "cached_response": "data/observation_pilot/lk/laads_mod14_2022355_1.txt",
+      "sha256": "52eeac22fcd6b65f9f607e94ecf7546e56a27771e86959e942da10b0f258a91f"
+    }
+  ]
+}

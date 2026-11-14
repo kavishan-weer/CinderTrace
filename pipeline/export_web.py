@@ -10,6 +10,10 @@ ROOT=Path(__file__).resolve().parent.parent
 OUT=ROOT/'web/public/data'
 CATS=['veg','volcano','static','offshore']
 COLS=['month','cat','conf','modis_raw','viirs_snpp_raw','harmonized','lo','hi','source','period_status','comparison_eligible','low_data']
+EVIDENCE_COLS=['slice_status','interval_status','allocation_status','spatial_method','interval_method']
+
+def export_columns(frame):
+    return COLS+[c for c in EVIDENCE_COLS if c in frame]
 
 def write(path,data):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -29,7 +33,7 @@ def run():
         members=pd.read_parquet(ROOT/f'data/boundaries/{region}_members.parquet')
         report=json.loads((base/f'{region}_report.json').read_text())
         manifest['as_of']=report['as_of']
-        write(OUT/region/'monthly.json',records(monthly[COLS]))
+        write(OUT/region/'monthly.json',records(monthly[export_columns(monthly)]))
         write(OUT/region/'report.json',report)
         definitions=json.loads((ROOT/f'data/boundaries/{region}_subs.geojson').read_text())
         sub_counts=members['sub'].value_counts()
@@ -40,7 +44,7 @@ def run():
         areas=pd.read_parquet(base/f'{region}_sub_monthly.parquet')
         for sub,df in areas.groupby('sub'):
             # Preserve spatial eligibility for tiny/unallocatable areas.
-            write(OUT/region/f'sub-{sub}.json',records(df[COLS]))
+            write(OUT/region/f'sub-{sub}.json',records(df[export_columns(df)]))
         ids=sorted(cells.h3_cell.unique()); lookup={h:i for i,h in enumerate(ids)}
         write(OUT/region/'hexagons.json',ids)
         maps=cells[cells.fam.isin(['modis','snpp'])].copy()
@@ -56,5 +60,7 @@ def run():
         manifest['regions'].append({'id':region,'silhouette':silhouette,**config,'subs':subs,'cell_count':len(members),'years':sorted(int(x) for x in maps.year.unique())})
         print(region,'exported',len(monthly),'monthly rows;',len(ids),'active hexagons')
     write(OUT/'manifest.json',manifest)
+    from .export_comparison import run as export_comparison
+    export_comparison()
 
 if __name__=='__main__':run()

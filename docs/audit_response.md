@@ -1,0 +1,35 @@
+# Historical first-pass audit response
+
+This document records the earlier repair state. See [scientific_repair_status.md](scientific_repair_status.md) for the subsequent items 1–7 work and current release blockers.
+
+Reviewed against the current checkout and actual generated data on 2026-11-14. This is a first correctness repair, not a claim that all audit items or scientific validation are complete. Software-test counts establish regression coverage, not scientific validity.
+
+## Confirmed and repaired
+
+- **Major reference interruptions:** a reviewed subset of documented multi-day S-NPP interruptions now marks affected months provisional, excludes them from comparisons and overlap training, and retains source metadata. The original observations remain visible as partial data. No NOAA-20 substitution or synthetic gap fill was introduced. November 2025 is omitted from this mask because the FIRMS recovery notice reports nominal processed data. This subset is not a complete mission outage or observing-coverage inventory. [NASA MODAPS outage table](https://modaps.modaps.eosdis.nasa.gov/services/production/outages_suomi_npp.html), [NASA FIRMS recovery/quality notices](https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html).
+- **Missing category rows:** production output now contains all 12 category/confidence combinations per month. A structurally empty MODIS/S-NPP reference slice emits zero only where reference availability supports a value; unknown reference months remain unknown. Rare nonzero slices are no longer silently skipped or relabelled as zero. Empty category rows describe the pipeline’s retrospective categories, not independently verified absence of a heat source.
+- **Terra-only intervals:** pre-August-2002 point estimates remain, but stage-2-only residual bands are withheld and the period flagged low-data. They cannot quantify the unvalidated two-stage transfer. End-to-end interval validation remains required.
+- **Retrospective calendar baseline:** calendar anomalies and percentiles now use all other eligible years for the calendar month, excluding the selected year. It is explicitly labelled retrospective. Genuine missing/provisional months still lack comparisons. The month-in-context strip and brief retain prior-only history, with explicit labels: this remains a defensible different question, not an accidental baseline change. A zero median still has no ratio.
+- **Colours and exports:** shared blue–neutral–brown log-ratio scale is neutral at 1× and saturates at ≤0.25× / ≥4× in the calendar and PNG. Early eligible years now receive comparisons.
+- **Fixed map scale:** colour and height use log1p(cell-days) against a fixed 31 cell-day ceiling, with a numeric legend. Quiet-month maxima no longer fill the entire scale. The map still shows observed sensor counts; sensor switching does not make local map counts harmonized.
+- **Seam Test:** incomplete/provisional calendar years no longer appear as annual totals or transition ratios. Calendar-year basis is explicit, including NSW. The old nominal-only selection-optimistic validation badge is hidden rather than presented for arbitrary filters. A new post-repair held-out panel has not been released.
+- **Timing copy:** a zero month-resolution slope is described as “No shift resolved at month precision,” not proof that seasonal timing cannot have changed. No significance or finer temporal precision was manufactured.
+
+Monthly coverage, calibration, administrative selections and static browser datasets were rebuilt; raw archives and H3 cell aggregates were not rewritten. Prior monthly/coverage/report/subregion outputs are preserved under `data/audit_backups/`, with a repair result manifest. Existing research scores are historical artifacts from earlier coverage/model definitions, not certification of this release; they need versioned recomputation before use in a pitch or badge.
+
+## Unresolved scientific blockers
+
+1. **Regional zero versus missing:** fires elsewhere demonstrate instrument activity, not a valid local overpass or successful regional ingestion. The current detection-activity coverage proxy still cannot establish local true zeros. Restoring the disputed monsoon months needs archive/observation evidence, not merely the other two regions’ detections. Until then they remain unavailable, with the associated historical-baseline bias acknowledged.
+2. **Full outage coverage and Terra interruptions:** the reviewed S-NPP list is partial. Terra outages and other mission interruptions require a sourced inventory; partial-day granule outages and recoverable/backfilled products need separate treatment. The repair does not claim to implement all 57 days stated in the audit.
+3. **NOAA-20 gap fill:** replacing S-NPP requires matched-sensor checks, acquisition-time/coverage treatment, deduplication and explicit provenance. A higher NOAA-20 count does not itself prove a quantitative S-NPP deficit or a valid replacement factor.
+4. **District allocation:** positive regional estimates with no local MODIS support remain unallocatable. We have not forced VIIRS estimates to zero when MODIS sees zero, discarded an unavailable confidence slice, or silently adopted a nominal+high fallback with unvalidated uncertainty. These would change the scientific model, not merely repair a display.
+5. **New independent transfer validation:** the corrected availability/sample requires rerunning nested prediction and interval coverage tests. Report matched evaluation cohorts. Do not sum slice bands and claim joint nominal+high coverage.
+6. **NSW and season regime interpretation:** the annual Seam Test still uses explicitly labelled calendar years. Fire-year support, a climatological envelope and useful continuous activity metrics remain future work. An April activity peak is not itself a classification error: the vegetation category includes multiple burning types. Day/night/FRP associations need sensor-controlled evidence before labelling burns as agricultural, prescribed or wildfire.
+
+“100% accurate analytics,” automatic global true-zero inference, and verified fire identity inferred from these signals would all overstate what the archive establishes.
+
+## Verification
+
+The current checkout passes 56 Python and 34 frontend tests and a production build. New tests cover interruption-month exclusion despite detections, known-empty versus unavailable reference slices, retrospective target-year exclusion and stable anomaly/map scales. Additional release checks verify all 12 rows per month, unique month/category/confidence keys and exclusion of flagged reference months. Browser checks confirmed a previously blank early eligible month receives an anomaly colour and adding an empty volcanic category preserves regional totals. These checks do **not** resolve the blockers above.
+
+Reproduce the rebuild with `.venv/bin/python -m pipeline.repair_release`. It makes a new backup and uses existing raw/cell data. Existing running local-query services must be restarted after regeneration to clear their cached monthly data.

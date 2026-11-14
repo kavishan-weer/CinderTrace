@@ -1,0 +1,73 @@
+{
+  "months": [
+    "2001-01"
+  ],
+  "science_files": 10,
+  "monthly_screening": [
+    {
+      "month": "2001-01",
+      "product": "MOD14A1",
+      "region_pixels": 2396424,
+      "missing_input": 0,
+      "obsolete_not_processed": 0,
+      "other_not_processed": 0,
+      "nonfire_water": 94185,
+      "cloud": 886156,
+      "nonfire_land": 1416075,
+      "unknown": 8,
+      "fire_low": 0,
+      "fire_nominal": 0,
+      "fire_high": 0,
+      "qa_land": 2223631,
+      "qa_missing": 0,
+      "fire_pixels": 0,
+      "usable_class_pixels": 1510260,
+      "days_with_catalogued_layers": 31,
+      "calendar_days": 31,
+      "expected_tile_days": 62,
+      "received_tile_days": 62,
+      "tile_day_layers_complete": true,
+      "usable_class_fraction": 0.6302140188881433,
+      "local_combined_modis_bbox_detections": 0,
+      "status": "screening_only_not_archive_certification"
+    }
+  ],
+  "production_changes": false,
+  "identical_overlap_tile_day_rows_removed": 4,
+  "spatial_observation_support": [
+    {
+      "month": "2001-01",
+      "product": "MOD14A1",
+      "region_pixels": 77304,
+      "pixels_never_usable": 0,
+      "fraction_never_usable": 0.0,
+      "p10_usable_days": 17.0,
+      "median_usable_days": 20.0,
+      "p90_usable_days": 22.0,
+      "unit": "distinct daily composites with usable classification per selected regional pixel"
+    }
+  ],
+  "limits": [
+    "Pixel/day counts from daily L3 composites are not detections, overpasses or production H3 cell-days.",
+    "A daily class cannot recover all observations or cloud states within that day.",
+    "Presence of every tile/day layer does not prove complete swath ingestion.",
+    "Usable-class fraction is reported, not silently thresholded into a verified-zero decision.",
+    "Swath reconciliation and quality review remain necessary before any zero restoration."
+  ],
+  "source_manifest_sha256": "c09c78ad36279019c65ef69176cda00e7ca7aba0484900020ca6a69e341c4ae0",
+  "analysis_code_sha256": "95db59991c9814f32ce71ec9e10a2cdc888c1d04f3d4ed2859416debab2a8878",
+  "inputs": [
+    {
+      "path": "data/boundaries/lk_region.geojson",
+      "sha256": "838db6bf67cb4d21df585d32483c64c9d56556d4fc216564bf4aa982c659382e"
+    },
+    {
+      "path": "data/harmonized/lk_coverage.parquet",
+      "sha256": "7ce2a5ec435ed9ad0b0f629b25bdc96cab5bde2dbc6c4a84c88380f56275355a"
+    },
+    {
+      "path": "data/raw/lk/2001.parquet",
+      "sha256": "2cbe801f0bba45c4fb695fbdbf2911b060772f8715e6350248a523c892a2cbdd"
+    }
+  ]
+}

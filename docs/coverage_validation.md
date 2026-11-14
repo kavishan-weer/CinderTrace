@@ -1,18 +1,20 @@
 # Coverage and selected-area validation
 
+Development LOYO scores below use model-selection folds and are selection-optimistic. They are not independent repaired-release validation. Versioned nested results are generated separately by pipeline.scientific_validation.
+
 H3 resolution 6; unchanged raw data, source-category thresholds, confidence convention, combined Terra+Aqua reference. Monthly LOYO now excludes provisional/missing reference months and retains category-level zero months. Square-grid scores are from the pre-migration output snapshot and a different evaluation sample; this is not a controlled grid-only comparison. WAPE is lower-is-better.
 
 | Region | Vegetation confidence | Square model WAPE | H3 naive WAPE | H3 model WAPE | H3 predictive R² |
 |---|---|---:|---:|---:|---:|
-| Sri Lanka | low | 0.5764 | 0.8220 | 0.5849 | 0.628 |
-| Sri Lanka | nominal | 0.1809 | 0.2493 | 0.1849 | 0.927 |
-| Sri Lanka | high | 0.4044 | 0.4678 | 0.4115 | 0.765 |
-| California | low | 0.2801 | 0.9362 | 0.2983 | 0.700 |
-| California | nominal | 0.1401 | 0.1621 | 0.1298 | 0.906 |
-| California | high | 0.1395 | 0.1427 | 0.1418 | 0.985 |
-| New South Wales | low | 0.3870 | 0.8447 | 0.3856 | 0.611 |
-| New South Wales | nominal | 0.1171 | 0.1650 | 0.1097 | 0.946 |
-| New South Wales | high | 0.1408 | 0.1701 | 0.1426 | 0.975 |
+| Sri Lanka | low | 0.5764 | 0.7986 | 0.5814 | 0.632 |
+| Sri Lanka | nominal | 0.1809 | 0.2450 | 0.1901 | 0.925 |
+| Sri Lanka | high | 0.4044 | 0.4771 | 0.4188 | 0.757 |
+| California | low | 0.2801 | 0.9475 | 0.3092 | 0.693 |
+| California | nominal | 0.1401 | 0.1616 | 0.1265 | 0.909 |
+| California | high | 0.1395 | 0.1366 | 0.1213 | 0.989 |
+| New South Wales | low | 0.3870 | 0.8436 | 0.3724 | 0.624 |
+| New South Wales | nominal | 0.1171 | 0.1618 | 0.1068 | 0.945 |
+| New South Wales | high | 0.1408 | 0.1683 | 0.1443 | 0.972 |
 
 ## Transition comparison
 

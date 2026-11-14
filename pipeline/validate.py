@@ -15,6 +15,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 def run():
     lines = ['# Coverage and selected-area validation', '',
+             'Development LOYO scores below use model-selection folds and are selection-optimistic. '
+             'They are not independent repaired-release validation. Versioned nested results are generated separately by pipeline.scientific_validation.', '',
              'H3 resolution 6; unchanged raw data, source-category thresholds, confidence convention, '
              'combined Terra+Aqua reference. Monthly LOYO now excludes provisional/missing reference months and retains category-level zero months. '
              'Square-grid scores are from the pre-migration output snapshot and a different evaluation sample; this is not a controlled grid-only comparison. WAPE is lower-is-better.', '',
@@ -35,9 +37,12 @@ def run():
         assert cells.groupby('h3_cell')['sub'].nunique().max()==1
         assert (cells.area_km2>0).all() and (cells.cell_days>0).all()
         known=monthly[monthly.source!='missing']
-        assert np.isfinite(known[['harmonized','lo','hi']]).all().all()
+        assert np.isfinite(known.harmonized).all()
+        bounded=known.dropna(subset=['lo','hi'])
         assert monthly.loc[monthly.source=='missing',['harmonized','lo','hi']].isna().all().all()
-        assert (known.lo>=0).all() and (known.lo<=known.harmonized).all() and (known.hi>=known.harmonized).all()
+        assert (bounded.lo>=0).all() and (bounded.lo<=bounded.harmonized).all() and (bounded.hi>=bounded.harmonized).all()
+        unsupported=known[(known.model!='empty_reference_slice')&((known.month<'2002-08-01')|((known.low_data)&(known.source!='viirs_observed')))]
+        assert unsupported[['lo','hi']].isna().all().all()
         assert not monthly.loc[monthly.period_status!='inferred_available','comparison_eligible'].any()
         assert not monthly.loc[(monthly.modis_status!='inferred_available') | (monthly.snpp_status!='inferred_available'),'training_eligible'].any()
         from .analytics import export_subregions, selected_monthly

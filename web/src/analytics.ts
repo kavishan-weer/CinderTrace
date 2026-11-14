@@ -6,10 +6,30 @@ export function sumKnown(values:(number|null)[]):number|null{return values.lengt
 export function aggregate(rows:Row[],cats:string[],confs:number[]):Month[]{
  const groups=new Map<string,Row[]>();
  for(const row of rows){if(!cats.includes(row.cat)||!confs.includes(row.conf))continue;const list=groups.get(row.month)||[];list.push(row);groups.set(row.month,list);}
- return [...groups].sort(([a],[b])=>a.localeCompare(b)).map(([month,r])=>({month,modis:sumKnown(r.map(x=>x.modis_raw)),viirs:sumKnown(r.map(x=>x.viirs_snpp_raw)),value:sumKnown(r.map(x=>x.harmonized)),lo:sumKnown(r.map(x=>x.lo)),hi:sumKnown(r.map(x=>x.hi)),eligible:r.every(x=>x.comparison_eligible),provisional:r.some(x=>x.period_status==='provisional'),lowData:r.some(x=>x.low_data)}));
+ const expected=new Set(cats).size*new Set(confs).size;
+ return [...groups].sort(([a],[b])=>a.localeCompare(b)).map(([month,r])=>{
+  const complete=r.length===expected&&new Set(r.map(x=>`${x.cat}/${x.conf}`)).size===expected;
+  const total=(values:(number|null)[])=>complete?sumKnown(values):null;
+  return {month,modis:total(r.map(x=>x.modis_raw)),viirs:total(r.map(x=>x.viirs_snpp_raw)),value:total(r.map(x=>x.harmonized)),lo:total(r.map(x=>x.lo)),hi:total(r.map(x=>x.hi)),eligible:complete&&r.every(x=>x.comparison_eligible),provisional:r.some(x=>x.period_status==='provisional'),lowData:!complete||r.some(x=>x.low_data)};
+ });
 }
 export const fmt=(v:number|null,digits=0)=>v===null?'—':new Intl.NumberFormat('en',{maximumFractionDigits:digits,notation:v>=100000?'compact':'standard'}).format(v);
 export function historical(data:Month[],month:string){const target=data.find(r=>r.month===month);const values=data.filter(r=>r.month<month&&r.month.slice(5)===month.slice(5)&&r.eligible&&r.value!==null).map(r=>r.value!).sort((a,b)=>a-b);if(!target?.eligible||target.value===null||values.length<5)return null;const n=values.length;const median=n%2?values[(n-1)/2]:(values[n/2-1]+values[n/2])/2;return {median,percentile:100*(values.filter(v=>v<target.value!).length+values.filter(v=>v===target.value).length/2)/n,n};}
 export function color(value:number|null,max:number){if(value===null)return '#d9ddd2';const t=Math.max(0,Math.min(1,value/(max||1)));const stops=[[31,61,64],[43,104,111],[85,152,137],[170,194,112],[231,227,126]];const i=Math.min(3,Math.floor(t*4)),f=t*4-i;return `rgb(${stops[i].map((v,j)=>Math.round(v+(stops[i+1][j]-v)*f)).join(',')})`;}
 export async function getJSON<T>(path:string,signal?:AbortSignal):Promise<T>{const r=await fetch(path,{signal});if(!r.ok)throw new Error('Could not load the archive. Retry or rebuild the web datasets.');try{return await r.json();}catch(error){if((error as Error).name==='AbortError')throw error;throw new Error('The archive response could not be read. Please retry.');}}
 export function download(data:Month[],name:string){const fields=['month','modis','viirs','value','lo','hi','eligible','provisional'];const header=['month','modis_cell_days','viirs_snpp_cell_days','harmonized_cell_days','lower_transfer_bound','upper_transfer_bound','comparison_eligible','provisional'];const csv=[header.join(','),...data.map(r=>fields.map(f=>r[f as keyof Month]??'').join(','))].join('\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+
+export function climatology(data:Month[],month:string){
+ const target=data.find(r=>r.month===month);
+ const values=data.filter(r=>r.month!==month&&r.month.slice(5)===month.slice(5)&&r.eligible&&r.value!==null).map(r=>r.value!).sort((a,b)=>a-b);
+ if(!target?.eligible||target.value===null||values.length<5)return null;
+ const n=values.length,median=n%2?values[(n-1)/2]:(values[n/2-1]+values[n/2])/2;
+ return {n,median,percentile:100*(values.filter(v=>v<target.value!).length+.5*values.filter(v=>v===target.value).length)/n};
+}
+export function anomalyColor(ratio:number|null){
+ if(ratio===null||!Number.isFinite(ratio)||ratio<0)return '#d9ddd2';
+ const t=ratio===0?-1:Math.max(-1,Math.min(1,Math.log2(ratio)/2));
+ const neutral=[245,242,232],end=t<0?[33,102,172]:[178,86,32];
+ return `rgb(${neutral.map((v,i)=>Math.round(v+(end[i]-v)*Math.abs(t))).join(',')})`;
+}
+export function mapFraction(value:number){return Math.log1p(Math.max(0,Math.min(31,value)))/Math.log(32);}

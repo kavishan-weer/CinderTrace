@@ -17,7 +17,7 @@ function timing(s:Season|undefined,key:TimingMetric){
  return key==='peak'?(s.peaks.length>3?`${s.peaks.length} tied months`:s.peaks.map(i=>months[Number(s.keys[i].slice(5))-1]).join(' / ')):months[Number(s.keys[s[key]!].slice(5))-1];
 }
 function trendText(value:number,key:TimingMetric){
- if(Math.abs(value)<.05)return 'No directional shift';
+ if(Math.abs(value)<.05)return 'No shift resolved at month precision';
  return `${Math.abs(value).toFixed(1)} mo ${key==='duration'?(value>0?'longer':'shorter'):(value>0?'later':'earlier')}`;
 }
 

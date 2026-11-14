@@ -1,0 +1,80 @@
+{
+  "created_at": "20261114T122303Z",
+  "inputs": [
+    {
+      "path": "data/harmonized/lk_cells.parquet",
+      "sha256": "3ab91869852de27fffcaf4be84ce46926721b73eaaeb16cc53de585fbca91bdc"
+    },
+    {
+      "path": "data/harmonized/lk_monthly.parquet",
+      "sha256": "8e02cf947e4411719c7de6b490a0a2202daa9463ea5032e00fd86dc10e5c8722"
+    },
+    {
+      "path": "data/harmonized/lk_coverage.parquet",
+      "sha256": "7ce2a5ec435ed9ad0b0f629b25bdc96cab5bde2dbc6c4a84c88380f56275355a"
+    },
+    {
+      "path": "data/harmonized/ca_cells.parquet",
+      "sha256": "43fdc8822399ed2d8233c744cffb5541bdab377cda8b1df18d39c7eca07445f4"
+    },
+    {
+      "path": "data/harmonized/ca_monthly.parquet",
+      "sha256": "3cb5268c1360747ceb3bd4d3eace419fbc815166b679d566fa4bec5dd8bb72bd"
+    },
+    {
+      "path": "data/harmonized/ca_coverage.parquet",
+      "sha256": "8aa1459f44c8a52fa144ddc7b866d61c3c10fb563c6abb516e95fbfa0dfb3cb5"
+    },
+    {
+      "path": "data/harmonized/nsw_cells.parquet",
+      "sha256": "eff8231729e1507474cc2b0a9dbec8d128eae4b815a8237e348d179f53535d6c"
+    },
+    {
+      "path": "data/harmonized/nsw_monthly.parquet",
+      "sha256": "70c51e00633c09fd3a0cea3ca33fa45fa26e3b02e99e121383c7e0deff173a76"
+    },
+    {
+      "path": "data/harmonized/nsw_coverage.parquet",
+      "sha256": "ea5a32770bb1c39038f081ef9b54b33fc8ee04e1247f9d1b5ee7d4147a6ba964"
+    },
+    {
+      "path": "pipeline/scientific_validation.py",
+      "sha256": "3b4eee14db2e413bc3c072e505bedf7cbf44673967a85b256ab8aaf40253e682"
+    },
+    {
+      "path": "pipeline/harmonize.py",
+      "sha256": "255d454060473ffd4c7b4d7b4074e44ea7bfaddf7b7a8f8a89a8d7076ca2c266"
+    },
+    {
+      "path": "pipeline/coverage.py",
+      "sha256": "709faaf847a9616c4ff38e6a8d3ecd6dcfba1bc1d7c5cca116f4bb778082ed0c"
+    },
+    {
+      "path": "pipeline/outages.py",
+      "sha256": "fa75fe7cff52810bd7eae511d4b5a8887660b28740755b8eae9a0b9410411d13"
+    },
+    {
+      "path": "pipeline/analytics.py",
+      "sha256": "45f658635b30cd3982c0cdc396ace67842607d67921d2a2d9817852651d90ffe"
+    },
+    {
+      "path": "docs/outage_inventory.json",
+      "sha256": "f14a348ba6b5557de2ee065c8fdb044c1b482757e50fe67678de0429ac3f8f4e"
+    },
+    {
+      "path": "data/boundaries/lk_members.parquet",
+      "sha256": "c9473fee1877d0275e90d758f158c2c1d286d3ca0a69b98d5a9281310f179c4d"
+    },
+    {
+      "path": "data/boundaries/nsw_members.parquet",
+      "sha256": "ae503f2e5ece184aa587579209758503cf9ac96b4b64ac3679b7fd50f24e7367"
+    },
+    {
+      "path": "data/boundaries/ca_members.parquet",
+      "sha256": "efd178624dc285692159b146bd45bbc1d52ad96400b72161262b22d450a0a3f8"
+    }
+  ],
+  "intervals": "Inner LOYO log1p residual P10/P90; outer targets excluded. Chain residuals propagate both transfers on later overlap only.",
+  "period": "Eligible 2012-02 through 2025-12; all nonempty category/confidence slices independently",
+  "candidate": "Fixed 90% MODIS / 10% training-only S-NPP same-calendar-month district prior; prior-only without MODIS support."
+}

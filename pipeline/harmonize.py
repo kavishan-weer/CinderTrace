@@ -135,10 +135,23 @@ def loyo(d):
 def harmonize_slice(d):
     """d: modis, terra, snpp monthly cell-days. Returns (frame, report)."""
     d = d.copy()
+    # Structurally empty reference slice, not an absent/failed sensor month.
+    if d.modis.fillna(0).sum()==0 and d.snpp.fillna(0).sum()==0:
+        observed=(d.index>=OVERLAP_START)&d.snpp.notna()
+        status=np.where(observed,d.get('snpp_status','inferred_available'),d.get('modis_status','inferred_available'))
+        available=d.modis.notna()|observed
+        zero=np.where(available,0.,np.nan)
+        out=pd.DataFrame({'month':d.index,'modis_raw':d.modis,'viirs_snpp_raw':d.snpp,
+            'harmonized':zero,'lo':zero,'hi':zero,'source':np.where(observed,'viirs_observed',np.where(available,'empty_reference_slice','missing')),
+            'modis_status':d.get('modis_status','inferred_available'),'snpp_status':d.get('snpp_status','inferred_available'),
+            'model':'empty_reference_slice','low_data':False,'period_status':np.where(available,status,'missing'),
+            'comparison_eligible':available&(status=='inferred_available'),'training_eligible':d.get('training_ok',False)})
+        return out.reset_index(drop=True),{'model':'empty_reference_slice','low_data':False,'overlap_months':0,'validation_LOYO_monthly':None}
     d["modis"] = d.modis.astype(float)
     d["modis_raw"] = d.modis
     terra_only = d.index < "2002-08-01"
-    ref = d[(d.index >= "2003-01-01") & (d.index < "2012-01-01")]
+    ref = d[(d.index >= "2003-01-01") & (d.index < "2012-01-01") &
+            (d.get('modis_status',pd.Series('inferred_available',index=d.index))=='inferred_available')]
     ratio = {m: (g.modis.sum() / g.terra.sum()) if g.terra.sum() >= 20 else 1.8 for m, g in ref.groupby(ref.index.month)}
     d.loc[terra_only, "modis"] = [d.terra[i] * ratio.get(i.month, 1.8) for i in d.index[terra_only]]
     if "modis_status" in d:
@@ -170,6 +183,15 @@ def harmonize_slice(d):
     out["period_status"] = np.where(out.source == "missing", "missing", selected_status)
     out["comparison_eligible"] = out.period_status == "inferred_available"
     out["training_eligible"] = d.get("training_ok", False).to_numpy() if "training_ok" in d else False
+    # Stage-2 residuals cannot quantify the unvalidated Terra -> combined -> VIIRS chain.
+    out.loc[terra_only,['lo','hi']]=np.nan
+    out.loc[terra_only,'low_data']=True
+    # Arbitrary half/double ranges do not constitute validated uncertainty.
+    if low_data: out.loc[out.source!='viirs_observed',['lo','hi']]=np.nan
+    out['slice_status']='sparse_nonzero' if low_data else 'supported_nonzero'
+    out['interval_status']=np.where(observed,'observation_only',np.where(terra_only,'unvalidated_transfer_chain',
+        'unvalidated_sparse_transfer' if low_data else 'empirical_regional_transfer'))
+    out.loc[out.harmonized.isna(),'slice_status']='unavailable'
     return out, {"model": model, "low_data": bool(low_data), "overlap_months": int(len(ov)), "validation_LOYO_monthly": val}
 
 def seam(series_raw, series_h):
@@ -189,12 +211,13 @@ def run(region):
     for cat in CATS:
         for conf in CONF:
             d = attach_coverage(slice_series(cells, cat, conf, idx), coverage)
-            if d.modis.sum() + d.snpp.sum() < 10:
-                continue
             f, rep = harmonize_slice(d)
             f["cat"], f["conf"] = cat, conf
             frames.append(f); slices[f"{cat}/conf{conf}"] = rep
     monthly = pd.concat(frames, ignore_index=True)
+    monthly.loc[monthly.model=='empty_reference_slice','slice_status']='empty_reference_category'
+    monthly.loc[monthly.harmonized.isna(),'slice_status']='unavailable'
+    monthly.loc[monthly.model=='empty_reference_slice','interval_status']='empty_reference_category'
     monthly.to_parquet(OUT / f"{region}_monthly.parquet", index=False)
     # seam test for two filter presets
     def preset(cats, confs):

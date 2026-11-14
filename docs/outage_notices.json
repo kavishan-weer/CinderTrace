@@ -1,0 +1,515 @@
+[
+  {
+    "published_on": "2026-08-11",
+    "description": "Per the instrument Calibration/Validation teams, the SNPP data is OK to use from 16:30Z on August 6, 2026, onward. Data received and processed between 13:48Z and 16:30Z on August 4, 2026, were assigned the default DayNightFlag of \u201cD\u201d, and that data should be used with caution if it is still being accessed.",
+    "disposition": "quality_cleared_from_stated_time",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-08-05",
+    "description": "We have started receiving S-NPP data and NRT processing resumed with the granule acquired at 13:54 UTC on August 4, 2026. At this time, users are advised to exercise caution when using S-NPP products while the instrument Calibration/Validation teams continue to assess data quality.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-08-02",
+    "description": "The S-NPP spacecraft SNPP is experiencing an anomaly starting at 02:05Z on August 02, 2026. All science data remains unavailable and will not be recoverable until further notice. The last granule processed is the August 03, 2026, 00:06 granule. An update will be posted when more information is available.",
+    "disposition": "unrecoverable_during_interruption",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-07-31",
+    "description": "Following a review by the Calibration/Validation teams, the data (NOAA-21) from July 28, 2026, onward has been verified to be of good quality and presents no concerns for users. However, a data gap still exists between 16:42Z and 18:18Z on July 29, 2026.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-07-30",
+    "description": "Starting at 05:42Z on July 28, 2026, NOAA-21 experienced data anomalies that affected VIIRS M14-M16 and I5 Long Wave Infrared (LWIR) data. Therefore, we encourage users to exercise caution when using JPSS-2 data collected from July 28, 2026, 05:42Z to July 29, 2026, 20:10Z. Additionally, please note that there is a data gap on July 29, 2026, from 16:42Z to 18:18Z.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-07-27",
+    "description": "SNPP data is considered safe for use starting July 27, 2026, upon the implementation of the revised calibration lookup tables (LUT) in the NRT processing stream.",
+    "disposition": "quality_cleared_from_stated_time",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-07-17",
+    "description": "Processing of VIIRS S-NPP NRT data resumed, at 19:48 UTC on July 16, 2026. At this time, users are advised to exercise caution when using S-NPP products while the instrument Calibration/Validation teams continue to assess data quality.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-07-10",
+    "description": "VIIRS S-NPP data is currently unavailable. The S-NPP spacecraft entered a non-nominal state at ~14:50 UTC on July 10, 2026 and S-NPP Science products, including products from the VIIRS sensor, were disabled at 01:30 UTC on July 11, 2026. This message will be updated when more information is available.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-06-11",
+    "description": "S-NPP was restored to a nominal state on Thursday, June 11, 2026. S-NPP data are now considered safe for use starting from June 11, 2026 onward.",
+    "disposition": "quality_cleared_from_stated_time",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-06-04",
+    "description": "Please be advised that scheduled maintenance is planned on Monday 06/15/26 and Tuesday 06/16/26. During this time, users may experience temporary service interruptions or downtime when accessing FIRMS.",
+    "disposition": "service_delay_or_maintenance",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-06-03",
+    "description": "Processing of VIIRS S-NPP NRT data has resumed, starting 6/2/26 15:06 UTC. Users are advised to exercise caution while using S-NPP NRT data, as the calibration team assess the quality.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-06-01",
+    "description": "VIIRS S-NPP data is currently unavailable. The S-NPP spacecraft entered an anomaly mode at 0145Z on June 1, 2026 and S-NPP NRT and science data became unavailable and will remain so until further notice. Last data received for NRT coverage ended at 2316Z on 5/31/26 and no products are currently being generated.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-05-05",
+    "description": "S-NPP was restored to a nominal state on Friday, May 1, 2026. S-NPP data are now considered safe for use starting from May 1, 2026, 05:00 UTC onward.",
+    "disposition": "quality_cleared_from_stated_time",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-05-01",
+    "description": "We are pleased to announce that data have started to come in and NRT processing has started April 30, 2026 at 13:33:23 UTC. At this point, users are advised to exercise caution while using S-NPP products, as the instrument Calibration/Validation teams are still trying to assess the impact from this anomaly.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-04-29",
+    "description": "Beginning at approximately 02:30Z on April 28, 2026, S-NPP data became unavailable and will remain so until further notice. This is affecting all S-NPP data processing.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-04-28",
+    "description": "Please be advised that system maintenance is planned on Monday 05/04/26 and Tuesday 05/05/26 between 8am and 12pm Eastern Daylight Time (12:00 to 16:00 UTC).",
+    "disposition": "service_delay_or_maintenance",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-03-30",
+    "description": "Terra MODIS returned to Science mode the afternoon of 2026-086 (March 27, 2026) and the blackbody reached its nominal temperature by 19:23z. The data has been reviewed by the calibration team and flagged as questionable/bad between 2026/085 20:00z to 2026/086 19:23z. Data after 2026-086 19:23Z is safe to use.",
+    "disposition": "quality_cleared_from_stated_time",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-03-27",
+    "description": "At approximately 20:00:00 GMT on DOY 2026-085(March 26, 2026), the Terra satellite experi-enced an anomaly, and MODIS was placed in Standby mode. Although we are still receiving data and NRT processing continues, we advise users to exercise caution when using the data until it has been further verified and confirmed by the instrument teams.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2026-03-09",
+    "description": "S-NPP was restored to a nominal state on 3/12/2026, 1717Z with science products meeting mission specifications for operational use effective 3/16/26 1930Z. SNPP data is now considered safe for use.",
+    "disposition": "quality_cleared_from_stated_time",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-11-12",
+    "description": "The S-NPP Calibration/Validation teams have assessed the anomaly-impacted data and confirmed that the data quality is nominal. All processed data is now available for use. The Suomi NPP VIIRS instrument was experiencing an outage at Fairbanks, Alaska starting November 11, 2025 1140Z.",
+    "disposition": "processed_products_recovered",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-09-25",
+    "description": "Availability of Landsat OLI active fire detection data is nominal.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-09-24",
+    "description": "Data flow for SNPP L0 resumed late yesterday, around 9/24/25 18:42 and the EDOS were able to send data for most of 9/24/25 however there is a data gap from 06:27:58 - 08:06:09 in NRT data.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-09-10",
+    "description": "Due to system maintenance (below) there were delays in processing data on FIRMS. We apologize for the inconvenience.",
+    "disposition": "service_delay_or_maintenance",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-08-26",
+    "description": "Please be advised that system maintenance is planned on three separate days, Monday 9/8/25 to Wednesday 9/10/25. The maintenance is scheduled between 8AM-12PM EDT (12PM-4PM UTC) each day.",
+    "disposition": "service_delay_or_maintenance",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-08-14",
+    "description": "Please note that the countries, country API services are currently unavailable. We apologize for the inconvenience. To obtain these data please use FIRMS active fire data. Data can be downloaded by region for the last 24h, 48h or 7 days in SHP, KML or CSV formats.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-08-04",
+    "description": "Landsat OLI Active Fire Detection Data Interruptions Maintenance on the Landsat antenna at USGS EROS Data Center has been completed as of September 5, 2025. Occasional impacts to the availability of real-time Landsat active fire detection data in FIRMS is no longer an issue. Thank you for your patience and understanding.",
+    "disposition": "service_delay_or_maintenance",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-07-04",
+    "description": "The Suomi NPP ground station in Fairbanks, Alaska experienced a network outage causing a delay of L0 data. Currently, only half of the data and imagery for a given day is being received and processed. We apologize for the inconvenience. See here for more information or to see the resolution status.",
+    "disposition": "service_delay_or_maintenance",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-06-15",
+    "description": "A bug in the Collection-2 Vxx14IMGML monthly fire location production software caused the fire \u201cType\u201d field to be set inconsistently for product versions 1 and 2. As a result, obvious type-2 (\u201cother static land source\u201d) hotspots were often incorrectly labeled as type-0 (\u201cpresumed vegetation fire\u201d) hotspots. This bug was corrected in May 2025 and all VxxIMGML product files reprocessed to version 3.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-05-20",
+    "description": "Please be advised that a two-hour four-hour System Maintenance is planned that will affect the FIRMS nrt3 server on Tuesday, May 20, 2025, starting at 9:30AM EDT (13:30 UTC). During this server maintenance period, users can continue to use nrt4/firms2, the backup server, for their data requirements.",
+    "disposition": "service_delay_or_maintenance",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-04-09",
+    "description": "Please be advised that a three-hour System Maintenance is planned for the FIRMS nrt3 server on Wednesday, April 9, 2025, starting at 1pm EDT (17:00 UTC). During this server maintenance period, users can continue to use nrt4, the backup server, for their data requirements",
+    "disposition": "service_delay_or_maintenance",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2025-04-07",
+    "description": "NOAA's GOES-19 satellite replaced GOES-16 as GOES-East on 2025-04-07. FIRMS is currently updating the system to reflect this change. Information on the replacement is available here.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-11-08",
+    "description": "The S-NPP's onboard geolocation system was reset on Wed. Nov. 6 around 17:17 UTC. The Calibration/Validation teams have finished verifying S-NPP's data products and found them to be suitable for operations. Given this, MODAPS LANCE has decided to resume S-NPP NRT processing, November 9 (Day 314). The STD processing is also expected to be resumed either later today or early next week.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-11-04",
+    "description": "LANCE Suomi-NPP data on hold due to a GPS anomaly which started on November 2, 2024 at 22:15z (Zulu time/ UTC). Given the GPS degradation, all production of SNPP VIIRS land data products from MODAPS LANCE and LandSIPS are being suspended until further notice. Users are advised not to use any SNPP VIIRS data products that have been produced and are being distributed since 22:15z on November 2, 2024, until further notice. A possible mitigation effort will start today, Monday November 4, 2024, following which all performance will be evaluated by the instrument Cal/Val teams, before any resumption of SNPP NRT and STD processing at the leading edge. Further updates will be provided once all processing has been resumed for SNPP from MODAPS LANCE and LandSIPS.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-10-01",
+    "description": "The S-NPP GPS anomaly was resolved on September 27, 2024, and geolocation accuracy has been restored. MODAPS LANCE resumed S-NPP NRT production on September 30, 2024. STD processing was resumed on October 1, 2024.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-09-25",
+    "description": "An anomaly with the Suomi-NPP GPS, which started at around 22:44:05 UTC on September 24, 2024, is causing degradation in SNPP VIIRS data geolocation performance. Given this degradation, all production of S-NPP VIIRS land data products from MODAPS LANCE and LandSIPS are being suspended until further notice. Users are advised not to use any S-NPP VIIRS data products that have been produced and are being distributed since 22:42, September 24, 2024, until further notice. A possible mitigation effort will be attempted on Friday, September 27, following which all performance will be evaluated by the instrument Cal/Val teams, before any resumption of S-NPP NRT and STD processing at the leading edge. Further updates will be provided once all processing have been resumed for S-NPP from MODAPS LANCE and LandSIPS.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-09-24",
+    "description": "Please be advised that a Systems Maintenance is planned for all LANCE NRT/FIRMS systems on Monday September 30, 2024, at 9am EDT (13:00 UTC). No production and/or distribution disruptions are anticipated during this maintenance, however, any disruption caused to production and distribution will be promptly addressed, during this maintenance. Users are requested to contact MODAPS support (modapsuso@lists.nasa.gov) promptly, if any issues are noticed with distribution of all MODIS and VIIRS LANCE/FIRMS products.",
+    "disposition": "service_delay_or_maintenance",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-08-02",
+    "description": "July 31, 2024: SNPP VIIRS data processing in NRT has been resumed.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-07-30",
+    "description": "The technical issues with S-NPP, that stopped data processing on Wednesday 24th July 2024 were resolved on 29th July and NRT processing started on 30th July, however we received a notice on 29th July that another issue is impacting data quality and so NRT processing is again paused until the issue is resolved.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-07-24",
+    "description": "Due to technical issues with S-NPP, data processing has stopped, starting at 05.28 UTC on Wednesday 24th July 2024. Once the issue is resolved SNPP VIIRS data processing will remain on hold until the calibration and validation team ascertain data quality.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-07-21",
+    "description": "Production of NOAA-21 (J2) NRT data has resumed. The geolocation of the NOAA-21 (J2) spacecraft had degraded for a short period on 07/20 but is seen to be normal by 07/21. Caution should be exercised while using the NOAA-21 (J2) Level-1 and 375m active fire products until further validations are completed and this announcement is updated.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-07-20",
+    "description": "Starting on July 20 at ~06:18 UTC, the geolocation of the NOAA-21 (J2) spacecraft has entered a degraded state, causing the data to be inaccurate and out of mission specifications. Therefore, starting at 09:06Z on July 20, 2024, all NRT production of NOAA-21 (J2) Level-1 and higher-level data products are being suspended until further notice. Users are advised not to use any NOAA-21 (J2) data products until further notice.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-07-18",
+    "description": "The SNPP GPS issue has been resolved, and processing of SNPP VIIRS NRT data has been restarted.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-07-10",
+    "description": "VIIRS SNPP data have been disabled due to an error with the GPS receiver. Starting on July 09 at ~2146Z , the S-NPP spacecraft GPS toggled to invalid causing the geolocation of all observed data to be inaccurate and out of the mission specifications. Engineering has started planning the execution of the reset of the GPS unit on the S-NPP spacecraft.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-06-24",
+    "description": "Note that JPSS NOAA-21/J2 had gone into safe mode briefly on June 22, around 04:24z, causing a data gap between 04:24z \u2013 09:24z (included). The Spacecraft returned to Mission Pointing mode on June 22, 2024, at 07:49:52z, and MODAPS LANCE started receiving the L0 from 09:30z, but we are advising the NRT VIIRS users to use this data with caution, pending further updates from the instrument Cal/Val team. At this moment, the quality of the data will be questionable.",
+    "disposition": "quality_cleared_from_stated_time",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-06-17",
+    "description": "FIRMS slowness and timeouts has been resolved. The cause was a faulty network hardware which has been replaced.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-06-04",
+    "description": "At this time, FIRMS is being impacted by slowness and timeouts. The Systems Administrators are currently determining the cause, and this announcement will be updated when the issue is resolved.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-06-03",
+    "description": "The S-NPP GPS recovery has been successfully carried out, with resolution of the geolocation accuracy starting 06/04 00:00z. Production of all S-NPP VIIRS Land NRT data products will be resumed starting 06/05.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-05-28",
+    "description": "On 5/25/2024, the S-NPP GPS started toggling from valid to invalid starting at approximately 22:23:14z before finally \"latching\" as invalid at 22:30:10z. As of now, it has remained at invalid, and this is causing significant degradation in SNPP VIIRS geolocation performance. Starting late 5/25/2024, the geolocation errors have started to gradually degrade and has been found to exceed 1 km, as seen on 05/26/2024 and on 05/27/2024. Given this, all production of SNPP VIIRS STD and NRT L2+ data products are being suspended till further notice. The users are advised not to use any SNPP VIIRS data products that have been produced and are being distributed from day 05/25/2024 and after.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-03-25",
+    "description": "Processing of NOAA-20 (J1) data is being restarted on nrt3 and nrt4 with data from 3/25/24, with a few granules at the end of 3/24/24. Users should exercise caution when using this data as it may still be impacted by the rephasing.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-03-21",
+    "description": "A planned rephasing maneuver burn activity on March 20, 2024 will halt the production and display of all near real-time NOAA-20 data from March 20 to April 4, 2024 (end date subject to change). There will be an approximate 16 day (subject to change) outage of NRT NOAA-20 data and imagery. Learn more...",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-03-07",
+    "description": "Generation of the NRT products from VIIRS and OMPS (NOAA-21) has resumed, following the mid-mission activity.",
+    "disposition": "processing_resumed_quality_unverified",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-02-26",
+    "description": "NOAA-21 will undergo a mid-mission activity from February 26, 2024, 00:00Z until March 7, 2024. During this activity, data from VIIRS and OMPS will be unavailable. All NRT products from VIIRS and OMPS onboard NOAA-21 will be affected. This announcement will be updated when the data are nominal.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2024-02-03",
+    "description": "NOAA-21 data delay/outage from February 3, 2024 18:00z - February 4, 2024, 14:20z. During this time all instruments were in safe mode, all NRT products from VIIRS and OMPS onboard NOAA-21 were affected.",
+    "disposition": "quality_cleared_from_stated_time",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2023-11-06",
+    "description": "SNPP VIIRS Fires and Thermal Anomalies and SNPP VIIRS corrected reflectance (true color & false color (bands M11-l2-l1)) imagery are nominal.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2023-11-03",
+    "description": "Engineering placed the S-NPP satellite in mission-point mode and all instruments were confirmed to be in a safe state on Nov 1, 2023. Instrument activation activities commenced today Nov 2, 2023. ATMS was placed in operational mode at 15:47 UTC on Nov 2, 2023. OMPS was placed in operational mode at 17:56Z on Nov 2, 2023. CERES was placed in operational mode at 17:56Z on Nov 2, 2023. VIIRS was placed in operational mode at 16:09Z on Nov 2, 2023. CrIS is expected to be fully activated by Friday Nov 3, 2023. Users are advised S-NPP data is undergoing further evaluation by Cal/Val science teams. While S-NPP High Rate data (HRD) is enabled, Direct broadcast (DB) users are advised that this S-NPP science data is not yet cleared for operational use. PDA OPS subscriptions for all S-NPP science products have been disabled as of 20:00 UTC, Nov 1, 2023. All missed data will not be recoverable (after the 14:56 UTC Nov 1, 2023 observation time). The NOAA-20 and NOAA-21 satellites will continue to provide JPSS science data as the primary and tertiary satellites, respectively.",
+    "disposition": "quality_cleared_from_stated_time",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2023-11-02",
+    "description": "SNPP VIIRS science data are unavailable starting from 11/01/2023 at ~14:50Z due to a spacecraft anomaly and the data production is put on hold until further notice. SNPP VIIRS Fires and Thermal Anomalies and SNPP VIIRS corrected reflectance (true color & false color (bands M11-l2-l1)) imagery are unavailable at this time.",
+    "disposition": "notice_requires_review",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  },
+  {
+    "published_on": "2023-09-30",
+    "description": "Missing data for 2023-09-30 Please note that NOAA-20 JPSS J1 (J1) entered a non-nominal state at ~1847Z on September 29, 2023. Telemetry from subsequent contacts indicate a possible Spacecraft Command Processor reset. Because of this, the Spacecraft is currently in sun-pointing mode and all instruments are confirmed to be in a safe state, with no science data acquisition. MODAPS Lance has not received any J1 L0 data since September 29 (Day 272) 18:29Z. Nominal science data acquisition will begin once a recovery plan has been determined. Further updates will be sent out in this regard, once MODAPS Lance starts receiving J1 L0 again.",
+    "disposition": "quality_cleared_from_stated_time",
+    "source": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+    "source_sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+    "retrieved_on": "2026-11-14",
+    "interpretation": "Notice date is not an outage interval. Resumption does not establish recovery of prior gaps."
+  }
+]

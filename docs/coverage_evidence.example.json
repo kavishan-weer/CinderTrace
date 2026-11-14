@@ -1,0 +1,14 @@
+[
+  {
+    "month": "2020-02",
+    "fam": "snpp",
+    "archive_sha256": "REPLACE_WITH_SHA256_OF_REGIONAL_2020_PARQUET",
+    "ingestion_complete": false,
+    "regional_observation_manifest_complete": false,
+    "quality_review_complete": false,
+    "expected_observations": 0,
+    "received_observations": 0,
+    "ingestion_source": "",
+    "observation_source": ""
+  }
+]
