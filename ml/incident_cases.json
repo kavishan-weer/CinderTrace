@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "selection": "Purposive named-case audit, fixed before matching; large fires and two official complexes. Not representative sampling or held-out threshold tuning.",
+  "sources": {
+    "calfire": {
+      "layer": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+      "catalog": "https://data.ca.gov/@cal-fire/california-fire-perimeters-all",
+      "agency": "CAL FIRE FRAP and contributing agencies",
+      "name_field": "FIRE_NAME", "id_field": "INC_NUM", "start_field": "ALARM_DATE", "end_field": "CONT_DATE",
+      "date_meaning": "Alarm and containment dates; containment is not extinction. Stored date values used with one-day tolerance."
+    },
+    "nsw": {
+      "layer": "https://portal.data.nsw.gov.au/arcgis/rest/services/Hosted/NSWFireHistory/FeatureServer/0",
+      "catalog": "https://portal.data.nsw.gov.au/arcgis/rest/services/Hosted/NSWFireHistory/FeatureServer/0",
+      "agency": "NSW government consolidated fire history / Rural Fire Service",
+      "name_field": "fire_name", "id_field": "fire_id", "start_field": "ignition_date", "end_field": "extinguish_date",
+      "date_meaning": "Recorded ignition and extinguish dates; stored dates used with one-day tolerance."
+    },
+    "nsw_legacy": {
+      "layer": "https://portal.data.nsw.gov.au/arcgis/rest/services/Hosted/NSW_Fire_History/FeatureServer/0",
+      "catalog": "https://portal.data.nsw.gov.au/arcgis/rest/services/Hosted/NSW_Fire_History/FeatureServer/0",
+      "agency": "NSW government fire history / Rural Fire Service",
+      "name_field": "firename", "id_field": "rfsfireno", "start_field": "startdate", "end_field": "enddate",
+      "date_meaning": "Recorded fire start and end timestamps; stored dates used with one-day tolerance."
+    }
+  },
+  "cases": [
+    {"id":"ca-camp-2018","region":"ca","name":"Camp 2018","source":"calfire","where":"YEAR_=2018 AND UNIT_ID='BTU' AND INC_NUM='00016737'","kind":"incident"},
+    {"id":"ca-kincade-2019","region":"ca","name":"Kincade 2019","source":"calfire","where":"YEAR_=2019 AND UNIT_ID='LNU' AND INC_NUM='00019376'","kind":"incident"},
+    {"id":"ca-glass-2020","region":"ca","name":"Glass 2020","source":"calfire","where":"YEAR_=2020 AND UNIT_ID='LNU' AND INC_NUM='00015497'","kind":"incident"},
+    {"id":"ca-creek-2020","region":"ca","name":"Creek 2020","source":"calfire","where":"YEAR_=2020 AND UNIT_ID='SNF' AND INC_NUM='00001391'","kind":"incident"},
+    {"id":"ca-august-2020","region":"ca","name":"August Complex 2020","source":"calfire","where":"YEAR_=2020 AND INC_NUM='00000753'","kind":"official_complex"},
+    {"id":"ca-scu-2020","region":"ca","name":"SCU Lightning Complex 2020","source":"calfire","where":"YEAR_=2020 AND INC_NUM='00005740'","kind":"official_complex"},
+    {"id":"ca-dixie-2021","region":"ca","name":"Dixie 2021","source":"calfire","where":"YEAR_=2021 AND UNIT_ID='BTU' AND INC_NUM='00009205'","kind":"incident_including_named_constituent_fires"},
+    {"id":"ca-caldor-2021","region":"ca","name":"Caldor 2021","source":"calfire","where":"YEAR_=2021 AND INC_NUM='00024030'","kind":"incident"},
+    {"id":"nsw-gospers-2019","region":"nsw","name":"Gospers Mountain 2019/20","source":"nsw_legacy","where":"fireseason='201920' AND rfsfireno='352934'","kind":"incident"},
+    {"id":"nsw-dunns-2019","region":"nsw","name":"Westbrook Rd / Dunns 2019/20","source":"nsw_legacy","where":"fireseason='201920' AND rfsfireno='367024'","kind":"agency_incident_record"},
+    {"id":"nsw-green-wattle-2019","region":"nsw","name":"Green Wattle Creek 2019/20","source":"nsw","where":"fire_id='360264'","kind":"incident"},
+    {"id":"nsw-liberation-2019","region":"nsw","name":"Liberation Trail 2019","source":"nsw","where":"fire_id='354354'","kind":"incident"}
+  ],
+  "locality_cases": [
+    {"id":"lk-hanthana-2020","region":"lk","name":"Hanthana mountain fire","date_local":"2020-02-10","district":"Kandy District","source":"https://alt.army.lk/sfhqcentral/content/army-troops-doused-sudden-fire","agency":"Sri Lanka Army","evidence":"Reported controlled on 10 February 2020 in Hanthana mountain range, Kandy District. No perimeter or ignition coordinates supplied."},
+    {"id":"lk-redeepana-2026","region":"lk","name":"Redeepana forest fire","date_local":"2026-09-11","district":"Badulla District","source":"https://www.army.lk/news/army-troops-assist-extinguishing-wildfire-redeepana","agency":"Sri Lanka Army","evidence":"Reported forest fire near Redeepana Elders' Home on 11 September 2026, following a request from Badulla District Disaster Management Unit. No perimeter supplied."}
+  ]
+}

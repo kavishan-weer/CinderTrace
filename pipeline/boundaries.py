@@ -1,18 +1,18 @@
 """Build real region outlines + sub-regions (districts / counties / LGAs) from geoBoundaries,
-and the 0.05-deg grid-cell -> sub-region membership used to clip the pipeline.
+and the H3 resolution-6 cell -> sub-region membership used to clip the pipeline.
 Usage: python -m pipeline.boundaries
 """
 import json, pathlib
-import numpy as np, pandas as pd
+import h3, pandas as pd
 from shapely.geometry import shape, mapping, Point
 from shapely.ops import unary_union
 from shapely.prepared import prep
 from shapely.strtree import STRtree
 from .regions import REGIONS
+from .grid import H3_RESOLUTION, cell_metadata
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 B = ROOT / "data" / "boundaries"
-CELL = 0.05
 COAST_BUFFER = 0.03  # deg; keeps coastal cells whose centre is just offshore but whose pixel is on land
 
 def load(name):
@@ -34,23 +34,19 @@ def build(region):
         near = prep(outline.simplify(0.0005).buffer(0.02))
         subs = [(n, g) for n, g in feats(load("aus_adm2.geojson")) if near.contains(g.representative_point())]
     # cell membership
-    x0, y0, x1, y1 = REGIONS[region]["bbox"]
-    cxs = np.arange(int(np.floor(x0 / CELL)), int(np.floor(x1 / CELL)) + 1)
-    cys = np.arange(int(np.floor(y0 / CELL)), int(np.floor(y1 / CELL)) + 1)
-    outline = outline.simplify(0.0005)  # ~50 m, far below the 5 km grid; keeps point-in-polygon fast
-    zone = prep(outline.buffer(COAST_BUFFER))
+    outline = outline.simplify(0.0005)
+    # Match the previous centre-based coastal buffer policy, now on H3.
+    cells = sorted(h3.geo_to_cells(mapping(outline.buffer(COAST_BUFFER)), H3_RESOLUTION))
     geoms = [g for _, g in subs]
     tree = STRtree(geoms)
     rows = []
-    for cx in cxs:
-        for cy in cys:
-            p = Point((cx + 0.5) * CELL, (cy + 0.5) * CELL)
-            if not zone.contains(p):
-                continue
-            hit = [i for i in tree.query(p, predicate="within")]
-            sub = hit[0] if hit else int(tree.nearest(p)) if geoms else -1
-            rows.append((int(cx), int(cy), int(sub)))
-    members = pd.DataFrame(rows, columns=["cx", "cy", "sub"])
+    for cell in cells:
+        meta = cell_metadata(cell)
+        p = Point(meta["lon"], meta["lat"])
+        hit = tree.query(p, predicate="within")
+        sub = int(hit[0]) if len(hit) else int(tree.nearest(p)) if geoms else -1
+        rows.append({**meta, "sub": sub})
+    members = pd.DataFrame(rows)
     members.to_parquet(B / f"{region}_members.parquet", index=False)
     # web-friendly simplified outputs
     def fc(items, props):
@@ -58,7 +54,7 @@ def build(region):
             {"type": "Feature", "properties": props(i, n), "geometry": mapping(g.simplify(0.003))} for i, (n, g) in enumerate(items)]}
     (B / f"{region}_region.geojson").write_text(json.dumps(fc([(REGIONS[region]["name"], outline)], lambda i, n: {"id": 0, "name": n})))
     (B / f"{region}_subs.geojson").write_text(json.dumps(fc(subs, lambda i, n: {"id": i, "name": n})))
-    print(f"{region}: outline ok, {len(subs)} sub-regions, {len(members):,} grid cells inside (bbox had {len(cxs)*len(cys):,})")
+    print(f"{region}: outline ok, {len(subs)} sub-regions, {len(members):,} H3 resolution-{H3_RESOLUTION} cells")
 
 if __name__ == "__main__":
     import sys

@@ -5,5 +5,7 @@ h3>=4
 numpy
 pandas
 scikit-learn
+scipy>=1.11
 lightgbm
-shapely
+shapely>=2
+reportlab>=4.4,<5

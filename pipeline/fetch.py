@@ -4,6 +4,8 @@ Resumable: existing files are skipped.   Usage: python -m pipeline.fetch [lk ca 
 """
 import sys, time, argparse, pathlib, concurrent.futures as cf
 import duckdb
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from .regions import REGIONS
 
 BASE = "https://data.source.coop/portolan-mirrors/firms-catalog/detections/year={y}/detections.parquet"
@@ -19,9 +21,9 @@ COPY (
 ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
 """
 
-def fetch_one(region, year, retries=3):
+def fetch_one(region, year, retries=3, refresh=False):
     out = OUT / region / f"{year}.parquet"
-    if out.exists():
+    if out.exists() and not refresh and year < datetime.now(ZoneInfo("Asia/Colombo")).year:
         return region, year, "skip", 0
     out.parent.mkdir(parents=True, exist_ok=True)
     x0, y0, x1, y1 = REGIONS[region]["bbox"]
@@ -43,12 +45,13 @@ def fetch_one(region, year, retries=3):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("regions", nargs="*", default=list(REGIONS))
-    ap.add_argument("--years", default="2000-2026")
+    ap.add_argument("--years", default=f"2000-{datetime.now(ZoneInfo('Asia/Colombo')).year}")
+    ap.add_argument("--refresh", action="store_true", help="Refresh existing historical files too")
     ap.add_argument("--workers", type=int, default=3)
     a = ap.parse_args()
     y0, y1 = map(int, a.years.split("-"))
     jobs = [(r, y) for r in a.regions for y in range(y0, y1 + 1)]
     with cf.ThreadPoolExecutor(a.workers) as ex:
-        for res in ex.map(lambda j: fetch_one(*j), jobs):
+        for res in ex.map(lambda j: fetch_one(*j, refresh=a.refresh), jobs):
             print(*res, flush=True)
     print("DONE", flush=True)

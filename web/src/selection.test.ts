@@ -1,0 +1,7 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {polygonArea,coordinateArea,postJSON} from './selection.ts';
+test('polygon closes the boundary without mutating input',()=>{const points:[number,number][]=[[80,7],[81,7],[81,8],[80,8]];const area=polygonArea(points);assert.equal(points.length,4);assert.deepEqual(area.geometry.coordinates[0].at(-1),[80,7]);});
+test('reject crossed and zero-area boundaries',()=>{assert.throws(()=>polygonArea([[80,7],[81,8],[80,8],[81,7]]),/crosses/);assert.throws(()=>polygonArea([[80,7],[81,7],[82,7]]),/area/);});
+test('coordinate area has the requested geodesic radius',()=>{const area=coordinateArea(8,80.5,25);assert.equal(area.geometry.coordinates[0].length,65);const p=area.geometry.coordinates[0][0];const rad=Math.PI/180;const a=Math.sin((p[1]-8)*rad/2)**2+Math.cos(8*rad)*Math.cos(p[1]*rad)*Math.sin((p[0]-80.5)*rad/2)**2;assert.ok(Math.abs(6371.0088*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))-25)<.0001);});
+test('invalid coordinates and radius are rejected',()=>{for(const args of [[NaN,80,25],[8,181,25],[86,80,25],[8,80,0],[8,80,251]])assert.throws(()=>coordinateArea(...args as [number,number,number]));});
+
+test('cancelled area response preserves cancellation semantics',async()=>{const original=globalThis.fetch;globalThis.fetch=async()=>({ok:true,json:async()=>{throw new DOMException('cancelled','AbortError');}} as unknown as Response);try{await assert.rejects(postJSON('/api/area',{}),{name:'AbortError'});}finally{globalThis.fetch=original;}});

@@ -124,6 +124,11 @@ The challenge describes two parts (harmonize + visualize). Phase 3 is how we **g
 - **Bonus:** events also harmonize better than pixels, since one fire is one fire on both sensors.
 
 ### 🥈 3B. Probabilistic Fire Outlook (early warning)
+
+> **Implementation update — 2026-11-14:** the local outlook pipeline and 2019–2025 rolling validation are built. NASA POWER + ONI/DMI are tested against seasonal and history-only baselines. Results are mixed and none of the nine region/lead combinations passes the combined numerical gate. The initial target uses directly observed S-NPP activity, avoiding future-calibrated pre-2013 transfers. It remains outside the app. See [validation report](docs/fire_outlook.md). The Black Summer story below was a hypothesis, not an established result; the August 2019 hindcast does not support that claim.
+
+> **Calibration follow-up — 2026-11-14:** a locked, regularized sigmoid calibrator uses only matured 2019–2025 out-of-sample forecasts. A newly scored January–September 2026 holdout improves probability error relative to raw ML in Sri Lanka and NSW, but worsens California. Seasonal history still wins seven of nine region/lead comparisons; nine months is insufficient release evidence. [Full calibration results](docs/outlook_calibration.md). No outlook app panel is added.
+
 - **What:** forecast the next **1–3 months** of harmonized fire activity as a probability ("70% chance of above-normal activity").
 - **Inputs (NASA-first):** harmonized history + **NASA POWER** (rainfall, temperature, humidity, wind) + **ENSO (ONI)** and **IOD (DMI)** indices.
 - **Model:** LightGBM quantile regression → P10 / P50 / P90 fan chart.
