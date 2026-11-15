@@ -4,7 +4,17 @@ public/data/
 .env
 .env.*
 !.env.example
+!.env.*.example
+!.env.sample
+!.env.template
 *.tsbuildinfo
 *-preview.jpg
 preview.jpg
 statistics-visibility-fixed.jpg
+
+# Local hosting state and generated review artifacts
+.vercel/
+.openai/
+output/
+tmp/
+*-preview.png

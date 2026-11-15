@@ -1,17 +1,62 @@
-.venv/
-data/
-node_modules/
-__pycache__/
-*.pyc
-web/dist/
-web/public/data/
+# Local environment settings and credentials
 .env
 .env.*
 !.env.example
-web/*.tsbuildinfo
-output/pdf/
-tmp/pdfs/
+!.env.*.example
+!.env.sample
+!.env.template
 
-# Generated publication checkout and static data
-release/
-web/site-public/ready/
+# Python environments, bytecode, and tool caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.tox/
+.nox/
+.ipynb_checkpoints/
+*.egg-info/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# JavaScript dependencies, build output, and tool caches
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+.cache/
+coverage/
+.vercel/
+
+# Local data, generated publications, and temporary output
+/data/
+/release/
+/tmp/
+/output/pdf/
+/web/public/data/
+# web/site-public/ready/ is required by the hosted app and must stay tracked.
+/cindertrace_atlas_*.zip
+
+# Runtime logs and incomplete downloads
+*.log
+*.pid
+*.pid.lock
+*.partial
+
+# Operating system and editor temporary files
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# Local hosting metadata
+.openai/

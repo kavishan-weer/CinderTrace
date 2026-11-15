@@ -1,1 +1,0 @@
-{"url": "https://portal.data.nsw.gov.au/arcgis/rest/services/Hosted/FRNSW_Locations/FeatureServer/0/query?where=1%3D1&outFields=fid%2Cstationnam%2Cstationno%2Ctown&returnGeometry=true&outSR=4326&f=geojson", "parameters": {"where": "1=1", "outFields": "fid,stationnam,stationno,town", "returnGeometry": "true", "outSR": 4326, "f": "geojson"}}

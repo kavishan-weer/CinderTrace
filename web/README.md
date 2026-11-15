@@ -10,6 +10,12 @@ https://cindertrace-fire-observatory.haleoak66.chatgpt.site — owner-private pu
 
 From `web/`, run `npm run dev` and open the printed URL. `npm run build` creates `dist/`; `npm run preview` serves the production build. Node 22.6+ is required. No Python query service is used by the active frontend. The finished `dist/` directory can be hosted as a static site. Keep the `.json.gz` files intact; the browser detects and decompresses them, whether the host supplies a gzip content-encoding header or not.
 
+## Deploy to Vercel
+
+Import the GitHub repository and set **Root Directory** to `web`, **Framework Preset** to `Vite`, **Build Command** to `npm run build`, and **Output Directory** to `dist`. Use Node.js 22.x. Set `VITE_MAPBOX_ACCESS_TOKEN` in the Vercel project environment variables before deploying; use a public Mapbox token authorized for your deployment domain. See `.env.example` for the available browser configuration. Local `.env` files stay out of Git.
+
+The required `site-public/ready/` snapshot is committed so Vercel can build without Python or the local research data. Keep these files tracked and preserve the `.json.gz` filenames.
+
 ## Data included
 
 The versioned native snapshot has **5,072,279 pixel observations**, 2000–2026, loaded one year/region at a time:
