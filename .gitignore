@@ -3,34 +3,15 @@ data/
 node_modules/
 __pycache__/
 *.pyc
-.DS_Store
-*.log
-
-# Environment files
+web/dist/
+web/public/data/
 .env
 .env.*
 !.env.example
-
-# Web build & generated static data
-web/dist/
-web/public/data/
 web/*.tsbuildinfo
+output/pdf/
+tmp/pdfs/
+
+# Generated publication checkout and static data
 release/
 web/site-public/ready/
-
-# Scratch, temporary & output directories
-output/
-tmp/
-
-# Jupyter notebooks
-*.ipynb
-.ipynb_checkpoints/
-
-# Internal & review markdown files
-/challenge.md
-/winning_strategy.md
-/cindertrace_review.md
-/emberline_review.md
-
-# Zip archives / data bundles
-*.zip

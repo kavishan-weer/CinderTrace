@@ -1,0 +1,29 @@
+{
+  "checked_utc": "2026-11-15T14:57:07.006556+00:00",
+  "tests": {
+    "app_passed": 73,
+    "data_workflow_passed": 88,
+    "failed": 0
+  },
+  "production_build": "passed",
+  "browser_checks": [
+    "Sri Lanka, California and NSW context snapshots load",
+    "Dated NASA example frames load",
+    "Keyboard imagery swipe updates percentage",
+    "Evidence ZIP downloads with all 12 expected files",
+    "Detailed PDF downloads with four branded pages",
+    "Imagery and evidence appendix PDF pages rendered and visually inspected",
+    "390px mobile layout has no horizontal document overflow"
+  ],
+  "source_commit": "11db7ef91a3c3c36f588d9ad5178918f0f549873",
+  "sample_report": "output/pdf/cindertrace-visual-report.pdf",
+  "limits": [
+    "Live imagery requires NASA connectivity; source mosaics can contain clouds and gaps",
+    "Context inventories have bounded coverage and differing dates",
+    "Independent perimeter case measures geographic concordance, not physical-fire detection accuracy"
+  ],
+  "publication": "Hosted title/URL renamed to CinderTrace; app archive upload timed out after 300003 ms; live app remains version 1",
+  "project": "CinderTrace",
+  "hosted_url": "https://cindertrace-fire-observatory.haleoak66.chatgpt.site",
+  "retained_legacy_references": "Compatibility storage/cache keys and immutable historical evidence receipts"
+}
