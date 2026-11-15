@@ -1,4 +1,11 @@
 /* Additions retain the original CinderTrace palette, typography and page structure. */
+.header-actions{display:flex;align-items:center;gap:10px;margin-left:auto;flex-shrink:0}
+.header-actions .method-link{margin-left:0;white-space:nowrap}
+.github-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 15px;border:1px solid #294534;border-radius:30px;background:#294534;color:#e3edc8;font-size:11px;white-space:nowrap;transition:background .2s,transform .2s,box-shadow .2s}
+.github-link:hover{background:#3c5a40;transform:translateY(-1px);box-shadow:0 4px 12px #24352d1a}
+@media(max-width:1100px) and (min-width:701px){.ready-observatory .topbar{gap:18px}.ready-observatory .topbar nav{gap:12px}.header-actions{gap:7px}.header-actions .method-link{gap:7px;padding:10px 12px}.github-link{padding:10px 12px}}
+@media(max-width:700px){.header-actions{gap:7px}.github-link{font-size:10px;padding:9px 11px}.github-link>svg:last-child{display:none}}
+@media(max-width:400px){.github-link{padding:9px}.github-link span{display:none}}
 .ready-observatory select,.ready-observatory input[type=date],.ready-coordinate-form input{min-width:0;border:1px solid #cbd2c3;border-radius:4px;background:#f8f9f3;color:var(--ink);padding:7px;font-size:11px}
 .ready-observatory input[type=checkbox]{accent-color:#526c48;width:14px;height:14px;margin:0;flex-shrink:0}
 .ready-observatory .sidebar{max-height:1100px;overflow:auto;scrollbar-width:thin;scrollbar-color:#b4c0a5 transparent}
