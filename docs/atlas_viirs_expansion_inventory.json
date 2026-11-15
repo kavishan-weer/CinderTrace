@@ -1,0 +1,1782 @@
+{
+  "study_id": "lk_viirs_expansion_design_v1",
+  "sampled_dates": 54,
+  "catalogued_science_files": 638,
+  "fire_granules": 316,
+  "catalogue_mib": 47535.19502735138,
+  "catalogue_gib": 46.42108889389783,
+  "companion_states": {
+    "unique_catalogue_companion": 316
+  },
+  "absent_product_dates": [
+    {
+      "date": "2018-04-19",
+      "product": "VJ114IMG"
+    },
+    {
+      "date": "2018-05-27",
+      "product": "VJ114IMG"
+    }
+  ],
+  "science_files_downloaded": 0,
+  "coverage_verified": false,
+  "replacement_validated": false,
+  "frontend_changed": false,
+  "resource_note": "Full geolocation files dominate. Estimate is catalogue size, not a storage guarantee. Plan transient raw-file staging with retained receipts/derived evidence; preserve the original pilot cache.",
+  "files": {
+    "cmr/VJ103IMG_2018-04-19_1.json": {
+      "bytes": 12236,
+      "sha256": "85e4e17d2a5bd747ea1f513898452d78412d62f35bddbab05e9691546000abf1"
+    },
+    "cmr/VJ103IMG_2018-04-19_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "47b925a6d5dbf6c7846c18f6663d02428cf80c6c42c7023b4b3ffbe3b47dd221"
+    },
+    "cmr/VJ103IMG_2018-05-27_1.json": {
+      "bytes": 6302,
+      "sha256": "2f199b5c656ba1412616b9e2ae7950c52452bd5eca1c1005df4259b965046a7d"
+    },
+    "cmr/VJ103IMG_2018-05-27_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "65d98f39c9812030b664672c95c8a557b2955fb24b6e70c44e58a3f49c55957a"
+    },
+    "cmr/VJ103IMG_2018-07-03_1.json": {
+      "bytes": 9269,
+      "sha256": "16b4d46ae51aec242229da0b9f7d761f538a6479648a432efb2bce166f00986d"
+    },
+    "cmr/VJ103IMG_2018-07-03_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "3b9e61b6131ac87b5e4cac2ab6c8814e5e4a89f3866bec4627349543b32da2f0"
+    },
+    "cmr/VJ103IMG_2018-09-01_1.json": {
+      "bytes": 9264,
+      "sha256": "3b35073b51a27e5053b833e24c90e97d117d69227a4b21874b0186658b4c9d4b"
+    },
+    "cmr/VJ103IMG_2018-09-01_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "12072165d02305200a889bfc356d97a05bfe2a6a427a3f2a1869cd716ae7d3be"
+    },
+    "cmr/VJ103IMG_2018-10-22_1.json": {
+      "bytes": 15205,
+      "sha256": "0822955211edcbcd8f3fc2783bcdcc95918e2408e78481baf90569e5a7562363"
+    },
+    "cmr/VJ103IMG_2018-10-22_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "ef87017e8aeee2c4a54e47200502e79431b0402785c80398338d85809bb3af19"
+    },
+    "cmr/VJ103IMG_2018-12-10_1.json": {
+      "bytes": 9269,
+      "sha256": "e2dce87dc04a074172da3e2967b9f7a992c4bcbc6e25b7132838899898367c1f"
+    },
+    "cmr/VJ103IMG_2018-12-10_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "b0e131ec4925489def0e635bba00e0abaea11687d644764b8b77f89b1719f7b8"
+    },
+    "cmr/VJ103IMG_2019-02-14_1.json": {
+      "bytes": 6295,
+      "sha256": "66e44be051b6d9d8ac5b7bd26796331145a4365f6da1d38c26def5719576fd06"
+    },
+    "cmr/VJ103IMG_2019-02-14_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "e011a906a94127339029859383939c47bba06e9833947f558455d8d8b65767b3"
+    },
+    "cmr/VJ103IMG_2019-03-08_1.json": {
+      "bytes": 6295,
+      "sha256": "ef88004121a45cde4b026bbdcafd50f1a154b70640dbc3bde13ef0de6707f21c"
+    },
+    "cmr/VJ103IMG_2019-03-08_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "946d2ff2e01f4f773b641345d3886b80f19ba5f00ebdc146c87e5759545d96cb"
+    },
+    "cmr/VJ103IMG_2019-04-22_1.json": {
+      "bytes": 15208,
+      "sha256": "7897e929f18795f17fdc1683ece4d909a3993fddf79910762f48ccea5242dd54"
+    },
+    "cmr/VJ103IMG_2019-04-22_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "771812c9f90c9cfebdad38e06e7c180b086c68e3ff6b64f8584da96ddc56d9a9"
+    },
+    "cmr/VJ103IMG_2019-05-18_1.json": {
+      "bytes": 12230,
+      "sha256": "d55f4b7f57d19c34e2f5582d41ee6479f5b29c7f3a5b9bd50710a6374f53dd55"
+    },
+    "cmr/VJ103IMG_2019-05-18_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "dd8ecf8712d3dbda5f3a6d737aa3b916b23a5eb0036c6b17818a1b6145aaab8c"
+    },
+    "cmr/VJ103IMG_2019-07-10_1.json": {
+      "bytes": 9262,
+      "sha256": "ecc2489b96bb306d073a9b9f9fe92a884a848130db485e652874219a1d7d0215"
+    },
+    "cmr/VJ103IMG_2019-07-10_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "b0caa514ccfc20f27b74bb38ae901c71b86f06b11e8b3ba528c6b91782f68842"
+    },
+    "cmr/VJ103IMG_2019-09-30_1.json": {
+      "bytes": 9267,
+      "sha256": "fb5dbe0214f1f13cbcb28a84c87a91f062d467f8daea1812f5154d5f6f334c9a"
+    },
+    "cmr/VJ103IMG_2019-09-30_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "434946b13a1f1cc8f98252e33478844b8cf30cc598920797ea5724413f1d22e7"
+    },
+    "cmr/VJ103IMG_2019-11-11_1.json": {
+      "bytes": 12237,
+      "sha256": "50f7522a58e54fb0a66d7c4f087ab342a56d1c5d221e9510c02351733984f346"
+    },
+    "cmr/VJ103IMG_2019-11-11_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "c32f4503be48fed8becd36c8e70b6c36b038341e086235ab4616be401dbe9432"
+    },
+    "cmr/VJ103IMG_2019-12-12_1.json": {
+      "bytes": 15199,
+      "sha256": "20e59d49d0de288b4e86b945cb4b584a530255365d858ca88e4857eca96515ff"
+    },
+    "cmr/VJ103IMG_2019-12-12_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "e4a6545a1d1d1ef7381e7c0ede459f467b6a65cad7effc9af80a0684d08e817e"
+    },
+    "cmr/VJ103IMG_2020-01-16_1.json": {
+      "bytes": 6299,
+      "sha256": "3c1fe0809a8df0605623f65a80493df04fbd824ef3168805ec176b4dabab9ace"
+    },
+    "cmr/VJ103IMG_2020-01-16_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "6c0f64472bfb8567af2ebd453050e120f67b58af9e9c887b118e8087e2765c68"
+    },
+    "cmr/VJ103IMG_2020-02-23_1.json": {
+      "bytes": 6297,
+      "sha256": "896d181d735ad7aa261d6af044127722819c4c681f0fa3e7c2d5e768dc64491b"
+    },
+    "cmr/VJ103IMG_2020-02-23_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "0281bbb3efd536940d92de29016030574b3c3216edbe80c909c491805b8ab936"
+    },
+    "cmr/VJ103IMG_2020-05-14_1.json": {
+      "bytes": 6297,
+      "sha256": "5160e226d83c811d33c16e71c9cc72171dc4b5e3fb9767246f88f6a706e64f50"
+    },
+    "cmr/VJ103IMG_2020-05-14_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "408ec305f3f722f469208b7df97a73427e7983b122c5f17ee069a911da99d5be"
+    },
+    "cmr/VJ103IMG_2020-06-28_1.json": {
+      "bytes": 9259,
+      "sha256": "ddeb5b00303a0aae4f78b21901af23d78d324ffe5bb4f8d23c6c8aa25a63e880"
+    },
+    "cmr/VJ103IMG_2020-06-28_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "71d7703208ab05893989c3f481ab84596d3bd22e70b6f7b063d0c40cbfd3b3e7"
+    },
+    "cmr/VJ103IMG_2020-07-15_1.json": {
+      "bytes": 6298,
+      "sha256": "d7960db893f011b721634167d8a09d6b351272722fbc112bc6d7421805d19bad"
+    },
+    "cmr/VJ103IMG_2020-07-15_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "a5c223965c724ce6ba5c3686238662eb89cf7db83c212a98811bbfd1516f6a54"
+    },
+    "cmr/VJ103IMG_2020-09-19_1.json": {
+      "bytes": 12230,
+      "sha256": "2437de6dd8a625ffce3a2ea6ce4ee993d37c9ac3b84a4d0ee8d67c92ab9988aa"
+    },
+    "cmr/VJ103IMG_2020-09-19_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "d76972d97b15df821f34ecbb96888295ba5a695e321ac9d18c61a713c3cc5376"
+    },
+    "cmr/VJ103IMG_2020-10-09_1.json": {
+      "bytes": 6294,
+      "sha256": "5e688ec39c5feeb1808f0389872992525443a0b1e51854b5aedb1f66e3b8911f"
+    },
+    "cmr/VJ103IMG_2020-10-09_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "195ec556e867efbda79a520be6f082875ed4fc46772b8f517bcc716deb3e65b3"
+    },
+    "cmr/VJ103IMG_2020-12-09_1.json": {
+      "bytes": 15198,
+      "sha256": "7ffb48deb2fc7dea3dc238e040f51bf0f8db583caa7831cb216bb7b08e5331a4"
+    },
+    "cmr/VJ103IMG_2020-12-09_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "89d2fb1215d58802cf61a9fa0c0719c3362f9bc04ddb66b27bb248e683b92388"
+    },
+    "cmr/VJ103IMG_2021-02-12_1.json": {
+      "bytes": 9265,
+      "sha256": "c0b18cdc2040a281891e47b4c119c1132c59c3d3fe399e30eeaff16bee639e06"
+    },
+    "cmr/VJ103IMG_2021-02-12_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "7014ff622936a6f0b945341b1d0dadb60b51ec2bf1fc65935a26cd6fed42e24d"
+    },
+    "cmr/VJ103IMG_2021-03-29_1.json": {
+      "bytes": 6297,
+      "sha256": "3c472b6a6d2af869f9ff4ec840060638b2e6cf1c82451551026cdf3e4a028a5d"
+    },
+    "cmr/VJ103IMG_2021-03-29_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "9a4f91e14eeea31ab4e8c04985fd4e6f4a9e541e3c52976e0d1a1b5ac1375f6e"
+    },
+    "cmr/VJ103IMG_2021-04-01_1.json": {
+      "bytes": 9272,
+      "sha256": "6079294773858d4ab67da1dae1f02f0d8edfda3ce5b625088c828af314af021a"
+    },
+    "cmr/VJ103IMG_2021-04-01_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "46352b9042ce6f090fe3759853c1c7fcb6a23f3cd5b8c74e17c9188143ba0008"
+    },
+    "cmr/VJ103IMG_2021-06-23_1.json": {
+      "bytes": 6295,
+      "sha256": "512f8470a8a598bb84088957268ae38423cb7bd9c2ca981adbf0efa2d38c7bf3"
+    },
+    "cmr/VJ103IMG_2021-06-23_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "e859ffade72c9f2446cda82e57e2b0eee73b7e0ab5c174343455284246de64ea"
+    },
+    "cmr/VJ103IMG_2021-07-05_1.json": {
+      "bytes": 12236,
+      "sha256": "86186b73aae82da48aec80cf5a0bc13def6ab059cb22141826a391d85646cc89"
+    },
+    "cmr/VJ103IMG_2021-07-05_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "f1fafc31329c017847e56004cc0fcd9764d906d6520a429856fe07a350afcc52"
+    },
+    "cmr/VJ103IMG_2021-09-11_1.json": {
+      "bytes": 6299,
+      "sha256": "10d97f0682fee97f89ceedc5958ff3487035dd01508cc8ede050753578138c67"
+    },
+    "cmr/VJ103IMG_2021-09-11_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "4d514b5f94a1da757c32c2130d210efaab8fced268cddf35fe495b8ba87d922d"
+    },
+    "cmr/VJ103IMG_2021-10-05_1.json": {
+      "bytes": 12230,
+      "sha256": "0e38638f7a202631716fbd06f289b0fc8ba5c3f1bb57c87e364c32a719bb50bb"
+    },
+    "cmr/VJ103IMG_2021-10-05_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "e0c8ad10f19a3cef4080e48fce4f7a36edb1c2a017f4abcba0c9aac37f087cbb"
+    },
+    "cmr/VJ103IMG_2021-12-15_1.json": {
+      "bytes": 6294,
+      "sha256": "d0bb0e58663a1c1b7c7cabc0967110c3045c9128f7110353c431af8ffcf8700e"
+    },
+    "cmr/VJ103IMG_2021-12-15_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "b386ad3d47bd59f67e20bcb4f63850f192f462893d8781d34947126928363249"
+    },
+    "cmr/VJ103IMG_2022-02-13_1.json": {
+      "bytes": 9263,
+      "sha256": "9fc1b4597a51c86987d3270c3b8660e7ef8d9b363987f262f338e7a76afa6a91"
+    },
+    "cmr/VJ103IMG_2022-02-13_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "2b659bd33b2dcc72beb34fe440f3bbcdac85f9affb3a10ad2c4b9c45c5a6a59c"
+    },
+    "cmr/VJ103IMG_2022-03-13_1.json": {
+      "bytes": 15206,
+      "sha256": "f928120dd3eee99c34a38a49fa70a573afb6aa839a9fac64626a4d874b43ca43"
+    },
+    "cmr/VJ103IMG_2022-03-13_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "d8f62aad2eb8d3406ade94ea8dc50d0c2d0bc15e15ea8d2124fa5486d1547832"
+    },
+    "cmr/VJ103IMG_2022-05-15_1.json": {
+      "bytes": 6297,
+      "sha256": "c3e033f418503b29fbe85bfafd7fa87cadf9cad4fe67f2fae37d8701839ee7c5"
+    },
+    "cmr/VJ103IMG_2022-05-15_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "baa0bc23557c9db69ad5443d7f8824ea7aed37f834c0118bd4e04147847d233b"
+    },
+    "cmr/VJ103IMG_2022-06-24_1.json": {
+      "bytes": 9266,
+      "sha256": "de7b9d68767e13c8343fd495e2d8a3e456409ebb5affda3524544eb3fc60d798"
+    },
+    "cmr/VJ103IMG_2022-06-24_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "9a3517493b0d11b1ffa2e4999a12c38b9c61eb20eee6a40d170f7e6525498fe3"
+    },
+    "cmr/VJ103IMG_2022-07-10_1.json": {
+      "bytes": 9268,
+      "sha256": "781bfcfb4204cdfd1c1356823dbeadb7dd5fde5ea63ed034ae927be358231f53"
+    },
+    "cmr/VJ103IMG_2022-07-10_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "6194298bdf3bd37c33e2528874372555df14d5c62ae1e1e984473f3e40fbf419"
+    },
+    "cmr/VJ103IMG_2022-08-30_1.json": {
+      "bytes": 15201,
+      "sha256": "ab0640b9c08ccfc50de190208513108ce9af5273e27e018a990b4ce8f4215dd3"
+    },
+    "cmr/VJ103IMG_2022-08-30_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "1abe3cce3508db6ec78d66baa0927e49b18398e0d38e709839d985e7964ebd28"
+    },
+    "cmr/VJ103IMG_2022-11-02_1.json": {
+      "bytes": 15202,
+      "sha256": "d0e19da35e3ba37f35ecf6f30f971765d1f4c89232784ae9a96282bd2f8929f0"
+    },
+    "cmr/VJ103IMG_2022-11-02_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "762e2859d1842ef9ef1c70b3b6812dce85301e96c22918195d1c8d035945e424"
+    },
+    "cmr/VJ103IMG_2022-12-07_1.json": {
+      "bytes": 6300,
+      "sha256": "a376b22bbfdec182eb623e471f96f922b45bcba58cab9b3c18d4b1da924755f4"
+    },
+    "cmr/VJ103IMG_2022-12-07_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "35d3af78ea00e88aae02eb4bc24126099d6775e171a08d849d4e001ee0724dfd"
+    },
+    "cmr/VJ103IMG_2023-01-26_1.json": {
+      "bytes": 9260,
+      "sha256": "309a82c475cd98a9598bf3f199a28caacbad7410614e1c40ba0c4d4a6bcaf751"
+    },
+    "cmr/VJ103IMG_2023-01-26_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "0c8f58a5212df14314b33a6e7aec879ffeb38be2d9da5e6ccab9e8652ea9e061"
+    },
+    "cmr/VJ103IMG_2023-03-15_1.json": {
+      "bytes": 6298,
+      "sha256": "1ba2b4a4b81828f2b2439ede0f22fdebc20978387cde704cd299c06e2a4bed71"
+    },
+    "cmr/VJ103IMG_2023-03-15_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "5741739b8010adc56930acde6a0afb67deb0891b15d51f9c28b459d853a52f62"
+    },
+    "cmr/VJ103IMG_2023-04-30_1.json": {
+      "bytes": 6298,
+      "sha256": "63babb6586346bd489c5c94f0477d7fbc97398f75efee5d07759d5e71770d511"
+    },
+    "cmr/VJ103IMG_2023-04-30_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "e9ec9239314f968bb59495216c91acf6bd27dd2a8dd58b2fb92f6b4b671ce315"
+    },
+    "cmr/VJ103IMG_2023-06-02_1.json": {
+      "bytes": 6296,
+      "sha256": "c163d60f407b3b78d7ff80e5cf9a82e545420c4ab3f5f5556ac46d14d6da9864"
+    },
+    "cmr/VJ103IMG_2023-06-02_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "59ae208611be2623e45365dc9fc2600f797a989a9774cbbdd8f0ff071da83430"
+    },
+    "cmr/VJ103IMG_2023-07-01_1.json": {
+      "bytes": 12232,
+      "sha256": "dff5f6258ee7a7b2e927532ae6adac6cd6db69f955b3221f103c0c20db3909fd"
+    },
+    "cmr/VJ103IMG_2023-07-01_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "26f63d091539409ce4a303dd37e0ebcf804f23f3d1a7cb2f5bbdb9eb12ea2e90"
+    },
+    "cmr/VJ103IMG_2023-08-26_1.json": {
+      "bytes": 6299,
+      "sha256": "02626985c0ca2a4c1ed6f561448c0ad64f764a89c268f25a1382443c55fe2dcc"
+    },
+    "cmr/VJ103IMG_2023-08-26_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "5cca064949a50d4d88d333b69f3141874cc3badfc60a75b47b1316784bdefce6"
+    },
+    "cmr/VJ103IMG_2023-10-23_1.json": {
+      "bytes": 6296,
+      "sha256": "d4160dad5af565e289782127bc4841568cf8d8d5f7e151dbe87955717f9b0e2a"
+    },
+    "cmr/VJ103IMG_2023-10-23_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "24850f99988ea72bcc0e5ccd47be66ef6443216788d0caa6c9a16fbb04631616"
+    },
+    "cmr/VJ103IMG_2023-12-02_1.json": {
+      "bytes": 12235,
+      "sha256": "a25879f65eb08b808c60c82f6354d02003cc2d707622d361fc65d182c624c6b8"
+    },
+    "cmr/VJ103IMG_2023-12-02_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "8434f87e8e0301ab8eb29a6ba43e47fc8ef4863f7c22553efe232ac055eb60db"
+    },
+    "cmr/VJ103IMG_2024-01-13_1.json": {
+      "bytes": 6298,
+      "sha256": "d57cb42ea01fa1385384c6ddf44e8185c85ef8f6fa7c3c81e83bfd59d3e9be80"
+    },
+    "cmr/VJ103IMG_2024-01-13_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "9c55d4205f4b4a8a7605f011236c13c304329a1aca38b96fd70bb762894fc3e0"
+    },
+    "cmr/VJ103IMG_2024-03-29_1.json": {
+      "bytes": 9266,
+      "sha256": "877b5c8495851f77a92d368347b0a5d26b091ad8a9d1f9e1adb09dc1ab5500da"
+    },
+    "cmr/VJ103IMG_2024-03-29_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "2f09b0bf521b6b5c5da65227220fc37c1138fbdf621f5bcff5354f48062e3695"
+    },
+    "cmr/VJ103IMG_2024-05-06_1.json": {
+      "bytes": 6298,
+      "sha256": "732ca736893f14bf3bce50a64a4e0bdaa43a55f754d2269d005cb909ce25f723"
+    },
+    "cmr/VJ103IMG_2024-05-06_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "3f62e21f2f7258b43894ee9d43ba2df658cdb9dc93e84f47d2f917d8e2ba43d2"
+    },
+    "cmr/VJ103IMG_2024-05-24_1.json": {
+      "bytes": 6297,
+      "sha256": "d0c060ccb0e0501697fb03727d08b57fbdc46ab02708c414d75aec69a0d2d9d4"
+    },
+    "cmr/VJ103IMG_2024-05-24_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "cd912c1dd80f7dddb2bbdc8bf5ea480236cbe40dfb0b494740b13e6d70e9da18"
+    },
+    "cmr/VJ103IMG_2024-07-08_1.json": {
+      "bytes": 9267,
+      "sha256": "77240d018d7a51e4b661b67ab9785cb63a1cabbfb8c264cc7d2c74e5510343b1"
+    },
+    "cmr/VJ103IMG_2024-07-08_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "0a5f4e996356165adf6574477af33eda420c35026e2862479632267edefb1b6d"
+    },
+    "cmr/VJ103IMG_2024-09-17_1.json": {
+      "bytes": 12223,
+      "sha256": "8ab9cec0861e58597f5291fe5dfed76627e33958658447dc39f3051774c0a01a"
+    },
+    "cmr/VJ103IMG_2024-09-17_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "dcbef5f0f6a80b235bfd31f61a06e8d158f57d89c1feefea3072f784f268a0ca"
+    },
+    "cmr/VJ103IMG_2024-11-10_1.json": {
+      "bytes": 12221,
+      "sha256": "b925f634b961498d0936e0ecc17eb4c4f56150e47a52f557a31b700adf3707cc"
+    },
+    "cmr/VJ103IMG_2024-11-10_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "69a27eff61d787c7873dcb5c5f4594fa3d98340a2a8f5a719c3d736757eb1d65"
+    },
+    "cmr/VJ103IMG_2024-12-15_1.json": {
+      "bytes": 9264,
+      "sha256": "71618959367f4499f039b42705c70162fe4aec5dc27a5b78fd37bf250fe18506"
+    },
+    "cmr/VJ103IMG_2024-12-15_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "e3c0e8a88303059bf2665764fdd651d4ff32d3c7d0a8771c94db4a03c6fc5bbb"
+    },
+    "cmr/VJ114IMG_2018-04-19_1.json": {
+      "bytes": 368,
+      "sha256": "44331435cf56933728f936ab0e460762a3b0bf965c969d3fd5f225363db375bf"
+    },
+    "cmr/VJ114IMG_2018-04-19_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "f99c69b6bad25ea8399be092fa628f76d88f46c7388f91092feaf001fb5b1093"
+    },
+    "cmr/VJ114IMG_2018-05-27_1.json": {
+      "bytes": 368,
+      "sha256": "cc200ff5624bc14438ba1ce05363e55c43eb01b40314e604cb1c31e195a646e6"
+    },
+    "cmr/VJ114IMG_2018-05-27_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "2741e1d7a2267d3cce95e62dc4953164e2a9d581c2573d806ae6346da56b16da"
+    },
+    "cmr/VJ114IMG_2018-07-03_1.json": {
+      "bytes": 16462,
+      "sha256": "568195c5eade730a4d11f97992aa7ac26482ea3bec92833e64a55a93e19e22ac"
+    },
+    "cmr/VJ114IMG_2018-07-03_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "bda10f9b94cbdb5ad3f222af9b1d5e13693c4ed982139b0897c25a54733fa21b"
+    },
+    "cmr/VJ114IMG_2018-09-01_1.json": {
+      "bytes": 16463,
+      "sha256": "ef1a63bb6c7f4f5413e26924d47be663c7d02b8421bdbdee23ef3bc0718fb1b8"
+    },
+    "cmr/VJ114IMG_2018-09-01_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "d5b6a90128433b73f9aa100c6d556a2536db0188e5650619e2037f1cdc5927ab"
+    },
+    "cmr/VJ114IMG_2018-10-22_1.json": {
+      "bytes": 27193,
+      "sha256": "ac4bf04e4368c781793e5dc8cb1c76532b5b26285de00f5aefb681f12bfbf545"
+    },
+    "cmr/VJ114IMG_2018-10-22_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "b4fcc0b37bd1218f474a30e52dc190e6f53ee139b765b4049f76465be749d083"
+    },
+    "cmr/VJ114IMG_2018-12-10_1.json": {
+      "bytes": 16460,
+      "sha256": "c9166cea83f9b0bf0ad50fd07a7301d3bfe2a7b3e67737afd001a7cdd63c6410"
+    },
+    "cmr/VJ114IMG_2018-12-10_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "1436435b0732694af1e5ed5a922b263d54c108a8b09d95746605d7854af9665b"
+    },
+    "cmr/VJ114IMG_2019-02-14_1.json": {
+      "bytes": 11096,
+      "sha256": "6465e9b6033e8cbf2a6f489e6b2a47d8f05a74ecdbe3afdb4258a5b766e70cee"
+    },
+    "cmr/VJ114IMG_2019-02-14_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "d49aa20bc61942dd58e2c6694fc9447a4bf9606fc05e58afd30af0bc78ba342f"
+    },
+    "cmr/VJ114IMG_2019-03-08_1.json": {
+      "bytes": 11095,
+      "sha256": "e59b28cbc3658630caeca8853b0d8accc8974cce246abf785d208e1bef8f6c3b"
+    },
+    "cmr/VJ114IMG_2019-03-08_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "24fd825e5ef1c87954425f3ab07b1cc07c130efbc6c441e8e3078e1a57ceed29"
+    },
+    "cmr/VJ114IMG_2019-04-22_1.json": {
+      "bytes": 27199,
+      "sha256": "53dcdf5d45a7da0962830b1c0bc08594a7649a8bc79d0a42dbd312d1ab476aac"
+    },
+    "cmr/VJ114IMG_2019-04-22_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "9f766e05c9bac360e4154e3276e60d53777723c3e6231900e8c03def99601a17"
+    },
+    "cmr/VJ114IMG_2019-05-18_1.json": {
+      "bytes": 21825,
+      "sha256": "fdb29f834e137ac69fdcabd002ca5984a358ea7c83fc58a3c72c3d3314478b35"
+    },
+    "cmr/VJ114IMG_2019-05-18_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "2f2205f4dd6a5a790bad3b0977b301c3fab35d05ea664838b4d8f631bb1a3c16"
+    },
+    "cmr/VJ114IMG_2019-07-10_1.json": {
+      "bytes": 16459,
+      "sha256": "987b276ab95a3d65f025662169a097c22863d8859e7a4ccebc98837fa9d47a35"
+    },
+    "cmr/VJ114IMG_2019-07-10_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "14e6f1e594bb14de4e0e192724f3fff4928f7316fef682aa8e73816ccb7251ff"
+    },
+    "cmr/VJ114IMG_2019-09-30_1.json": {
+      "bytes": 16462,
+      "sha256": "4e37677238cf78475bb63e92e87cbf28a3d592648c2e6b457868d9e6ddb1cd99"
+    },
+    "cmr/VJ114IMG_2019-09-30_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "76ef427d37a249760af1279e9531b3d0fc40b413abf2c40d5b433d915da9c8df"
+    },
+    "cmr/VJ114IMG_2019-11-11_1.json": {
+      "bytes": 21835,
+      "sha256": "55a2ce360657efc577f53ca9683620957a0bbafd1d71be83c1841bc2709ad40c"
+    },
+    "cmr/VJ114IMG_2019-11-11_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "8133b362beef16e34e133178800fe93b450b30e1199996ccbcd0fed002157876"
+    },
+    "cmr/VJ114IMG_2019-12-12_1.json": {
+      "bytes": 27201,
+      "sha256": "158dd809edb67c00fff9fc1fe87940bd9a0fa61b4b546fddc41480c1ce1db546"
+    },
+    "cmr/VJ114IMG_2019-12-12_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "4c7417867986013232b3cb4a8f2132503099c1b6d60bf09d68c59286ab9e7163"
+    },
+    "cmr/VJ114IMG_2020-01-16_1.json": {
+      "bytes": 11099,
+      "sha256": "e8e77862d51ffaf1c74c333d5c87401011a8ca3f3eb5e0a8b381daf88c880a16"
+    },
+    "cmr/VJ114IMG_2020-01-16_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "5ccd0671ce35940578c316e471c9e26f1bf289f438e856724aac9b979650665d"
+    },
+    "cmr/VJ114IMG_2020-02-23_1.json": {
+      "bytes": 11093,
+      "sha256": "268f1759a9d287c849d974906f1eebe1ebd2415b09e548f0e52077ebfc99916c"
+    },
+    "cmr/VJ114IMG_2020-02-23_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "b048e8c8709bccd76b8d21f213f35cb2a6d2fc62104fb1189eb5986b55060977"
+    },
+    "cmr/VJ114IMG_2020-05-14_1.json": {
+      "bytes": 11096,
+      "sha256": "a03741155911b1c55d6c3a6e1eea5615f793e331d993634aaf19dd31d6ad5d51"
+    },
+    "cmr/VJ114IMG_2020-05-14_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "241fc3f809180221ee2b7f4768337d4c743d6a78595c9980bf035eb51ef332a7"
+    },
+    "cmr/VJ114IMG_2020-06-28_1.json": {
+      "bytes": 16458,
+      "sha256": "8b9b63ec04360e4913abc8f9640a04ea8efde058551bd08078a9259f8d2e657e"
+    },
+    "cmr/VJ114IMG_2020-06-28_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "bc9c33872980097a7233bb2041def9e7c743bbccbcf16ce6befee6b127015167"
+    },
+    "cmr/VJ114IMG_2020-07-15_1.json": {
+      "bytes": 11097,
+      "sha256": "6ab6b909dc502f6c1e375bcdb895e8bd55158bc6ccc91b234ccdc849835ecebd"
+    },
+    "cmr/VJ114IMG_2020-07-15_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "471ba6f849112928a7b370d993c2c3d0e4300d5ee41c990a3e83b7961e79644f"
+    },
+    "cmr/VJ114IMG_2020-09-19_1.json": {
+      "bytes": 21828,
+      "sha256": "7f0166938e3219d065126d90d55fda4116ac44950a4277ffa5e9c1c04220602c"
+    },
+    "cmr/VJ114IMG_2020-09-19_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "8e4d1008245911de511d4269152dc476a2812e594830f7d9f3b035d39aaebc89"
+    },
+    "cmr/VJ114IMG_2020-10-09_1.json": {
+      "bytes": 11096,
+      "sha256": "9a66a9e9be2b06d1ccbf0a1b65aa4cad2047f0729bb9508e5b6fa26fcc57786e"
+    },
+    "cmr/VJ114IMG_2020-10-09_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "a5619c5d34ae0f4cfc7b8f3357759a00c37c1edc65a69e32c6bb08ee32d0380c"
+    },
+    "cmr/VJ114IMG_2020-12-09_1.json": {
+      "bytes": 27192,
+      "sha256": "cfc3e5cac14b62ecb18d6d720a549fb5497edd389dda5a8eff9acf970df97bf4"
+    },
+    "cmr/VJ114IMG_2020-12-09_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "443cb7f9bcba20e6b381d4184900e14b9559d964e1043001320915d8dc82fb93"
+    },
+    "cmr/VJ114IMG_2021-02-12_1.json": {
+      "bytes": 16465,
+      "sha256": "506634ad39d5bf83c6b81498e69b03ee749f52f0726bb7fbb5b99e2881cc52f1"
+    },
+    "cmr/VJ114IMG_2021-02-12_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "92d9139d245f957afd7f24e7b8480c12c175a8acf7bbd3e851103661a9b90231"
+    },
+    "cmr/VJ114IMG_2021-03-29_1.json": {
+      "bytes": 11094,
+      "sha256": "02d548ec755e0bce8cacabdd4c0be2c5b3ca8320ee07d858653ee8f1684e3249"
+    },
+    "cmr/VJ114IMG_2021-03-29_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "adcec87199eed5871139315a4ed111fd93f7152b41ce5a0f5759e1d8e207484a"
+    },
+    "cmr/VJ114IMG_2021-04-01_1.json": {
+      "bytes": 16468,
+      "sha256": "ddebc58cecf38121cbbb15c6ee8e6f5aa9ece8f4c613be557fcbcce8ec57a615"
+    },
+    "cmr/VJ114IMG_2021-04-01_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "4664bd060a9eb5f40f6d99e6380ca901dafb05a5f2a9179f46a4238919057a8d"
+    },
+    "cmr/VJ114IMG_2021-06-23_1.json": {
+      "bytes": 11095,
+      "sha256": "c00181f437958743747a8160c44b76c42217b10c03de5a493fbd53dc9b9c5866"
+    },
+    "cmr/VJ114IMG_2021-06-23_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "5f1e58b8e7b100ebf9a45ae913eeaf23f56ee3a72c701d4ff55669804516d974"
+    },
+    "cmr/VJ114IMG_2021-07-05_1.json": {
+      "bytes": 21829,
+      "sha256": "5f411c8235e7f40b6d8f4995699c452c3f6768c44ac65eef6d6e58ce2783de6f"
+    },
+    "cmr/VJ114IMG_2021-07-05_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "b287a616e5336fad930940c37fb2255d2ab883808e1208b5872ad89188c4afe0"
+    },
+    "cmr/VJ114IMG_2021-09-11_1.json": {
+      "bytes": 11096,
+      "sha256": "7be051f9d0b95c340a922cc434bca77adea1a605cfa0b815023a4ee95f017b93"
+    },
+    "cmr/VJ114IMG_2021-09-11_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "faf6a7340bdc420c624f76eff86dcbaad74c7098768a9fc59afff3150c4d4dd4"
+    },
+    "cmr/VJ114IMG_2021-10-05_1.json": {
+      "bytes": 21829,
+      "sha256": "a885b9d215b94b99669163393471738c688fdb52d12153a46db451b64077e388"
+    },
+    "cmr/VJ114IMG_2021-10-05_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "1be49902a01baff20473f917980ae12007366b030ed59937ea18544421690536"
+    },
+    "cmr/VJ114IMG_2021-12-15_1.json": {
+      "bytes": 11095,
+      "sha256": "e3fc591a02fb1adf14e44c369546e741fa2bd867937725b513292dd154a55e48"
+    },
+    "cmr/VJ114IMG_2021-12-15_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "1e79692e6a0737f2f22c0fa88b93d8ba7f65ea8297469f64a1b850bd4d4025c1"
+    },
+    "cmr/VJ114IMG_2022-02-13_1.json": {
+      "bytes": 16462,
+      "sha256": "6c532a1f660c18c77583cb28e6a00d24a379c05ec370709172f986c550ac8b74"
+    },
+    "cmr/VJ114IMG_2022-02-13_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "95a9a61ada0c7080695513af5c9e41b077ae9d246549184cfcf65813a9f0f244"
+    },
+    "cmr/VJ114IMG_2022-03-13_1.json": {
+      "bytes": 27194,
+      "sha256": "d673164bd2146932b311a154b19c5ae550246e0c4fd3a7a6527860836ec43376"
+    },
+    "cmr/VJ114IMG_2022-03-13_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "5d1ff3a1a2d7a54ee81ea81562da3c7e10affcb2885c972784fbcb6a064b67d1"
+    },
+    "cmr/VJ114IMG_2022-05-15_1.json": {
+      "bytes": 11098,
+      "sha256": "f99613d41f5d6098605b67fe83c79ea32880c899cea6b3edaa3530c8af698cd1"
+    },
+    "cmr/VJ114IMG_2022-05-15_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "20a3281a8d257d31e7f317fafc542f559f4ba085ec50163ce0ab0b84d6507724"
+    },
+    "cmr/VJ114IMG_2022-06-24_1.json": {
+      "bytes": 16465,
+      "sha256": "7c19cd4738cdb8134370369daf8e080a376ec15760cd754712bc28e7c88df60f"
+    },
+    "cmr/VJ114IMG_2022-06-24_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "e62d9fca3fb67398dfd208a31df8864a474c3be9c33761271b58d7e47f60476b"
+    },
+    "cmr/VJ114IMG_2022-07-10_1.json": {
+      "bytes": 16463,
+      "sha256": "cb93b917fa779217513879fb1644eae6bfce53bec7e243ef7187dd704efb5c07"
+    },
+    "cmr/VJ114IMG_2022-07-10_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "f602ac3357ecee5c48341815bca945c3c1be829abf15bee5d52a3c5bbe5a907f"
+    },
+    "cmr/VJ114IMG_2022-08-30_1.json": {
+      "bytes": 27196,
+      "sha256": "031d77f373bbd8b2f07c01b93b586548337309984b5f2c7af38823955cf86ff8"
+    },
+    "cmr/VJ114IMG_2022-08-30_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "f5d8494e2d659f85ce6de82c1563b3455a1391c1b2a8fa90926c3318783a2a3f"
+    },
+    "cmr/VJ114IMG_2022-11-02_1.json": {
+      "bytes": 27192,
+      "sha256": "24836514048be9f14f46824d267933f02d153886a2e0540d3e5ec24fbe67834d"
+    },
+    "cmr/VJ114IMG_2022-11-02_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "4c231802057fc99ff1567057d5d5d7ba942e62c448e932ddf8c346e45663adfa"
+    },
+    "cmr/VJ114IMG_2022-12-07_1.json": {
+      "bytes": 11093,
+      "sha256": "a56a25378b3d4efd3fd3ddf3fb9c1cb92d783b70ce5758344a4f9288934b178a"
+    },
+    "cmr/VJ114IMG_2022-12-07_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "9f407f390b7dd31455285c83c134e9e9cf1403fba5b7621b748e3633ddba5745"
+    },
+    "cmr/VJ114IMG_2023-01-26_1.json": {
+      "bytes": 16456,
+      "sha256": "5f2fc1fd876c4bdb28212c59f877e8f13b870cb45306dee2dbca0b826609445b"
+    },
+    "cmr/VJ114IMG_2023-01-26_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "402bbfd6ac457a6607fcdad615d5f2bf77fbd936591059c6d625be524e0fc88a"
+    },
+    "cmr/VJ114IMG_2023-03-15_1.json": {
+      "bytes": 11091,
+      "sha256": "a2e4d0803581b4058df2e8a11c284121dc487ffedfabe0de387d27d54808b8ca"
+    },
+    "cmr/VJ114IMG_2023-03-15_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "dc15d4d5ce736f2426aa764d5575c1cf4be7e40a579144cdd4d16c68e4d2fd6c"
+    },
+    "cmr/VJ114IMG_2023-04-30_1.json": {
+      "bytes": 11094,
+      "sha256": "0f8b972811867c68e19b5ad99354be21f9b27530b7219d241dd3bbacd513ea83"
+    },
+    "cmr/VJ114IMG_2023-04-30_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "525678f062fcf0125f26047bff8ba8ac98f9ca0c2488bf506b484daeb721dfc7"
+    },
+    "cmr/VJ114IMG_2023-06-02_1.json": {
+      "bytes": 11097,
+      "sha256": "d3b596fb4ffaf1ca2de7fd457f7830b30c184ad988c20a5f3b89399d581ec20f"
+    },
+    "cmr/VJ114IMG_2023-06-02_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "da693ff7a31912547c98c77075376fb6b84170767256b5f274c0679dac88ccea"
+    },
+    "cmr/VJ114IMG_2023-07-01_1.json": {
+      "bytes": 21832,
+      "sha256": "4cbded4eec2f5bf49b7423f931965a02b71c94a1f8a01b3bf6cd8f9900b1206c"
+    },
+    "cmr/VJ114IMG_2023-07-01_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "89ebbb7cb4cbf11bcc1270a68ded376e45e5270b9389adc9eb79f97b6dd152dc"
+    },
+    "cmr/VJ114IMG_2023-08-26_1.json": {
+      "bytes": 11095,
+      "sha256": "9b1888801f63ce4807bf9c332ac9e3fe10ce6ddc25736e1bce088a6dd5f4f1a7"
+    },
+    "cmr/VJ114IMG_2023-08-26_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "358a1fbcbf6e2593637cb104d86710052455f1adfd5da55f9557e0bcd86d0af2"
+    },
+    "cmr/VJ114IMG_2023-10-23_1.json": {
+      "bytes": 11098,
+      "sha256": "80458b9de39917366a51e44ec44848360622cffeb77c7954c07f620afd019863"
+    },
+    "cmr/VJ114IMG_2023-10-23_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "4966b5e18fd738e56973998b3658cd4a35678b3f7e9066d7c29337770bff0e46"
+    },
+    "cmr/VJ114IMG_2023-12-02_1.json": {
+      "bytes": 21824,
+      "sha256": "79b5f6bf598542e26ec70826387d0bc615f4846cc870d5f4b7da35c3d9f3328c"
+    },
+    "cmr/VJ114IMG_2023-12-02_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "96834cd4c3bbdf900879708a30710245e17c5cf2e249c5a0c60d3c087cfcacc1"
+    },
+    "cmr/VJ114IMG_2024-01-13_1.json": {
+      "bytes": 11090,
+      "sha256": "946fc50a4fa36beb59151f0eddc4b783d61b3733b794992bb1fa8a6bbc6382d9"
+    },
+    "cmr/VJ114IMG_2024-01-13_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "08a803895abdda30d07a2671fe025b054af4d95db0ee4026a849314593d22769"
+    },
+    "cmr/VJ114IMG_2024-03-29_1.json": {
+      "bytes": 16465,
+      "sha256": "d159e64ece0feb83043ea1457f63309f43a24b99c6ad9471e4097440fbaae6a2"
+    },
+    "cmr/VJ114IMG_2024-03-29_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "2712761cd943ac4328ea3de7b7f07f916b44bba585b7ce457624b71db9c616cf"
+    },
+    "cmr/VJ114IMG_2024-05-06_1.json": {
+      "bytes": 11097,
+      "sha256": "e0853398400d19a1db15c00b112402c85f1aba2910c718b4bca43278976899ed"
+    },
+    "cmr/VJ114IMG_2024-05-06_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "de0754079dca2ccedff928a9948c27ffa83326879ffc9ff660f2fbe5d4a30b6e"
+    },
+    "cmr/VJ114IMG_2024-05-24_1.json": {
+      "bytes": 11096,
+      "sha256": "cd6875bca531be4bf22bc50433e07f037bacdc559d1370441ee28d3eed4e7f81"
+    },
+    "cmr/VJ114IMG_2024-05-24_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "6145ae093bc802dd16fbd266f6fe3998c85cbb2c8a9b1316afd9574747aac95c"
+    },
+    "cmr/VJ114IMG_2024-07-08_1.json": {
+      "bytes": 16470,
+      "sha256": "7936775201dd0f5d1841a2e23f6528b1a7fee68351ce0b7dcabcc2e8c327a6f5"
+    },
+    "cmr/VJ114IMG_2024-07-08_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "8a9162ba1033babc841958207d1f2d8697263d4b16977e0248162b27e36776e1"
+    },
+    "cmr/VJ114IMG_2024-09-17_1.json": {
+      "bytes": 21829,
+      "sha256": "faf94f771c093678128bb00239fef2fd161812f12909629d72d90531c3940fd9"
+    },
+    "cmr/VJ114IMG_2024-09-17_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "555054ba912f3e431c8a9d8b9090dee20572901e7ccc7c722744a81cc93d2fcc"
+    },
+    "cmr/VJ114IMG_2024-11-10_1.json": {
+      "bytes": 21833,
+      "sha256": "7f4aabb9fca191f06c516b1b039bc49b1ce3c633220e58bcea3a879085eb7217"
+    },
+    "cmr/VJ114IMG_2024-11-10_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "4d351c765b28f82c0038321a69067884427e5fe8c3371be8d565783d823763a7"
+    },
+    "cmr/VJ114IMG_2024-12-15_1.json": {
+      "bytes": 16469,
+      "sha256": "d607ea571ecbf6906a3b8d8795756fac938a76d28a2076bded4b5b9f2894d9bb"
+    },
+    "cmr/VJ114IMG_2024-12-15_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "bfb641252b2f46729f4bcc08642499a0019e90ff0eaf563b98e0e8ad71d8a8ff"
+    },
+    "cmr/VNP03IMG_2018-04-19_1.json": {
+      "bytes": 5847,
+      "sha256": "72a699df364b21ebd97e04ed8fe0582f57242856adc878bc53ceae3dd6a27d21"
+    },
+    "cmr/VNP03IMG_2018-04-19_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "07f568daf5c0bafcf67937a668b3a220d5875225ccba9578944f365f3bea1ff4"
+    },
+    "cmr/VNP03IMG_2018-05-27_1.json": {
+      "bytes": 5846,
+      "sha256": "a3bbaa78cdaea4573e6c802f4ba8d1278b9e19ab0dc51cb8d2a021bce37033e0"
+    },
+    "cmr/VNP03IMG_2018-05-27_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "f717a6183da307b85cd337416fc267723518941e14f0f5e7ae6773de57d8fd1a"
+    },
+    "cmr/VNP03IMG_2018-07-03_1.json": {
+      "bytes": 5844,
+      "sha256": "5657225080e5f0806b1d0d5836aa4a0944c00c0a2ecdfcbffc9bb92e71aca46f"
+    },
+    "cmr/VNP03IMG_2018-07-03_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "27a52679ffbe24104f2605a28627204f76c44866bf0ff86a27ddaa3590014b94"
+    },
+    "cmr/VNP03IMG_2018-09-01_1.json": {
+      "bytes": 5843,
+      "sha256": "be2400fc7c7253d369e39c542818f62a0002f32585a76396a24b53177aeebce8"
+    },
+    "cmr/VNP03IMG_2018-09-01_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "2f7c8e3f12a9c7ab9df61482b154af7038b54658dcd6c7b355fbf1834580b0d1"
+    },
+    "cmr/VNP03IMG_2018-10-22_1.json": {
+      "bytes": 8593,
+      "sha256": "8a094d495fcde39e55077648db6b3a2cc1d623974ffa5474093c95981f7b20ad"
+    },
+    "cmr/VNP03IMG_2018-10-22_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "5aa7c3b2ac8f528215a37ddea2cb8b33f42091887d9d606b367abd4c257a1a37"
+    },
+    "cmr/VNP03IMG_2018-12-10_1.json": {
+      "bytes": 5848,
+      "sha256": "7e602a0aad0d81ba0fb075ef0c0b0553f6b51094136df18bcc18e4ce47860962"
+    },
+    "cmr/VNP03IMG_2018-12-10_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "52d02a996728bba0f0fdf290d68208c35a2bbe91a1cd993525f009b47af67f63"
+    },
+    "cmr/VNP03IMG_2019-02-14_1.json": {
+      "bytes": 14070,
+      "sha256": "2e514336481434478e822a83b388419dfccd72c932729965a841c943ddd2b8e7"
+    },
+    "cmr/VNP03IMG_2019-02-14_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "7b6c0e3da5a4804aebb6e034fa2ccc321c6b6d4db5a02f7a66050f3306ab0e03"
+    },
+    "cmr/VNP03IMG_2019-03-08_1.json": {
+      "bytes": 11337,
+      "sha256": "488e4ecde9cae48efe26c102b0cd3ed8c530ce3c48c2a1b7f4bae041a6b41ed8"
+    },
+    "cmr/VNP03IMG_2019-03-08_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "b561f723521fb229cf8c7392dbd5a57bc34291e70cd7cf07009c54f32327fbaf"
+    },
+    "cmr/VNP03IMG_2019-04-22_1.json": {
+      "bytes": 5843,
+      "sha256": "7de974da7462970cb5e31df858ea6a77c61f1bdd6e0868cc39443d1ee833a427"
+    },
+    "cmr/VNP03IMG_2019-04-22_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "e98255f22bcc5278233a0306975f48a6aee2ccb3839897b35cc7264e46d181fd"
+    },
+    "cmr/VNP03IMG_2019-05-18_1.json": {
+      "bytes": 8588,
+      "sha256": "5ae1247414df8e5ff898993f3418e8de2da4c5e0363f0d6e4f477d5d155bdc90"
+    },
+    "cmr/VNP03IMG_2019-05-18_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "43a36910efff6fb206eda1649a183ef524a1ce42ead83e9e82a94bce4677b1df"
+    },
+    "cmr/VNP03IMG_2019-07-10_1.json": {
+      "bytes": 8591,
+      "sha256": "893c9269e1c213fca8dbd312031ce0c6a65f33cb2706db16fdbb4d42efd061e2"
+    },
+    "cmr/VNP03IMG_2019-07-10_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "0f817d3f43e166ef1342e9dfd5df1ed730fd58e1aa6b182de0127f008183e3da"
+    },
+    "cmr/VNP03IMG_2019-09-30_1.json": {
+      "bytes": 5844,
+      "sha256": "24a2d2d59fc7ff7c8f53c6057f236032a007e7d805e4701281e7d6c6bfdd2b8c"
+    },
+    "cmr/VNP03IMG_2019-09-30_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "9bb2f3303ff4a03575cdfc2cde8f6b5c0d60f6b69d37ebf911a582ae7dcae703"
+    },
+    "cmr/VNP03IMG_2019-11-11_1.json": {
+      "bytes": 5845,
+      "sha256": "4a05fcaaeca2f3dec5394d93f7522aff0306b9e8c1e436f08928a07268dbdca4"
+    },
+    "cmr/VNP03IMG_2019-11-11_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "23141a59cf7cc9f7cd5b8df9ef5e3296e7cdbdbac2e3ab87c75e9666580160ef"
+    },
+    "cmr/VNP03IMG_2019-12-12_1.json": {
+      "bytes": 8586,
+      "sha256": "7fc9d86214d8396d0528f0ccd3824f15e83cf2acd27e65d227efc1ebb2da4145"
+    },
+    "cmr/VNP03IMG_2019-12-12_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "e00cc23acaa2c053680ce12ced066df564a03d67a97811a010fa54f0d092ecc1"
+    },
+    "cmr/VNP03IMG_2020-01-16_1.json": {
+      "bytes": 14066,
+      "sha256": "30c229cc675f4cda1bfe2fb58890cb254c1e91ed58e694dc20e5a6ca8b41087a"
+    },
+    "cmr/VNP03IMG_2020-01-16_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "5f28014b432bee2d66c93f9cfe4785c335e1145d2886c45433915f7e82dda52e"
+    },
+    "cmr/VNP03IMG_2020-02-23_1.json": {
+      "bytes": 8591,
+      "sha256": "584bf7648691f0f0dceb7935f6e637c899fd42f4ecd889dc288551d2f88445ee"
+    },
+    "cmr/VNP03IMG_2020-02-23_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "fc22c7d37f8cb6507060ef9a826347d2332a090f64edb05c4961003a560c3862"
+    },
+    "cmr/VNP03IMG_2020-05-14_1.json": {
+      "bytes": 8590,
+      "sha256": "bd68c6ce011824c327f17f235c300fffb7f35f86eb73c67b6f9589aaf4745018"
+    },
+    "cmr/VNP03IMG_2020-05-14_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "ecc0bf92455b4afed17c87ce43882e18bd61962f68704a580dc01020f5ebf6d5"
+    },
+    "cmr/VNP03IMG_2020-06-28_1.json": {
+      "bytes": 5842,
+      "sha256": "df6b45d0ff99f74823a14b4a04d7dcbd129d6e7296195bee3dc3d223711196cd"
+    },
+    "cmr/VNP03IMG_2020-06-28_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "47fd3f8d8fba08c5004c456cc1d4ba93d30056145ed77bfefb8d88849f96a9f5"
+    },
+    "cmr/VNP03IMG_2020-07-15_1.json": {
+      "bytes": 14075,
+      "sha256": "cd0fa369b3fbcb94b78e78181560e95f3f61a4bb022d6ad3dfaedfb1d0adea05"
+    },
+    "cmr/VNP03IMG_2020-07-15_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "3fbe98733d243cfb16a8e40c2da468af31f0e5448051b5293e58f388031dd93a"
+    },
+    "cmr/VNP03IMG_2020-09-19_1.json": {
+      "bytes": 8587,
+      "sha256": "2316664ba04d3b189b3a4463d16c54fec9455c32850e6eb46b2801f97607afea"
+    },
+    "cmr/VNP03IMG_2020-09-19_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "5db205e4f7c5720f0d0ca5b0d254719918837c4c2555721ddec02fd628d93304"
+    },
+    "cmr/VNP03IMG_2020-10-09_1.json": {
+      "bytes": 14074,
+      "sha256": "bc7b30c8b0a9b93fdf871b692b04ee6eca07c8bd026960caffbcd25a2c5324be"
+    },
+    "cmr/VNP03IMG_2020-10-09_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "5d941bf12ba5913afb9ea7f573eed14351323f2593d2ce6337f9108ffba70997"
+    },
+    "cmr/VNP03IMG_2020-12-09_1.json": {
+      "bytes": 5848,
+      "sha256": "0b2a9213a82bc579ec3c2f73dddea8d6e674bd9ed227e38a6763f37fde65538f"
+    },
+    "cmr/VNP03IMG_2020-12-09_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "734eab80ca2243c95195447608c818926b8e09b5e454030774be08631c9147e4"
+    },
+    "cmr/VNP03IMG_2021-02-12_1.json": {
+      "bytes": 5842,
+      "sha256": "d1357d4f8caecd35a177e40b76f53310b95d9794e0a80875e3824cdcee0d9b94"
+    },
+    "cmr/VNP03IMG_2021-02-12_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "3c6b29fa7e0a90af7173eee12a3da8e8a635f8fa1f122622e38da61d9f1ee8db"
+    },
+    "cmr/VNP03IMG_2021-03-29_1.json": {
+      "bytes": 8586,
+      "sha256": "0dd9c73a4a11508be993d6277feb3b8649dc14293f7b46110f21ea62d6f8b021"
+    },
+    "cmr/VNP03IMG_2021-03-29_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "c2c1958b2005b05595372619224f8d9c7073cbc6de79e37ddf331177fab8e64b"
+    },
+    "cmr/VNP03IMG_2021-04-01_1.json": {
+      "bytes": 5843,
+      "sha256": "b4267b6aa7211992082a75a74070d86ea970e79f53e07ee8fffdd880d9eecbfb"
+    },
+    "cmr/VNP03IMG_2021-04-01_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "9f2404ca63e7f620236022fbc8edebc32407a1b20d22b8bef11d78047f441b7e"
+    },
+    "cmr/VNP03IMG_2021-06-23_1.json": {
+      "bytes": 8591,
+      "sha256": "573fb8fa7dcb19a11bc11c47b4ac5ed032c2fe60ff7549d9fa4766403a6b0119"
+    },
+    "cmr/VNP03IMG_2021-06-23_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "7e27ced441d3009d141ad09a80605bf0ef42980e7d66e5d810c383d424511e10"
+    },
+    "cmr/VNP03IMG_2021-07-05_1.json": {
+      "bytes": 5844,
+      "sha256": "e14efdd7febda8110bf217fac88a41a4bd81d1e2b97bf2746512f8509b8523a7"
+    },
+    "cmr/VNP03IMG_2021-07-05_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "2c45fa42355d6a12f8a44ffbd9aedc8e9babf4a1ddb788489ca7fe3d2c7b2506"
+    },
+    "cmr/VNP03IMG_2021-09-11_1.json": {
+      "bytes": 11332,
+      "sha256": "c6a29296d566f69fba39dd3c9520898e8068feea756272a2065ac394de382fb8"
+    },
+    "cmr/VNP03IMG_2021-09-11_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "a31905ffc2c711bf33d822a6b13ac684e8a5afdec70d886ef71410853b62b04b"
+    },
+    "cmr/VNP03IMG_2021-10-05_1.json": {
+      "bytes": 5846,
+      "sha256": "cb86243e126ccc8fb77018f8845405741bc8143b93372a8f6ae6111350f006d4"
+    },
+    "cmr/VNP03IMG_2021-10-05_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "c72c4c8ba65b0aab4d81397fc912d380faf62882fb3a3484d0b03fcea89b8159"
+    },
+    "cmr/VNP03IMG_2021-12-15_1.json": {
+      "bytes": 11327,
+      "sha256": "14ea79df1de054c239b8e669bcf20e07dd9a4c30b81516d139fb9df77d0b8837"
+    },
+    "cmr/VNP03IMG_2021-12-15_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "ae97e88d435eddde2e37aa0e06a05ba8abb1ec0f391695b37761dfc3e999ce6b"
+    },
+    "cmr/VNP03IMG_2022-02-13_1.json": {
+      "bytes": 8590,
+      "sha256": "ab6b93259e83ddfa3996d8aff64c205017c8f6861d2dc98e380c6b29e905a128"
+    },
+    "cmr/VNP03IMG_2022-02-13_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "3f3bda8e4bf9a2965db751066cea8456824bd8014d0af0c15944f93e991f40a2"
+    },
+    "cmr/VNP03IMG_2022-03-13_1.json": {
+      "bytes": 5846,
+      "sha256": "491a64324fc0d98df6fc93a2fd3da471838442a233b449156c03e2783854e6ca"
+    },
+    "cmr/VNP03IMG_2022-03-13_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "e286277a71ce09ee0690a2deb2ea5480ee79730b7865d30bb989830bbd34997d"
+    },
+    "cmr/VNP03IMG_2022-05-15_1.json": {
+      "bytes": 8587,
+      "sha256": "583aef65267c8d3f0e5dd2cd80e3ccaa7ae2eca5d43031f955a137ec11751f10"
+    },
+    "cmr/VNP03IMG_2022-05-15_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "973a86663406abcff4396d35fc38bcbc5edd841f99e5873b1375a246fc57d656"
+    },
+    "cmr/VNP03IMG_2022-06-24_1.json": {
+      "bytes": 8586,
+      "sha256": "d9234b32a37e4ad0b42fe44f7d362b56b75818f501f20417a15a8161fea8344f"
+    },
+    "cmr/VNP03IMG_2022-06-24_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "170e355d9de13509c65a910f459a272f9afcd9ab137a127dc2f551b5c9bf6ff9"
+    },
+    "cmr/VNP03IMG_2022-07-10_1.json": {
+      "bytes": 5844,
+      "sha256": "d18a0ffe5297be89b7edb740936b742ecf9e9f496dc74e2c37916f0f0ca461ee"
+    },
+    "cmr/VNP03IMG_2022-07-10_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "50aef90538dfd0eb90aa2d4d90b353785844ddda5f06a9b178ab96eb1966d445"
+    },
+    "cmr/VNP03IMG_2022-08-30_1.json": {
+      "bytes": 8589,
+      "sha256": "8d85fbecbbc8d9c0f168f3ff1e6a9677ef1b5dc1ff4788137526951051b3bb1b"
+    },
+    "cmr/VNP03IMG_2022-08-30_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "b36f966b61cb349e30a48cc0e9d336c66d70efaaf0e2ec3b77c8c0fa68065fa5"
+    },
+    "cmr/VNP03IMG_2022-11-02_1.json": {
+      "bytes": 8584,
+      "sha256": "0a1bab99b74854462c4f61a138258a57687c1534985e24f866492b8fe21e72c7"
+    },
+    "cmr/VNP03IMG_2022-11-02_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "d20ba41765eb1f5d0c16a51fdbbee4907d92555dddc3729bd039d637b588dea3"
+    },
+    "cmr/VNP03IMG_2022-12-07_1.json": {
+      "bytes": 8586,
+      "sha256": "a57954919bb309f7105a45ca375002028fb226ffffa76d0727427e162d535c02"
+    },
+    "cmr/VNP03IMG_2022-12-07_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "87e2acb97969dcc5ae027b694c8a8e1ef464d8ebbf6022ad397f234d24314d4f"
+    },
+    "cmr/VNP03IMG_2023-01-26_1.json": {
+      "bytes": 11332,
+      "sha256": "5ef45cc0d0f248d358f772505c1913776f0857fff60b70e092226d6aba28d202"
+    },
+    "cmr/VNP03IMG_2023-01-26_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "ee5794f9220c1bcfa1c87f641ceff4295ae6180ee0790daa58c54c1bcdaea097"
+    },
+    "cmr/VNP03IMG_2023-03-15_1.json": {
+      "bytes": 8591,
+      "sha256": "b0bae95c6efb1cfb5e55125fff33524c1574ae8e39e3e1a3d77b10f82a25bcf3"
+    },
+    "cmr/VNP03IMG_2023-03-15_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "9d8bc988ebe4152b1ee631c322bd664a3ab0b83f1e6d66217f3e6f377967127d"
+    },
+    "cmr/VNP03IMG_2023-04-30_1.json": {
+      "bytes": 11325,
+      "sha256": "99253f50c17fd2dc6f1d5285d03b997bd052e7b33c37edae726b93ca2e60862f"
+    },
+    "cmr/VNP03IMG_2023-04-30_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "dc694ea61730f7b74b8d1737362256e9d343fad3fdfbc66f12f41bf02b7b8852"
+    },
+    "cmr/VNP03IMG_2023-06-02_1.json": {
+      "bytes": 8589,
+      "sha256": "91d404c5c70eae82423edf5f6ae00bc2dea9e04cec4901b26717caf83e06f03c"
+    },
+    "cmr/VNP03IMG_2023-06-02_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "0b914e54cdd9f2d0d28fe23fce5b437bb15412ac09788296712bde288c073db9"
+    },
+    "cmr/VNP03IMG_2023-07-01_1.json": {
+      "bytes": 5841,
+      "sha256": "2527c9ec8ea8a77609334b04d17fa91e0692b54e53c4d8d5bb84115e61e5f1fe"
+    },
+    "cmr/VNP03IMG_2023-07-01_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "9759c30dfe41c6ab75d1929d1d85e45efe1983ce5c0289a158a5781a851fb53c"
+    },
+    "cmr/VNP03IMG_2023-08-26_1.json": {
+      "bytes": 8587,
+      "sha256": "311ff86a0f78c08a6d89433c2b340aa28821e0e43c30acd4aa3b9c3d836e8e4e"
+    },
+    "cmr/VNP03IMG_2023-08-26_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "7de9eaba0fc47d8086c5d8848284d06c77978b8022ebe148ab820488c4823e71"
+    },
+    "cmr/VNP03IMG_2023-10-23_1.json": {
+      "bytes": 11329,
+      "sha256": "2649a285b4cd588edc7bec3b542235753c30662e3b088e92b7618d54790ed64c"
+    },
+    "cmr/VNP03IMG_2023-10-23_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "cdf3674e9772215b3629538b6fe613d6b9498dca59debffb8eee17b51b354f10"
+    },
+    "cmr/VNP03IMG_2023-12-02_1.json": {
+      "bytes": 5839,
+      "sha256": "0e46adb549b4cbda6560633af91e200d74c832e1485238126ed5a42b7fd5fef3"
+    },
+    "cmr/VNP03IMG_2023-12-02_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "55f138796e9275e5788229eaecd7031466858326b119ba8797e1e546fcdf3345"
+    },
+    "cmr/VNP03IMG_2024-01-13_1.json": {
+      "bytes": 8589,
+      "sha256": "a29970a56a3261cc08b8aeb24957543bb3a8f292c86d6ee88e26812285060373"
+    },
+    "cmr/VNP03IMG_2024-01-13_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "56e772386c2e45b7adcd777dc8eb8468d5dfbf1634aca7af5d9744d6cb67f026"
+    },
+    "cmr/VNP03IMG_2024-03-29_1.json": {
+      "bytes": 5848,
+      "sha256": "54e2e285357904424fe863807331c7b5383ada0164bba41083e98127708f9727"
+    },
+    "cmr/VNP03IMG_2024-03-29_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "69dc6c1dff7ff0bc015ee35b43ad96c08950d7a30db54ea7a76fe9237ff99c8d"
+    },
+    "cmr/VNP03IMG_2024-05-06_1.json": {
+      "bytes": 5846,
+      "sha256": "e7001c82bb7618be8d8ca5ca5dbfd3e45730fe6b34c5031b3db0acd65b8061c9"
+    },
+    "cmr/VNP03IMG_2024-05-06_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "ea1bc285ba5860bc1e8aa9fe5bb79e6c3980ccf8d841a9f7fe52592260d79aa4"
+    },
+    "cmr/VNP03IMG_2024-05-24_1.json": {
+      "bytes": 14078,
+      "sha256": "43da060bbf51cd1c1be685e57a97784c84e3be0b5cfbf1475513c39e3ee4cc65"
+    },
+    "cmr/VNP03IMG_2024-05-24_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "818a416cadebbdad3375f1ac02ec40942b3666a5d6a487966ce31509a824f209"
+    },
+    "cmr/VNP03IMG_2024-07-08_1.json": {
+      "bytes": 5847,
+      "sha256": "686eda0d640620a04b67c04a605da3c6ded8c75c84a994628d2e0a69ab930cea"
+    },
+    "cmr/VNP03IMG_2024-07-08_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "4860ed089c25aea655789435e64cb7226ce9518c4d8e0ed1f68c8156598e51dd"
+    },
+    "cmr/VNP03IMG_2024-09-17_1.json": {
+      "bytes": 8589,
+      "sha256": "128cab928ae6d8ddb77f458263e0e2254572442b1792085f0dcc085da8bdaa5c"
+    },
+    "cmr/VNP03IMG_2024-09-17_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "7a215daa0fc6e3391d87fa657bce15ffc44107468e67e88a6d34d907d48d70f8"
+    },
+    "cmr/VNP03IMG_2024-11-10_1.json": {
+      "bytes": 14065,
+      "sha256": "4865779bea60faee2fec8bd19135321f4bb48454f5976a41e0e39dfbcc899f2d"
+    },
+    "cmr/VNP03IMG_2024-11-10_1.receipt.json": {
+      "bytes": 450,
+      "sha256": "a66f890cfc11cf941ce7736a7456b5f4c21243a406989cc76007f2c94ae283c0"
+    },
+    "cmr/VNP03IMG_2024-12-15_1.json": {
+      "bytes": 5847,
+      "sha256": "03e9421e4d210dfde496708d6ac3c7ff4e53e9d958355f8be0c32db3f2aa6f81"
+    },
+    "cmr/VNP03IMG_2024-12-15_1.receipt.json": {
+      "bytes": 449,
+      "sha256": "7c77fb505ee4acd5f0529cb14c4a9359de29cc0b45b03cc19fb02aa600703d4b"
+    },
+    "cmr/VNP14IMG_2018-04-19_1.json": {
+      "bytes": 11090,
+      "sha256": "097d1f4c6fb560c4a7b3601c7695899bf0f1748dcf13498ef3edeedbfee8c97f"
+    },
+    "cmr/VNP14IMG_2018-04-19_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "b095f2f3a3f785f6b324ba2ce92c2612485a385de2cf2623a378ed8ff4dfeb36"
+    },
+    "cmr/VNP14IMG_2018-05-27_1.json": {
+      "bytes": 11092,
+      "sha256": "a2e8e0ad0ce3f207335cefdd041f7f6f85502e06abd37e75dcdb300cbd96b919"
+    },
+    "cmr/VNP14IMG_2018-05-27_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "23e8855e0e9dddc2f480de0cfa1d636b77618ef743fd14fd659d4278a94c4eba"
+    },
+    "cmr/VNP14IMG_2018-07-03_1.json": {
+      "bytes": 11091,
+      "sha256": "9d55a61abdf2cd96fd36f203b1a4b652ec216a1635aaff5d70cbc53882c259b1"
+    },
+    "cmr/VNP14IMG_2018-07-03_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "7f81db7e62142de38bc7e5baf1e5965ccbdda2ce4ac46c61f4d7d6c968e9de38"
+    },
+    "cmr/VNP14IMG_2018-09-01_1.json": {
+      "bytes": 11091,
+      "sha256": "5806f0dcbce63bbddd0131c1e70744a7ecf2fa5f92dcc6a864017b81b10e45d0"
+    },
+    "cmr/VNP14IMG_2018-09-01_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "181110c4b8ba5d28c90c0de26bd8fda8c5cf37f05d36bf11415ac8ab5956946e"
+    },
+    "cmr/VNP14IMG_2018-10-22_1.json": {
+      "bytes": 16457,
+      "sha256": "4ae9a2187758ea6ba4031072fcaf50e516610060ca01568a94e9fccde68008cc"
+    },
+    "cmr/VNP14IMG_2018-10-22_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "864d0299db376f9f7aa8d1808bba03633737c77bcb24dd661ac1b09b4957df62"
+    },
+    "cmr/VNP14IMG_2018-12-10_1.json": {
+      "bytes": 11093,
+      "sha256": "12fe41b989dab943b8210007419c429dc7d47f8326c9a9bd8c55dc3458822164"
+    },
+    "cmr/VNP14IMG_2018-12-10_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "eff3a87e8a77575a6204e2cc4b48220779b906f756a5221e55d934faba356c55"
+    },
+    "cmr/VNP14IMG_2019-02-14_1.json": {
+      "bytes": 27186,
+      "sha256": "f8b48dbbc4418756433c50d1082924fc6e6362266f84da9bf0939e5e4bbf380e"
+    },
+    "cmr/VNP14IMG_2019-02-14_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "f76a41bb91746b8380914afb678f30370f1cad35653485a72c14b791bf5f602f"
+    },
+    "cmr/VNP14IMG_2019-03-08_1.json": {
+      "bytes": 21824,
+      "sha256": "2ed1680c2a7b838b6c494790fef2e9a64cbe0b4f4971c5253f46f5d9f1037be9"
+    },
+    "cmr/VNP14IMG_2019-03-08_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "dadec4e328ff82be5ae95839d2d61801d7571b5f4e10b3b9b7be58aecad81519"
+    },
+    "cmr/VNP14IMG_2019-04-22_1.json": {
+      "bytes": 11090,
+      "sha256": "252a94bda3752c8538810ff0405f5c333c6189ccc67caa41a27a57811b0734dd"
+    },
+    "cmr/VNP14IMG_2019-04-22_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "362015497c7b50cec093597f80512e4cea83ca561b8ad66774ae93353d2bd471"
+    },
+    "cmr/VNP14IMG_2019-05-18_1.json": {
+      "bytes": 16451,
+      "sha256": "0a1370a04ff4aac83e6a3f04759b6a186ceadd2b544741d3db5d6e97ec2e2dde"
+    },
+    "cmr/VNP14IMG_2019-05-18_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "429d259b55db46729baae3437eeb31903b186ab3c2afba3313df88735778a4d4"
+    },
+    "cmr/VNP14IMG_2019-07-10_1.json": {
+      "bytes": 16457,
+      "sha256": "5e26bb67afc9311a88c0b4cafc7a859bee781d22e8dbbc2490c55381127319ca"
+    },
+    "cmr/VNP14IMG_2019-07-10_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "53da03f2b823a3ef088ad8a9623554fddc3f1d850ae61ebebd311ba5794509c7"
+    },
+    "cmr/VNP14IMG_2019-09-30_1.json": {
+      "bytes": 11092,
+      "sha256": "66787d92b5194764b7749e527b46353e1770159fa2769a160d95d44d1727c39e"
+    },
+    "cmr/VNP14IMG_2019-09-30_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "5d85c0a362c44e68649d6549321311ff7eff71af281f32a86c3136c8c70a9c58"
+    },
+    "cmr/VNP14IMG_2019-11-11_1.json": {
+      "bytes": 11094,
+      "sha256": "1678e070913d19a30542d30ea17f7dba3d778dac3f80b628853ce82e898baf9f"
+    },
+    "cmr/VNP14IMG_2019-11-11_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "b209126d32a144295b296b0b863dda8a53a69b59c5bcf96fed7f0c126adfca39"
+    },
+    "cmr/VNP14IMG_2019-12-12_1.json": {
+      "bytes": 16459,
+      "sha256": "4d0a30f615397860d705ad55a414a8d7147e3195501bc69b3a5909a73f1e0d70"
+    },
+    "cmr/VNP14IMG_2019-12-12_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "f1b3145e6790ea3f0c89fbd884bf5c1ad82aeee6afb80a86d65735c5ef01b976"
+    },
+    "cmr/VNP14IMG_2020-01-16_1.json": {
+      "bytes": 27178,
+      "sha256": "02e9e9cdf9fa9c03adea4dcdc236cc1e3ea188f7c2c3df9b12377100ed7d6599"
+    },
+    "cmr/VNP14IMG_2020-01-16_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "aca9a9ec6df5e7f49b6d0f942bbdf005d728fa1240f245b8cbab53d601b57ba9"
+    },
+    "cmr/VNP14IMG_2020-02-23_1.json": {
+      "bytes": 16460,
+      "sha256": "e90bb95cfff169d518a96b94390401752e57b639b6cce7ad95c039c013553d93"
+    },
+    "cmr/VNP14IMG_2020-02-23_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "56d5b5939dd0878fab5c9c34005487e4062336467fc5d76269147d08dee31975"
+    },
+    "cmr/VNP14IMG_2020-05-14_1.json": {
+      "bytes": 16460,
+      "sha256": "ca0537c6101b140813372313e0e3383dd0e8657fa079ab4767aabadcf015250c"
+    },
+    "cmr/VNP14IMG_2020-05-14_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "f863103604313793c9b26a38e42ac9ef7878d0025d45c60b232ee81a8af9a50c"
+    },
+    "cmr/VNP14IMG_2020-06-28_1.json": {
+      "bytes": 11090,
+      "sha256": "992a13f6eb0c8b843e86aa4f9d78242894eac4a3ef79fc75c5a1f705e85261e5"
+    },
+    "cmr/VNP14IMG_2020-06-28_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "c6ea3796c80aa2b6233850416938382c5f845515ab229cb6593e5b13edd229f7"
+    },
+    "cmr/VNP14IMG_2020-07-15_1.json": {
+      "bytes": 27183,
+      "sha256": "510585032c678ad3f24da84ba7c1d8eba9b3ee90c0a25b15dd1aacb17cd296a7"
+    },
+    "cmr/VNP14IMG_2020-07-15_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "978b6a0da3fc65cbf1bc4e41f4d5099138fc6d6bf11c19771859cd4419c297f1"
+    },
+    "cmr/VNP14IMG_2020-09-19_1.json": {
+      "bytes": 16456,
+      "sha256": "d728cc6ddb8e169e75e310f4317038c97f119d16b657c97947f15f02a6d104dc"
+    },
+    "cmr/VNP14IMG_2020-09-19_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "3419d21863a5d42b940044d9a0a50408d6729f0b89bf8f33cd3443c93f73839c"
+    },
+    "cmr/VNP14IMG_2020-10-09_1.json": {
+      "bytes": 27188,
+      "sha256": "183dfa632d8aec0dd3042f152a51f54ef4c63ee92a752ea21bc2ae000c7a8be9"
+    },
+    "cmr/VNP14IMG_2020-10-09_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "8e0d5643a4b8c1a611bab95f5c8964c4b5ca663848943c6cb28e2efed586b0a2"
+    },
+    "cmr/VNP14IMG_2020-12-09_1.json": {
+      "bytes": 11090,
+      "sha256": "93b0a1d03767a558f243134dd656cf845782eff0907669d6ffa0c2d20491730b"
+    },
+    "cmr/VNP14IMG_2020-12-09_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "ee55dfaa4e1b3470d3ea9147a3269728eafbca1a4a4cd9dcb4e0be41f141b507"
+    },
+    "cmr/VNP14IMG_2021-02-12_1.json": {
+      "bytes": 11092,
+      "sha256": "1dbef5999ce2f650313dae472cf62cc93a41317ce181cb1541de9508bafe6d4c"
+    },
+    "cmr/VNP14IMG_2021-02-12_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "b2cb37d36d2b2abae0ba744c1224e5bda0fcb4e38ed0b937fbf4b6f5908740f5"
+    },
+    "cmr/VNP14IMG_2021-03-29_1.json": {
+      "bytes": 16455,
+      "sha256": "e3c05f07e41e6e43a842265d0e28c7c0e0374cb5638dba894f3f88be7ff38a68"
+    },
+    "cmr/VNP14IMG_2021-03-29_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "6ce5202bc4482c566482e8c65e524be388bbf14b3fc8462732b8ac4d6dd0f686"
+    },
+    "cmr/VNP14IMG_2021-04-01_1.json": {
+      "bytes": 11091,
+      "sha256": "9f93445080a0d89dea2c917e6590e046f6b5f722fb9ddf36aa4156dc6fd5e38c"
+    },
+    "cmr/VNP14IMG_2021-04-01_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "2328aeac70a49333ae0fab7a202e86407dcd2d0ca1b9b2e8ed56ee121ea67fc3"
+    },
+    "cmr/VNP14IMG_2021-06-23_1.json": {
+      "bytes": 16456,
+      "sha256": "99c094b3deefa80b0d83061fb1e870fb9171e58b6861ba8f866d024a240f3c69"
+    },
+    "cmr/VNP14IMG_2021-06-23_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "5ccd32f36e1cffa724b039126135026964ac627d9bbbc96674f6511bb2e11d89"
+    },
+    "cmr/VNP14IMG_2021-07-05_1.json": {
+      "bytes": 11090,
+      "sha256": "37215c15c9e9bf5ba663f54fbabe3183138d057d5c2861bc459a7da260be4391"
+    },
+    "cmr/VNP14IMG_2021-07-05_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "7824965bfddf4b450b5e0b8559aa1f6d5be641ab097d790864093017ef94e91c"
+    },
+    "cmr/VNP14IMG_2021-09-11_1.json": {
+      "bytes": 21824,
+      "sha256": "236d388505ae64c2c94184d43c8c8418e64555eeacaffce9579ba9667f117b5d"
+    },
+    "cmr/VNP14IMG_2021-09-11_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "63d7b92661491037c6fbc4bd12172f52aec84fa304f4d0428c2e8ae36135f7bf"
+    },
+    "cmr/VNP14IMG_2021-10-05_1.json": {
+      "bytes": 11093,
+      "sha256": "a98641689a0cd1008dfca7b0c9483aca1f9ca1de6e20381f0abe1b35adb291ae"
+    },
+    "cmr/VNP14IMG_2021-10-05_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "30b8d9a7695c57be917c3afbc5e3033049cb0ec2e0de532cf462f2484e0c0cc4"
+    },
+    "cmr/VNP14IMG_2021-12-15_1.json": {
+      "bytes": 21818,
+      "sha256": "74def5c24614a3c0c3d0c19bff490faf32b4ea47af510d2c43e55f46baa58538"
+    },
+    "cmr/VNP14IMG_2021-12-15_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "fc653940c7b27c821206345c47c4904a82cd0172ac54984e872083ff17fced49"
+    },
+    "cmr/VNP14IMG_2022-02-13_1.json": {
+      "bytes": 16457,
+      "sha256": "bd6425464cca787da3d1876f5676dcd28f21df489ca94de21856f940c95eeb5f"
+    },
+    "cmr/VNP14IMG_2022-02-13_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "d287ff187e17f723b8f1cc2c7ac7bb553990132a5be2087eb8a679ec2f69c541"
+    },
+    "cmr/VNP14IMG_2022-03-13_1.json": {
+      "bytes": 11091,
+      "sha256": "60f14230aec9ef6cf09628494cb6f307abeecf0c585a37426c5891c9c3842413"
+    },
+    "cmr/VNP14IMG_2022-03-13_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "280d1820eee16bd90c87a2cf0e8dd1de726f4be9ad6cc9330c633126f773f539"
+    },
+    "cmr/VNP14IMG_2022-05-15_1.json": {
+      "bytes": 16458,
+      "sha256": "16d01d300ed06495a3ee13884182e911f4a7706ea48c2e1ad378599b27fbb0d8"
+    },
+    "cmr/VNP14IMG_2022-05-15_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "e4b60705f2520ea5bf66534a9d05291ff51498e5e592af65aaf69c717cf4ac7c"
+    },
+    "cmr/VNP14IMG_2022-06-24_1.json": {
+      "bytes": 16457,
+      "sha256": "c6a6524d5dafc5b76bf1ba166425bad3968e379609f2e5a51b959b1185659ac5"
+    },
+    "cmr/VNP14IMG_2022-06-24_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "8202539953d859e3982eece5ad4ea5d2f915f34c0b0c60ed763ab712171341ab"
+    },
+    "cmr/VNP14IMG_2022-07-10_1.json": {
+      "bytes": 11091,
+      "sha256": "be56b0864ee3f5c01f0e12d7e2ce5ccff8381cb8687a565e882d07cf4d845d4e"
+    },
+    "cmr/VNP14IMG_2022-07-10_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "16b39ed869e39f5387023eed2e3cc566933b8b14647d393a228a93e25ce34a20"
+    },
+    "cmr/VNP14IMG_2022-08-30_1.json": {
+      "bytes": 16447,
+      "sha256": "10eede78bd8a8d23bf66173af7e9f63391fdde81d2af3f9c195b9a91d7793db3"
+    },
+    "cmr/VNP14IMG_2022-08-30_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "597f6ab53e5c31ca36b13f5135fd37b0156bee92f6077ce3f62ad58b3885e913"
+    },
+    "cmr/VNP14IMG_2022-11-02_1.json": {
+      "bytes": 16454,
+      "sha256": "ba4895646e5b524d196ca68893df7ff620086ca8e79a14ddc0fde3fabbbffde1"
+    },
+    "cmr/VNP14IMG_2022-11-02_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "074aa4d34b64f2221f4a09be6dc0f0b0956eaea6c04f3e6fcce9e4264b8c6aad"
+    },
+    "cmr/VNP14IMG_2022-12-07_1.json": {
+      "bytes": 16457,
+      "sha256": "72171fb42e756afc2ab81bb16de37475fbb685b1a1bf09d76749130004aa54c2"
+    },
+    "cmr/VNP14IMG_2022-12-07_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "a44fa33bf81ce6aa3015dda9ee68b8bbc2a6c4cafcb141de24effc226f1bfcc6"
+    },
+    "cmr/VNP14IMG_2023-01-26_1.json": {
+      "bytes": 21824,
+      "sha256": "3fca78f6261643f0cc26e25b225361ad70ccc538007bcd108fbd9e5e69c91671"
+    },
+    "cmr/VNP14IMG_2023-01-26_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "d6d30998e4018c660784e85a38edb95b3b2eeccacef30b06bc5f86c7a7bdce26"
+    },
+    "cmr/VNP14IMG_2023-03-15_1.json": {
+      "bytes": 16455,
+      "sha256": "982a30f2331ff4ed98ebe26967f7a38b11856e62aead820f6112c9731c20ef87"
+    },
+    "cmr/VNP14IMG_2023-03-15_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "edc06161f27f612ea59bd043c17fe87266ceea7c22e294fb2071afe5a1b7780d"
+    },
+    "cmr/VNP14IMG_2023-04-30_1.json": {
+      "bytes": 21817,
+      "sha256": "5df5167c68820014a39ef9957484a2a7081d7772b194004e0d1b74a02f6799ae"
+    },
+    "cmr/VNP14IMG_2023-04-30_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "ddd9ae3e7f704e6969d8498e8c319518c312efc6f6e2d62b6d4a059fb492ffbc"
+    },
+    "cmr/VNP14IMG_2023-06-02_1.json": {
+      "bytes": 16458,
+      "sha256": "61620882053b0dcf3c11b977575570040c01a234819590ae5a850da25d6081a0"
+    },
+    "cmr/VNP14IMG_2023-06-02_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "796084106c6a7712042e8c2f2c188e9978ca23875be9267e776da7cbfb913ce5"
+    },
+    "cmr/VNP14IMG_2023-07-01_1.json": {
+      "bytes": 11094,
+      "sha256": "f40a781634fe2e119ff9a67da4617c0e4d6f19efc080cc0005e70062f7009de3"
+    },
+    "cmr/VNP14IMG_2023-07-01_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "cd0a13fddbf8459cfcb69e0806dd6195f071206a06c5be67822316ae77fe16c3"
+    },
+    "cmr/VNP14IMG_2023-08-26_1.json": {
+      "bytes": 16458,
+      "sha256": "436266b6862d67fc8ae085907d08696cb021a0b5eaf647e593e2d50c2a1c1caf"
+    },
+    "cmr/VNP14IMG_2023-08-26_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "12c7d46966cff2f246b33645758078283c3ebc1d470c5e6543798e6a51419348"
+    },
+    "cmr/VNP14IMG_2023-10-23_1.json": {
+      "bytes": 21818,
+      "sha256": "183c9337b07fe9f4ba653e28e19b9d78c0374f602ed72cce59fe77942d365b62"
+    },
+    "cmr/VNP14IMG_2023-10-23_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "ce49ef9a3b84c1672063dbd57945dbd8b3f0b0a9ef0374d7f7b62ed1b17e5c3f"
+    },
+    "cmr/VNP14IMG_2023-12-02_1.json": {
+      "bytes": 11089,
+      "sha256": "3b7e4ca237d5d0840e3f740c7448287c53fbcb90db056e00f5f070e6be4c2255"
+    },
+    "cmr/VNP14IMG_2023-12-02_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "86aa9a1824caf1210cade0f47365b0038627b3fa2c577b2f79dd8600f1aab69d"
+    },
+    "cmr/VNP14IMG_2024-01-13_1.json": {
+      "bytes": 16461,
+      "sha256": "dde8dcab277857a1fad3596a363d52ca702a4d90f8e9fa213d72fb5219aad503"
+    },
+    "cmr/VNP14IMG_2024-01-13_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "26562c676a38c6e85d215871727a3232a66400710f0fda5e0da0616c106d849b"
+    },
+    "cmr/VNP14IMG_2024-03-29_1.json": {
+      "bytes": 11090,
+      "sha256": "a7083ec219c9c0c83058c8ffc5be9e1317f4845e70bb24364d544042192838ae"
+    },
+    "cmr/VNP14IMG_2024-03-29_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "cdd13cbbd90a40852e43bbf96ec20fc1fc143982a26199826a726655802a9e3b"
+    },
+    "cmr/VNP14IMG_2024-05-06_1.json": {
+      "bytes": 11092,
+      "sha256": "a027ba343b2cdfb79e7e6394af1c9d89547c315753e208452d5c4279ce2ab077"
+    },
+    "cmr/VNP14IMG_2024-05-06_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "64f3153bb8032f3a3dbb5909def0268d1a532c55f9731d5a38ad4b57bd2266f3"
+    },
+    "cmr/VNP14IMG_2024-05-24_1.json": {
+      "bytes": 27184,
+      "sha256": "bb7806683e465536b7a8f1513c32cef463ddab1f04544e13a8ba76443db0d7eb"
+    },
+    "cmr/VNP14IMG_2024-05-24_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "fbad77ad9ca18a405e40b003934a471908050e4677ffdd64ac93aec0a54c04e9"
+    },
+    "cmr/VNP14IMG_2024-07-08_1.json": {
+      "bytes": 11092,
+      "sha256": "f2683057145c2170456b962a0647088e713f44c5e985651934aa5905c5fb10b7"
+    },
+    "cmr/VNP14IMG_2024-07-08_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "0a80d4328a52983e567611540a028b8241c9265e791fde095924c6ab391c8d05"
+    },
+    "cmr/VNP14IMG_2024-09-17_1.json": {
+      "bytes": 16460,
+      "sha256": "63ba6576206b6e895855adaac7a7e00b14e44cdfdc1db910a24d1fbf53283b71"
+    },
+    "cmr/VNP14IMG_2024-09-17_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "a2820ad4e3d19305c2f48c4c97b94ef1b9852a579f8c7dae1adc8812b7e777b0"
+    },
+    "cmr/VNP14IMG_2024-11-10_1.json": {
+      "bytes": 27193,
+      "sha256": "43d188552776cb68b87b04b665d1f01cd9af7f759fb46961258e21036149b4fa"
+    },
+    "cmr/VNP14IMG_2024-11-10_1.receipt.json": {
+      "bytes": 452,
+      "sha256": "d380452e064d72b00c677a6b089e8474f22ee3aa142ed2dd7a705608f16f411c"
+    },
+    "cmr/VNP14IMG_2024-12-15_1.json": {
+      "bytes": 9776,
+      "sha256": "cf64f537a7b3d515f3aa94f4a0dc056669979d69e5d52a1de911830df747c4dd"
+    },
+    "cmr/VNP14IMG_2024-12-15_1.receipt.json": {
+      "bytes": 451,
+      "sha256": "fbc804d5cded9dc1a391ade9af265d9eca3b4ef2f16eac9c9092c89f53e7b207"
+    },
+    "inventory.json": {
+      "bytes": 686050,
+      "sha256": "20ac78f086a0c6cec52d03918153ff9d6885a0a02d2bf0f3f9c96576a8bdfe39"
+    },
+    "region.geojson": {
+      "bytes": 32028,
+      "sha256": "838db6bf67cb4d21df585d32483c64c9d56556d4fc216564bf4aa982c659382e"
+    }
+  },
+  "matched_fire_companion_files": 632,
+  "matched_download_catalogue_gib": 45.56768878735602,
+  "unpaired_geolocation_files": 6,
+  "early_dates_needing_source_reconciliation": [
+    {
+      "date": "2018-04-19",
+      "product": "VJ114IMG",
+      "global_cmr_hits": 0,
+      "native_archive_detections": 2
+    },
+    {
+      "date": "2018-05-27",
+      "product": "VJ114IMG",
+      "global_cmr_hits": 0,
+      "native_archive_detections": 0
+    }
+  ],
+  "alternative_listing_probe_status": "LAADS probe returned HTML rather than a usable JSON directory; product recovery not established"
+}

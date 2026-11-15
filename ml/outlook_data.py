@@ -45,7 +45,7 @@ def cached_download(url,path,refresh=False):
     if path.exists() and meta.exists() and not refresh:
         saved=json.loads(meta.read_text())
         if saved['url']==url and saved['sha256']==file_sha(path):return path.read_bytes()
-    with urlopen(Request(url,headers={'User-Agent':'EMBERLINE-outlook-research/1.0'}),timeout=180) as response:body=response.read()
+    with urlopen(Request(url,headers={'User-Agent':'CINDERTRACE-outlook-research/1.0'}),timeout=180) as response:body=response.read()
     path.parent.mkdir(parents=True,exist_ok=True);temp=path.with_suffix(path.suffix+'.tmp');temp.write_bytes(body);temp.replace(path)
     meta.write_text(json.dumps({'url':url,'retrieved_utc':pd.Timestamp.now(tz='UTC').isoformat(),'sha256':hashlib.sha256(body).hexdigest(),'bytes':len(body)},indent=2))
     return body

@@ -1,0 +1,316 @@
+{
+  "status": "independently_verified_historical_capture",
+  "zip_sha256": "b51ededac8925967d9d7edc58ea07524df7e72c41e0c02dea8ce5af0fded98c7",
+  "run_id": "20261114T211825Z_97d5550a",
+  "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "outer_members": 40,
+  "nested_manifested_files_verified": 5704,
+  "verified_raw_requests": 2555,
+  "standard_observations": 132249,
+  "annual": [
+    {
+      "year": 2000,
+      "standard_observations": 4,
+      "requests_verified": 13,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 1403
+    },
+    {
+      "year": 2001,
+      "standard_observations": 354,
+      "requests_verified": 73,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 1095
+    },
+    {
+      "year": 2002,
+      "standard_observations": 1577,
+      "requests_verified": 73,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 914
+    },
+    {
+      "year": 2003,
+      "standard_observations": 1505,
+      "requests_verified": 73,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 730
+    },
+    {
+      "year": 2004,
+      "standard_observations": 1915,
+      "requests_verified": 74,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 732
+    },
+    {
+      "year": 2005,
+      "standard_observations": 1808,
+      "requests_verified": 73,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 730
+    },
+    {
+      "year": 2006,
+      "standard_observations": 1324,
+      "requests_verified": 73,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 730
+    },
+    {
+      "year": 2007,
+      "standard_observations": 1226,
+      "requests_verified": 73,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 730
+    },
+    {
+      "year": 2008,
+      "standard_observations": 1403,
+      "requests_verified": 74,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 732
+    },
+    {
+      "year": 2009,
+      "standard_observations": 1905,
+      "requests_verified": 73,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 730
+    },
+    {
+      "year": 2010,
+      "standard_observations": 1097,
+      "requests_verified": 73,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 730
+    },
+    {
+      "year": 2011,
+      "standard_observations": 1379,
+      "requests_verified": 73,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "outside_advertised_archive_range",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 730
+    },
+    {
+      "year": 2012,
+      "standard_observations": 13237,
+      "requests_verified": 144,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "matched_native_records",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 385
+    },
+    {
+      "year": 2013,
+      "standard_observations": 10816,
+      "requests_verified": 146,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "matched_native_records",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 365
+    },
+    {
+      "year": 2014,
+      "standard_observations": 11673,
+      "requests_verified": 146,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "matched_native_records",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 365
+    },
+    {
+      "year": 2015,
+      "standard_observations": 5091,
+      "requests_verified": 146,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "matched_native_records",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 365
+    },
+    {
+      "year": 2016,
+      "standard_observations": 13542,
+      "requests_verified": 148,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "matched_native_records",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 366
+    },
+    {
+      "year": 2017,
+      "standard_observations": 6428,
+      "requests_verified": 146,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "matched_native_records",
+        "VIIRS_NOAA20_SP": "outside_advertised_archive_range"
+      },
+      "unsupported_platform_days": 365
+    },
+    {
+      "year": 2018,
+      "standard_observations": 14351,
+      "requests_verified": 201,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "matched_native_records",
+        "VIIRS_NOAA20_SP": "matched_native_records"
+      },
+      "unsupported_platform_days": 90
+    },
+    {
+      "year": 2019,
+      "standard_observations": 16396,
+      "requests_verified": 219,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "matched_native_records",
+        "VIIRS_NOAA20_SP": "matched_native_records"
+      },
+      "unsupported_platform_days": 0
+    },
+    {
+      "year": 2020,
+      "standard_observations": 16548,
+      "requests_verified": 222,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "matched_native_records",
+        "VIIRS_NOAA20_SP": "matched_native_records"
+      },
+      "unsupported_platform_days": 0
+    },
+    {
+      "year": 2021,
+      "standard_observations": 8670,
+      "requests_verified": 219,
+      "mirror_nrt_audit_rows": 0,
+      "source_comparison_status": {
+        "MODIS_SP": "matched_native_records",
+        "VIIRS_SNPP_SP": "matched_native_records",
+        "VIIRS_NOAA20_SP": "matched_native_records"
+      },
+      "unsupported_platform_days": 0
+    }
+  ],
+  "source_comparisons_checked": 36,
+  "source_comparisons_requiring_review": [],
+  "global_gap_intervals": 750,
+  "listed_missing_standard_dates": 55,
+  "unparsed_outage_rows": 0,
+  "coverage_verified": false,
+  "harmonization_validated": false,
+  "frontend_changed": false,
+  "checks": [
+    "Outer and all nested file hashes and receipts",
+    "All 22 year identities and pinned run/polygon contracts",
+    "Every native NASA response re-parsed and re-clipped",
+    "Canonical fields and row provenance reconstructed",
+    "Mirror standard comparisons recomputed",
+    "All daily/monthly/native grids recomputed",
+    "Early unavailable periods and partial months retained"
+  ]
+}

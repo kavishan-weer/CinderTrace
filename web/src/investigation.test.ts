@@ -1,0 +1,11 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {monthPlayback,selectionInsights,yearProfile,safeSelectionLink,historicalInsight} from './investigation.ts';
+import {utcDay,yearBounds,type NativeRow,type ProviderRow} from './observatoryData.ts';
+const row=(day:string,sat=2):NativeRow=>[utcDay(day)!*86400,80,7,sat,10,'n',0,0,0,0,'D',1];
+test('monthly playback respects leap years and partial archive bounds',()=>{const bounds:[number,number]=[utcDay('2024-02-10')!,utcDay('2024-03-15')!];assert.equal(monthPlayback(2024,0,bounds),null);assert.deepEqual(monthPlayback(2024,1,bounds),[utcDay('2024-02-10'),utcDay('2024-02-29')]);assert.deepEqual(monthPlayback(2024,2,bounds),[utcDay('2024-03-01'),utcDay('2024-03-15')]);assert.equal(monthPlayback(2024,3,bounds),null);});
+test('selection explanations distinguish unavailable, zero and sensor mixtures',()=>{assert.match(selectionInsights([],yearBounds(2023),false)[0].title,/unavailable/);assert.match(selectionInsights([],yearBounds(2023),true)[1].text,/cannot establish/);const insights=selectionInsights([row('2023-01-02'),row('2023-01-02',0),row('2023-01-03')],yearBounds(2023),true);assert.match(insights[1].text,/2023-01-02 has 2/);assert.match(insights[2].text,/not a harmonized trend/);});
+const provider=(year:number,month:number,h:number|null,src=1)=>({yr:year,mo:month,h,src} as ProviderRow);
+test('cross-year comparison preserves published zeros, missing months and unavailable values',()=>{const rows=[provider(2019,7,0),provider(2020,1,15),provider(2020,2,20,3)];const p=yearProfile(rows,2019,true);assert.equal(p[0].value,0);assert.equal(p[6].value,15);assert.equal(p[7].value,null);assert.equal(p[1].value,null);});
+test('saved links cannot navigate to executable URLs or a different origin',()=>{assert.equal(safeSelectionLink('javascript:alert(1)'),null);assert.equal(safeSelectionLink('https://example.org/'),null);assert.equal(safeSelectionLink('https://example.org/?region=lk&year=2023'),'?region=lk&year=2023');});
+test('historical explanation requires sufficient non-selected reference years',()=>{const rows=Array.from({length:7},(_,i)=>provider(2017+i,1,10+i));assert.match(historicalInsight(rows,'2023-01')!,/6 other matching/);assert.equal(historicalInsight(rows.slice(3),'2023-01'),null);});

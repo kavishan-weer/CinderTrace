@@ -1,0 +1,106 @@
+{
+  "dataset_id": "lk_observed_standard_benchmark_v1",
+  "status": "isolated_observed_standard_benchmark; not wired to frontend",
+  "observations": 38995,
+  "year_counts": {
+    "2022": 8593,
+    "2023": 13366,
+    "2024": 17036
+  },
+  "platform_year_counts": [
+    {
+      "year": 2022,
+      "satellite": "Aqua",
+      "recorded_detections": 395
+    },
+    {
+      "year": 2022,
+      "satellite": "NOAA-20",
+      "recorded_detections": 3917
+    },
+    {
+      "year": 2022,
+      "satellite": "Suomi-NPP",
+      "recorded_detections": 4079
+    },
+    {
+      "year": 2022,
+      "satellite": "Terra",
+      "recorded_detections": 202
+    },
+    {
+      "year": 2023,
+      "satellite": "Aqua",
+      "recorded_detections": 642
+    },
+    {
+      "year": 2023,
+      "satellite": "NOAA-20",
+      "recorded_detections": 6094
+    },
+    {
+      "year": 2023,
+      "satellite": "Suomi-NPP",
+      "recorded_detections": 6432
+    },
+    {
+      "year": 2023,
+      "satellite": "Terra",
+      "recorded_detections": 198
+    },
+    {
+      "year": 2024,
+      "satellite": "Aqua",
+      "recorded_detections": 419
+    },
+    {
+      "year": 2024,
+      "satellite": "NOAA-20",
+      "recorded_detections": 5813
+    },
+    {
+      "year": 2024,
+      "satellite": "NOAA-21",
+      "recorded_detections": 5654
+    },
+    {
+      "year": 2024,
+      "satellite": "Suomi-NPP",
+      "recorded_detections": 5010
+    },
+    {
+      "year": 2024,
+      "satellite": "Terra",
+      "recorded_detections": 140
+    }
+  ],
+  "verified_raw_requests": 734,
+  "daily_rows": 4750,
+  "monthly_rows": 156,
+  "native_filter_grid_rows": 30096,
+  "NOAA21_canonical_standard_records": 5654,
+  "NOAA21_retained_audit_NRT_records": 5775,
+  "NOAA21_exact_native_keys_shared": 1848,
+  "NOAA21_standard_only_native_keys": 3806,
+  "NOAA21_NRT_only_native_keys": 3927,
+  "NOAA21_shared_key_changed_fields": {
+    "type": 1848,
+    "version": 1848,
+    "frp": 32,
+    "confidence": 2
+  },
+  "source_checkpoints": {
+    "2023": "509afdf0418a01b248671addb4d7a221a02e0e5e275fb203aa6e170206d29077",
+    "2022_2024": "6203a50c88921de8c29757192fbcbd9ee2af3ee06bd7f923e5dcf50cc34deea5"
+  },
+  "boundary_sha256": "838db6bf67cb4d21df585d32483c64c9d56556d4fc216564bf4aa982c659382e",
+  "outage_evidence_status": {
+    "2022": "captured_2022_2024_bundle",
+    "2024": "captured_2022_2024_bundle",
+    "2023": "checksummed_local_public_snapshots"
+  },
+  "coverage_verified": false,
+  "harmonization_applied": false,
+  "production_export_enabled": false,
+  "frontend_changed": false
+}

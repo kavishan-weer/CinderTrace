@@ -1,0 +1,481 @@
+{
+  "study_id": "lk_viirs_expansion_design_v1",
+  "status": "frozen_design_not_a_validated_model",
+  "seed": "emberline_lk_seasonal_validation_v1_20261115",
+  "pilot_results_zip_sha256": "dea71170261cd155b5ff7515b12b3078bba08b280cd2204c48dd23ca5ac46de3",
+  "observed_manifest_sha256": "eedeae6a25c1366b0b86b95e8d2f3787d634317860e0a283cdbfd3243a322cdc",
+  "dates": [
+    {
+      "year": 2018,
+      "quarter": 2,
+      "half_quarter": 1,
+      "date": "2018-04-19",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2018,
+      "quarter": 2,
+      "half_quarter": 2,
+      "date": "2018-05-27",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2018,
+      "quarter": 3,
+      "half_quarter": 1,
+      "date": "2018-07-03",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2018,
+      "quarter": 3,
+      "half_quarter": 2,
+      "date": "2018-09-01",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2018,
+      "quarter": 4,
+      "half_quarter": 1,
+      "date": "2018-10-22",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2018,
+      "quarter": 4,
+      "half_quarter": 2,
+      "date": "2018-12-10",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2019,
+      "quarter": 1,
+      "half_quarter": 1,
+      "date": "2019-02-14",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2019,
+      "quarter": 1,
+      "half_quarter": 2,
+      "date": "2019-03-08",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2019,
+      "quarter": 2,
+      "half_quarter": 1,
+      "date": "2019-04-22",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2019,
+      "quarter": 2,
+      "half_quarter": 2,
+      "date": "2019-05-18",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2019,
+      "quarter": 3,
+      "half_quarter": 1,
+      "date": "2019-07-10",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2019,
+      "quarter": 3,
+      "half_quarter": 2,
+      "date": "2019-09-30",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2019,
+      "quarter": 4,
+      "half_quarter": 1,
+      "date": "2019-11-11",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2019,
+      "quarter": 4,
+      "half_quarter": 2,
+      "date": "2019-12-12",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2020,
+      "quarter": 1,
+      "half_quarter": 1,
+      "date": "2020-01-16",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2020,
+      "quarter": 1,
+      "half_quarter": 2,
+      "date": "2020-02-23",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2020,
+      "quarter": 2,
+      "half_quarter": 1,
+      "date": "2020-05-14",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2020,
+      "quarter": 2,
+      "half_quarter": 2,
+      "date": "2020-06-28",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2020,
+      "quarter": 3,
+      "half_quarter": 1,
+      "date": "2020-07-15",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2020,
+      "quarter": 3,
+      "half_quarter": 2,
+      "date": "2020-09-19",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2020,
+      "quarter": 4,
+      "half_quarter": 1,
+      "date": "2020-10-09",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2020,
+      "quarter": 4,
+      "half_quarter": 2,
+      "date": "2020-12-09",
+      "partition": "fit",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2021,
+      "quarter": 1,
+      "half_quarter": 1,
+      "date": "2021-02-12",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2021,
+      "quarter": 1,
+      "half_quarter": 2,
+      "date": "2021-03-29",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2021,
+      "quarter": 2,
+      "half_quarter": 1,
+      "date": "2021-04-01",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2021,
+      "quarter": 2,
+      "half_quarter": 2,
+      "date": "2021-06-23",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2021,
+      "quarter": 3,
+      "half_quarter": 1,
+      "date": "2021-07-05",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2021,
+      "quarter": 3,
+      "half_quarter": 2,
+      "date": "2021-09-11",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2021,
+      "quarter": 4,
+      "half_quarter": 1,
+      "date": "2021-10-05",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2021,
+      "quarter": 4,
+      "half_quarter": 2,
+      "date": "2021-12-15",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2022,
+      "quarter": 1,
+      "half_quarter": 1,
+      "date": "2022-02-13",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2022,
+      "quarter": 1,
+      "half_quarter": 2,
+      "date": "2022-03-13",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2022,
+      "quarter": 2,
+      "half_quarter": 1,
+      "date": "2022-05-15",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2022,
+      "quarter": 2,
+      "half_quarter": 2,
+      "date": "2022-06-24",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2022,
+      "quarter": 3,
+      "half_quarter": 1,
+      "date": "2022-07-10",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2022,
+      "quarter": 3,
+      "half_quarter": 2,
+      "date": "2022-08-30",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2022,
+      "quarter": 4,
+      "half_quarter": 1,
+      "date": "2022-11-02",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2022,
+      "quarter": 4,
+      "half_quarter": 2,
+      "date": "2022-12-07",
+      "partition": "calibration",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2023,
+      "quarter": 1,
+      "half_quarter": 1,
+      "date": "2023-01-26",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2023,
+      "quarter": 1,
+      "half_quarter": 2,
+      "date": "2023-03-15",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2023,
+      "quarter": 2,
+      "half_quarter": 1,
+      "date": "2023-04-30",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2023,
+      "quarter": 2,
+      "half_quarter": 2,
+      "date": "2023-06-02",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2023,
+      "quarter": 3,
+      "half_quarter": 1,
+      "date": "2023-07-01",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2023,
+      "quarter": 3,
+      "half_quarter": 2,
+      "date": "2023-08-26",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2023,
+      "quarter": 4,
+      "half_quarter": 1,
+      "date": "2023-10-23",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2023,
+      "quarter": 4,
+      "half_quarter": 2,
+      "date": "2023-12-02",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "half_quarter": 1,
+      "date": "2024-01-13",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2024,
+      "quarter": 1,
+      "half_quarter": 2,
+      "date": "2024-03-29",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "half_quarter": 1,
+      "date": "2024-05-06",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2024,
+      "quarter": 2,
+      "half_quarter": 2,
+      "date": "2024-05-24",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "half_quarter": 1,
+      "date": "2024-07-08",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2024,
+      "quarter": 3,
+      "half_quarter": 2,
+      "date": "2024-09-17",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "half_quarter": 1,
+      "date": "2024-11-10",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    },
+    {
+      "year": 2024,
+      "quarter": 4,
+      "half_quarter": 2,
+      "date": "2024-12-15",
+      "partition": "evaluation",
+      "selection_basis": "calendar and availability only; no detection count ranking"
+    }
+  ],
+  "unavailable_calendar_slots": [
+    {
+      "year": 2018,
+      "quarter": 1,
+      "half_quarter": 1,
+      "status": "no_eligible_calendar_candidate_not_zero_activity"
+    },
+    {
+      "year": 2018,
+      "quarter": 1,
+      "half_quarter": 2,
+      "status": "no_eligible_calendar_candidate_not_zero_activity"
+    }
+  ],
+  "date_counts_by_partition": {
+    "fit": 22,
+    "calibration": 16,
+    "evaluation": 16
+  },
+  "eligibility": "Both archives available; conservatively exclude upstream missing standard dates and documented global gap dates. Not verified local observing coverage.",
+  "sampling": "One hashed date per half-quarter, at least fourteen days apart within a quarter; exclude pilot dates; no detection count ranking. Unsupported slots remain absent. NOAA-20 standard archive starts April 2018 in this checkpoint.",
+  "prior_information": "Aggregate regional metrics and pilot results were inspected. Expanded pass-level evaluation is not a blind independent replication or physical fire-truth validation.",
+  "paired_observation_diagnostic": {
+    "target": "sensor-specific observed activity on explicit matched support",
+    "selection": "evaluate geometry/support eligibility for all time candidates before one-to-one assignment; never select using fire counts",
+    "caution": "S-NPP shared-support masks cannot be used as prediction inputs during a real S-NPP outage"
+  },
+  "simulated_outage_test": {
+    "target": "S-NPP observed regional activity on eligible archived dates, not total true fires",
+    "features": "NOAA-20 observations and its own quality/geometry plus calendar only",
+    "prohibited_features": "S-NPP counts, masks, clear-support selection, viewing information or reference-derived pairing",
+    "split": "fit 2018\u20132020, calibrate 2021\u20132022, evaluate 2023\u20132024; whole dates/passes remain together",
+    "caution": "Reference availability qualifies evaluation labels only, not deployment predictors. Outage covariate shift remains unverified."
+  },
+  "uncertainty": "Separate calibration date blocks. Minimum twelve supported calibration dates before exploratory 80/90 percent intervals; evaluate date-level coverage and width. Pixels and sensitivity variants are not independent samples. Withhold unsupported intervals; no annual/monthly uncertainty claims from sampled passes.",
+  "next_execution": "Public metadata inventory and volume estimate first; reuse existing cache and prepare resumable processing. This step downloads no science files.",
+  "replacement_enabled": false,
+  "early_history_bands_enabled": false,
+  "coverage_verified": false,
+  "frontend_changed": false
+}

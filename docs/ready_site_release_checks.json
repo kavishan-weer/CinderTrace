@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-15",
+  "product": "cindertrace-ready-v1",
+  "automated_tests": {
+    "passed": 50,
+    "failed": 0
+  },
+  "static_data": {
+    "file_hashes_verified": 90,
+    "regions": 3,
+    "years_per_region": 27,
+    "native_observations": 5072279
+  },
+  "browser_checks": {
+    "sri_lanka_2023": 13366,
+    "sri_lanka_august_2023_csv": 7017,
+    "california_2023": 77775,
+    "los_angeles_2023": 4374,
+    "nsw_2023": 176631,
+    "nsw_2019": 938625,
+    "lk_25km_radius_7_5_80_7_2023": 254,
+    "lk_snpp_2023": 6432,
+    "drawn_polygon_completed": true,
+    "record_inspector_pagination": 50,
+    "calendar_png_downloaded": true,
+    "area_pdf_downloaded_and_rendered": true,
+    "mobile_390px_no_horizontal_overflow": true,
+    "browser_errors_observed": []
+  },
+  "scientific_limitations": [
+    "Observing coverage is unverified; zeros are extract counts, not proof of no fire.",
+    "Published historical estimates are attributed Fire Harmony derivatives, not independent CinderTrace model validation.",
+    "Earlier calibration/validation outputs are not used by the active frontend.",
+    "Provider fixed filters and coarse H3 support remain separate from exact native selections."
+  ],
+  "production_build": "passed",
+  "publication": {
+    "status": "succeeded",
+    "project_id": "appgprj_6af709c5b55c8191a9fcaa07f71915a7",
+    "deployment_id": "appgdep_6af97e2c78d88191a16b6b294a8ad0bb",
+    "source_commit": "7d150c9c1440ab266db9393fa088b84c66f7bd8c",
+    "archive": "release/cindertrace-ready-site.tar.gz",
+    "audience": "owner only",
+    "url": "https://cindertrace-fire-observatory.haleoak66.chatgpt.site",
+    "production_access_check": "Private ChatGPT sign-in gate confirmed; authenticated production journey requires owner sign-in. All interaction tests ran against the matching local build."
+  }
+}

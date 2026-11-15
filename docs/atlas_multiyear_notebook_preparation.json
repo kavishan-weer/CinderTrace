@@ -1,0 +1,55 @@
+{
+  "status": "prepared_and_locally_tested_not_yet_run_on_expanded_science_data",
+  "sample_dates": 54,
+  "embedded_standard_observations": 929,
+  "catalogue_linked_files": 632,
+  "catalogue_download_gib": 45.56768878735602,
+  "unresolved_noaa20_dates_withheld": [
+    "2018-04-19",
+    "2018-05-27"
+  ],
+  "batches": [
+    [
+      2018,
+      2019,
+      2020
+    ],
+    [
+      2021,
+      2022
+    ],
+    [
+      2023,
+      2024
+    ]
+  ],
+  "single_results_zip": true,
+  "earthdata_login_required_for_new_downloads": true,
+  "checks_passed": 88,
+  "real_expanded_science_processing_run_locally": false,
+  "prior_notebooks_zips_and_observed_checkpoint_preserved": true,
+  "frontend_changed": false,
+  "production_export_enabled": false,
+  "files": {
+    "notebooks/Emberline_Atlas_LK_Multiyear_Validation.ipynb": {
+      "bytes": 486416,
+      "sha256": "14256271a57e6789b20551d8e32fdef83df280c026d0749fdd23ec222b8aeea9"
+    },
+    "pipeline/atlas_multiyear_validation.py": {
+      "bytes": 27835,
+      "sha256": "19e7a877ce4a8da8fae0871d6477164c8029b65b44bbc73ee0fc6f40a5a63e3c"
+    },
+    "scripts/prepare_atlas_multiyear_notebook.py": {
+      "bytes": 16277,
+      "sha256": "4d65bbe00234023f145b80bdc4fbae6c7bd16a170aea927c0e141eed48d7a93a"
+    },
+    "tests/test_atlas_multiyear_validation.py": {
+      "bytes": 12757,
+      "sha256": "99fb281947979e770bb94f7fc93b4a9153b737fdfac2b86295c28ca8fc2a3c01"
+    },
+    "docs/atlas_multiyear_validation_notebook.md": {
+      "bytes": 6644,
+      "sha256": "14bfabc9f8c22655b6dd9de13c29a7e9fe972b2d0575b1ae916e2323a7f9f6d8"
+    }
+  }
+}

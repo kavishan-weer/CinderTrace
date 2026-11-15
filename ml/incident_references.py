@@ -66,7 +66,7 @@ def decode_rings(rings):
 
 
 def fetch_json(url):
-    request=Request(url,headers={'User-Agent':'EMBERLINE-research-case-audit/1.0'})
+    request=Request(url,headers={'User-Agent':'CINDERTRACE-research-case-audit/1.0'})
     with urlopen(request,timeout=120) as response:body=response.read()
     data=json.loads(body)
     if 'error' in data:raise ValueError(f'Agency service error: {data["error"]}')

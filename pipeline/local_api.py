@@ -187,7 +187,7 @@ class Handler(BaseHTTPRequestHandler):
         # browser origins; no CORS permission is granted to arbitrary websites.
         origin = self.headers.get('Origin')
         if origin and urlparse(origin).hostname not in ['127.0.0.1', 'localhost', '::1']:
-            return self.respond(403, {'error': 'Use the local EMBERLINE app.'})
+            return self.respond(403, {'error': 'Use the local CINDERTRACE app.'})
         if not self.jobs.acquire(blocking=False):
             return self.respond(429, {'error': 'Two local queries are already running. Try again shortly.'})
         output = None
@@ -220,10 +220,10 @@ class Handler(BaseHTTPRequestHandler):
             if is_pdf:
                 from .brief_pdf import render_brief
                 count = render_brief(request.get('brief'), output)
-                filename = f"emberline-situation-brief-{request['brief']['selected']}.pdf"
+                filename = f"cindertrace-situation-brief-{request['brief']['selected']}.pdf"
             else:
                 count = export_hotspots(request, output)
-                filename = f"emberline-{request['region']}-raw-hotspots-{request['start']}-{request['end']}.csv"
+                filename = f"cindertrace-{request['region']}-raw-hotspots-{request['start']}-{request['end']}.csv"
             with self.exports_lock:
                 self.exports[token] = (output, time.time() + 600, filename)
             self.respond(200, {'url': f"/api/exports/{token}.{'pdf' if is_pdf else 'csv'}", 'pages' if is_pdf else 'rows': count, 'bytes': output.stat().st_size, 'filename': filename})
@@ -272,7 +272,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--port', type=int, default=0)
     args = parser.parse_args()
-    with tempfile.TemporaryDirectory(prefix='emberline-exports-') as directory:
+    with tempfile.TemporaryDirectory(prefix='cindertrace-exports-') as directory:
         Handler.export_root = directory
         server = Server(('127.0.0.1', args.port), Handler)
         print(json.dumps({'api_url': f'http://127.0.0.1:{server.server_port}'}), flush=True)

@@ -1,0 +1,131 @@
+{
+  "status": "bundle_and_processed_evidence_verified",
+  "zip_name": "emberline_atlas_lk_observation_evidence_20261115T001225Z.zip",
+  "zip_bytes": 2072416,
+  "zip_sha256": "e9ee5e9edf6790a31dfad88bd7e6edc7de9f681f51e76e27e3ae132699c7fe10",
+  "manifested_members": 64,
+  "science_receipts": 68,
+  "science_bytes_reported": 5317921454,
+  "fire_granules_screened": 34,
+  "sparse_alignment_checked_granules": 25,
+  "sparse_alignment_max_error_degrees": 0.0,
+  "zero_sparse_fire_granules_weaker_alignment": 9,
+  "bbox_matches_with_no_local_centres": 3,
+  "cell_support_rows": 1909386,
+  "time_candidates": 19,
+  "candidates_with_common_clear_centre_cells": 13,
+  "available_sensor_days_reconciled": 10,
+  "absent_sensor_days_kept_unavailable": 2,
+  "original_science_files_independently_reread_here": false,
+  "receipt_limit": "Science files are retained in user cache, not this ZIP. Hash/size receipts and derived-table consistency verified; no independent local recomputation of raw science arrays.",
+  "coverage_verified": false,
+  "gap_fill_validated": false,
+  "uncertainty_revalidated": false,
+  "zero_months_restored": 0,
+  "frontend_changed": false,
+  "daily_reconciliation": [
+    {
+      "date": "2021-08-15",
+      "satellite": "Suomi-NPP",
+      "status": "catalogued_granules_screened_coverage_unverified",
+      "screened_fire_centres": 0.0,
+      "archive_native_observations": 0,
+      "raw_mask_fire_centres": 0.0
+    },
+    {
+      "date": "2021-08-15",
+      "satellite": "NOAA-20",
+      "status": "catalogued_granules_screened_coverage_unverified",
+      "screened_fire_centres": 0.0,
+      "archive_native_observations": 0,
+      "raw_mask_fire_centres": 0.0
+    },
+    {
+      "date": "2021-08-19",
+      "satellite": "Suomi-NPP",
+      "status": "catalogued_granules_screened_coverage_unverified",
+      "screened_fire_centres": 69.0,
+      "archive_native_observations": 94,
+      "raw_mask_fire_centres": 94.0
+    },
+    {
+      "date": "2021-08-19",
+      "satellite": "NOAA-20",
+      "status": "catalogued_granules_screened_coverage_unverified",
+      "screened_fire_centres": 203.0,
+      "archive_native_observations": 221,
+      "raw_mask_fire_centres": 221.0
+    },
+    {
+      "date": "2022-08-04",
+      "satellite": "Suomi-NPP",
+      "status": "catalogue_absent_not_zero_observations",
+      "screened_fire_centres": null,
+      "archive_native_observations": 0,
+      "raw_mask_fire_centres": null
+    },
+    {
+      "date": "2022-08-04",
+      "satellite": "NOAA-20",
+      "status": "catalogued_granules_screened_coverage_unverified",
+      "screened_fire_centres": 0.0,
+      "archive_native_observations": 0,
+      "raw_mask_fire_centres": 0.0
+    },
+    {
+      "date": "2022-08-12",
+      "satellite": "Suomi-NPP",
+      "status": "catalogued_granules_screened_coverage_unverified",
+      "screened_fire_centres": 3.0,
+      "archive_native_observations": 6,
+      "raw_mask_fire_centres": 6.0
+    },
+    {
+      "date": "2022-08-12",
+      "satellite": "NOAA-20",
+      "status": "catalogued_granules_screened_coverage_unverified",
+      "screened_fire_centres": 12.0,
+      "archive_native_observations": 13,
+      "raw_mask_fire_centres": 13.0
+    },
+    {
+      "date": "2024-05-31",
+      "satellite": "Suomi-NPP",
+      "status": "catalogue_absent_not_zero_observations",
+      "screened_fire_centres": null,
+      "archive_native_observations": 0,
+      "raw_mask_fire_centres": null
+    },
+    {
+      "date": "2024-05-31",
+      "satellite": "NOAA-20",
+      "status": "catalogued_granules_screened_coverage_unverified",
+      "screened_fire_centres": 1.0,
+      "archive_native_observations": 1,
+      "raw_mask_fire_centres": 1.0
+    },
+    {
+      "date": "2024-06-05",
+      "satellite": "Suomi-NPP",
+      "status": "catalogued_granules_screened_coverage_unverified",
+      "screened_fire_centres": 0.0,
+      "archive_native_observations": 0,
+      "raw_mask_fire_centres": 0.0
+    },
+    {
+      "date": "2024-06-05",
+      "satellite": "NOAA-20",
+      "status": "catalogued_granules_screened_coverage_unverified",
+      "screened_fire_centres": 0.0,
+      "archive_native_observations": 0,
+      "raw_mask_fire_centres": 0.0
+    }
+  ],
+  "saved_notebook_review": {
+    "sha256": "8f3cccc8c288603242cff89bcb36d026c7e048205b971b808c5d327c0dfe3132",
+    "executed_code_cells": 8,
+    "error_outputs": [],
+    "returned_zip_sha_matches_saved_output": true,
+    "embedded_method_matches_local": true
+  }
+}

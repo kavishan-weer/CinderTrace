@@ -1,0 +1,86 @@
+{
+  "lk": {
+    "before": "2023-07-15",
+    "after": "2023-08-15",
+    "bbox": [
+      79.65,
+      5.92,
+      81.88,
+      9.84
+    ],
+    "layer": "terra",
+    "width": 1000,
+    "height": 800,
+    "source": "NASA GIBS / MODIS daily corrected-reflectance true colour",
+    "requests": [
+      {
+        "date": "2023-07-15",
+        "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&STYLES=&FORMAT=image/jpeg&SRS=EPSG:4326&BBOX=79.65,5.92,81.88,9.84&WIDTH=1000&HEIGHT=800&TIME=2023-07-15",
+        "sha256": "eb613ab7641412fea8c695e0a96631481193e4c1bf86f85ccc86d8e791f5164f"
+      },
+      {
+        "date": "2023-08-15",
+        "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&STYLES=&FORMAT=image/jpeg&SRS=EPSG:4326&BBOX=79.65,5.92,81.88,9.84&WIDTH=1000&HEIGHT=800&TIME=2023-08-15",
+        "sha256": "da2f1016fb54242549d40c72bb538aa4b3f1c38af7465ce6746965c7ec99a69f"
+      }
+    ],
+    "before_file": "imagery-lk-before.jpg",
+    "after_file": "imagery-lk-after.jpg"
+  },
+  "ca": {
+    "before": "2020-09-03",
+    "after": "2020-09-08",
+    "bbox": [
+      -119.65,
+      36.8,
+      -118.7,
+      37.8
+    ],
+    "layer": "terra",
+    "width": 1000,
+    "height": 800,
+    "source": "NASA GIBS / MODIS daily corrected-reflectance true colour",
+    "requests": [
+      {
+        "date": "2020-09-03",
+        "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&STYLES=&FORMAT=image/jpeg&SRS=EPSG:4326&BBOX=-119.65,36.8,-118.7,37.8&WIDTH=1000&HEIGHT=800&TIME=2020-09-03",
+        "sha256": "d052a085cff1c3749ad8e8c555881a00f9d388e26da861369e2181232d784bd6"
+      },
+      {
+        "date": "2020-09-08",
+        "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&STYLES=&FORMAT=image/jpeg&SRS=EPSG:4326&BBOX=-119.65,36.8,-118.7,37.8&WIDTH=1000&HEIGHT=800&TIME=2020-09-08",
+        "sha256": "ff75c6d006ba74b2b2ad675bfd92effb59e0c9f839747583744aa0f443f9ffff"
+      }
+    ],
+    "before_file": "imagery-ca-before.jpg",
+    "after_file": "imagery-ca-after.jpg"
+  },
+  "nsw": {
+    "before": "2019-11-01",
+    "after": "2019-12-31",
+    "bbox": [
+      149.3,
+      -36.8,
+      153.7,
+      -31.2
+    ],
+    "layer": "terra",
+    "width": 1000,
+    "height": 800,
+    "source": "NASA GIBS / MODIS daily corrected-reflectance true colour",
+    "requests": [
+      {
+        "date": "2019-11-01",
+        "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&STYLES=&FORMAT=image/jpeg&SRS=EPSG:4326&BBOX=149.3,-36.8,153.7,-31.2&WIDTH=1000&HEIGHT=800&TIME=2019-11-01",
+        "sha256": "9db4c59d07585fba58cce73cfc13e051f20279ebbbf3d45fbe2a0498568357c6"
+      },
+      {
+        "date": "2019-12-31",
+        "url": "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=MODIS_Terra_CorrectedReflectance_TrueColor&STYLES=&FORMAT=image/jpeg&SRS=EPSG:4326&BBOX=149.3,-36.8,153.7,-31.2&WIDTH=1000&HEIGHT=800&TIME=2019-12-31",
+        "sha256": "42214d950a84df426ef5d71c41a68abd1d2745f43eeb89b162355e04d88fc981"
+      }
+    ],
+    "before_file": "imagery-nsw-before.jpg",
+    "after_file": "imagery-nsw-after.jpg"
+  }
+}

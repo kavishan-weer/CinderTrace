@@ -1,0 +1,23 @@
+export type ValidationYear={year:number;reference:number;exported:number;matched:number;missing:number;extra:number;file_sha256:string};
+export type ValidationMonth={year:number;month:number;satellite:string;reference:number;exported:number;difference:number};
+export type ValidationReceipt={
+ version:number;generated_utc:string;
+ source_reconciliation:{kind:string;title:string;scope:string;units:string;reference:string;observations:number;matched:number;missing:number;extra:number;years:ValidationYear[];monthly_satellite:ValidationMonth[];verified_raw_requests:number;reference_sha256:string;boundary_sha256:string;manifest_sha256:string;comparison_fields:string[];comparison_method:string;historical_capture:string;noaa21_audit:{year:number;nrt_records:number;standard_records:number;shared_native_keys:number;standard_only_keys:number;nrt_only_keys:number;decision:string};limits:string[];source_links:{label:string;url:string}[]};
+ perimeter_case:{kind:string;title:string;reference:string;reference_feature:Record<string,string|number|null>;source_url:string;query_url:string;reference_sha256:string;browser_file_sha256:string;native_input_sha256:string;window_start:string;window_end:string;bbox:number[];local_records:number;inside_final_perimeter:number;inside_or_within_1km:number;inside_share:number|null;by_satellite:{name:string;local_records:number;inside_final_perimeter:number;inside_or_within_1km:number}[];daily:{date:string;local:number;inside:number;within_1km:number}[];geometry:GeoJSON.Polygon|GeoJSON.MultiPolygon;map_bins:{lon:number;lat:number;count:number;inside_count:number}[];method:string;limits:string[];reference_credit:string;source_links:{label:string;url:string}[]};
+ claims:{source_fidelity_checked:boolean;independent_perimeter_case_checked:boolean;physical_fire_sensitivity_validated:boolean;provider_harmonization_validated:boolean;forecast_validated:boolean;observing_coverage_verified:boolean};
+};
+export function sourceAgreement(years:ValidationYear[]){const result=years.reduce((r,y)=>({reference:r.reference+y.reference,matched:r.matched+y.matched,missing:r.missing+y.missing,extra:r.extra+y.extra}),{reference:0,matched:0,missing:0,extra:0});return {...result,share:result.reference?result.matched/result.reference:null};}
+export function perimeterShare(inside:number,total:number){return total>0?inside/total:null;}
+export function validationYearMonths(receipt:ValidationReceipt,year:number){return receipt.source_reconciliation.monthly_satellite.filter(r=>r.year===year);}
+export function validateValidationReceipt(value:unknown):ValidationReceipt{
+ if(!value||typeof value!=='object')throw new Error('Validation receipt is unavailable.');
+ const r=value as ValidationReceipt,s=r.source_reconciliation,c=r.perimeter_case;
+ const count=(v:unknown)=>typeof v==='number'&&Number.isInteger(v)&&v>=0;
+ if(r.version!==1||!s||!c||!r.claims||!Array.isArray(s.years)||!s.years.length||!Array.isArray(s.monthly_satellite)||!Array.isArray(c.daily)||!Array.isArray(c.map_bins)||!count(c.local_records)||!count(c.inside_final_perimeter)||!count(c.inside_or_within_1km)||c.inside_final_perimeter>c.inside_or_within_1km||c.inside_or_within_1km>c.local_records)throw new Error('Validation receipt failed its consistency check.');
+ if(s.years.some(y=>![y.reference,y.exported,y.matched,y.missing,y.extra].every(count)||y.matched+y.missing!==y.reference||y.matched+y.extra!==y.exported))throw new Error('Validation year totals do not reconcile.');
+ for(const year of s.years){const months=s.monthly_satellite.filter(m=>m.year===year.year);if(months.length!==60||months.some(m=>!count(m.reference)||!count(m.exported)||m.month<1||m.month>12||m.difference!==m.exported-m.reference)||months.reduce((n,m)=>n+m.reference,0)!==year.reference||months.reduce((n,m)=>n+m.exported,0)!==year.exported)throw new Error('Monthly validation totals do not reconcile.');}
+ const totals=sourceAgreement(s.years);if(totals.reference!==s.observations||totals.matched!==s.matched||totals.missing!==s.missing||totals.extra!==s.extra)throw new Error('Validation summary does not match the year receipts.');
+ if(c.daily.reduce((n,d)=>n+d.local,0)!==c.local_records||c.daily.reduce((n,d)=>n+d.inside,0)!==c.inside_final_perimeter||c.map_bins.reduce((n,b)=>n+b.count,0)!==c.local_records)throw new Error('Perimeter display counts do not preserve the evaluated records.');
+ if(r.claims.physical_fire_sensitivity_validated||r.claims.provider_harmonization_validated||r.claims.forecast_validated||r.claims.observing_coverage_verified)throw new Error('This receipt cannot certify unsupported scientific claims.');
+ return r;
+}

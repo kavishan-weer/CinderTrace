@@ -1,0 +1,10 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {gunzipSync} from 'node:zlib';
+import {buildVisualReport,type ReportInput} from '../src/visualReport.ts';
+import {selectNative,monthBounds,type Manifest,type NativePackage,type ProviderData} from '../src/observatoryData.ts';
+const base=new URL('../site-public/ready/',import.meta.url),manifest=JSON.parse(readFileSync(new URL('manifest.json',base),'utf8')) as Manifest;
+for(const id of ['lk','ca','nsw']){const region=manifest.regions.find(r=>r.id===id)!,native=JSON.parse(gunzipSync(readFileSync(new URL(`${id}/native-2023.json.gz`,base))).toString()) as NativePackage,provider=JSON.parse(readFileSync(new URL(`${id}/provider.json`,base),'utf8')) as ProviderData,boundary=JSON.parse(readFileSync(new URL(`${id}/boundary.json`,base),'utf8'));const range=monthBounds(2023,7),rows=selectNative(native.rows,{satellites:[0,1,2,3,4],categories:[0,1,2,3,4],confidence:[1,2,3],quality:'all',admin:null},range);
+ const input:ReportInput={region,manifest,rows,range,scope:region.name+' / Entire region',filters:'Terra + Aqua + Suomi-NPP + NOAA-20 + NOAA-21; all categories; nominal + high + unspecified confidence; all processing quality',source:native.source_sha256,provenance:native.provenance,boundary,provider,focus:'2023-08',note:'Compare this geographic pattern with the seasonal calendar before interpreting changes in recorded activity.',detailed:true,available:true};
+ for(const detailed of [false,true]){const doc=buildVisualReport({...input,detailed}),path=new URL(`../../${id==='lk'&&detailed?'output/pdf/cindertrace-visual-report.pdf':`tmp/pdfs/${id}-${detailed?'detailed':'brief'}.pdf`}`,import.meta.url);writeFileSync(path,new Uint8Array(doc.output('arraybuffer')));console.log(id,detailed,doc.getNumberOfPages(),path.pathname);}
+ if(id==='lk'){const doc=buildVisualReport({...input,note:'A long user annotation to check automatic page continuation. '.repeat(33),scope:input.scope+' / A selected coordinate-radius area with a longer label',detailed:true});writeFileSync(new URL('../../tmp/pdfs/long-note.pdf',import.meta.url),new Uint8Array(doc.output('arraybuffer')));}
+}

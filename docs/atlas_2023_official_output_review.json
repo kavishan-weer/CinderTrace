@@ -1,0 +1,23 @@
+{
+  "review_type": "saved_notebook_output_review; official ZIP receipts not yet independently inspected",
+  "notebook": "notebooks/Emberline_Atlas_2023_Official_Check.ipynb",
+  "notebook_sha256": "0ef5e86afdf5e667a276a20789782a09f29f528b5467caa15d03ad543872e47d",
+  "reported_status": "matched_native_records",
+  "completed_requests": 219,
+  "matched_observations": 13366,
+  "monthly_rows_checked_against_original_pilot": 48,
+  "missing_records": 0,
+  "extra_records": 0,
+  "native_attribute_differences": 0,
+  "duplicate_keys_need_review": false,
+  "coordinate_comparison_decimals": 5,
+  "numeric_attribute_absolute_tolerance": 1e-05,
+  "coverage_verified": false,
+  "harmonization_validated": false,
+  "reported_checkpoint_zip": "emberline_atlas_lk_2023_official_check.zip",
+  "reported_checkpoint_sha256": "509afdf0418a01b248671addb4d7a221a02e0e5e275fb203aa6e170206d29077",
+  "checkpoint_zip_present_in_project": false,
+  "nonblocking_warning": "pandas FutureWarning about concatenating empty/all-NA entries; saved reconciliation completed successfully",
+  "frontend_changed": false,
+  "next_gate": "Verify returned ZIP identity, per-request checksums, all 219 source/date windows, and recompute record comparisons locally."
+}

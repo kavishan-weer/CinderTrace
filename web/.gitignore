@@ -1,0 +1,10 @@
+node_modules/
+dist/
+public/data/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+*-preview.jpg
+preview.jpg
+statistics-visibility-fixed.jpg

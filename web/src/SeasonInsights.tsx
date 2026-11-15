@@ -40,7 +40,7 @@ export default function SeasonInsights({data,start,end,nsw,loading,exportContext
 
  function exportCSV(){
   const url=URL.createObjectURL(new Blob([seasonCSV(annual,exportContext,nsw)],{type:'text/csv;charset=utf-8'}));
-  const filename=`emberline-seasons-${nsw?'jul-jun':'jan-dec'}-${start}-${end}.csv`;
+  const filename=`cindertrace-seasons-${nsw?'jul-jun':'jan-dec'}-${start}-${end}.csv`;
   setCSV({url,filename});const a=document.createElement('a');a.href=url;a.download=filename;a.click();
  }
  return <section className="panel season-panel" id="seasons" aria-labelledby="season-title" aria-busy={loading}>

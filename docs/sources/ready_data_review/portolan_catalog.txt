@@ -1,0 +1,83 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ],
+  "id": "nasa-firms-active-fire",
+  "title": "NASA FIRMS Active Fire Detections",
+  "description": "Global satellite active fire and thermal anomaly detections from NASA's Fire Information for Resource Management System (FIRMS), mirrored as cloud-native GeoParquet. Covers MODIS (Terra and Aqua, 1 km, from November 2000) and VIIRS (Suomi-NPP, NOAA-20 and NOAA-21, 375 m, from January 2012) in a single queryable table partitioned by year. Near-real-time detections refresh hourly and are replaced by science-quality data as NASA finalizes it. This is a mirror; NASA LANCE FIRMS is the authoritative source. Read the [agent guide](AGENTS.md) before you query it.",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://data.source.coop/portolan-mirrors/firms-catalog/catalog.json",
+      "type": "application/json",
+      "title": "NASA FIRMS Active Fire Detections"
+    },
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json",
+      "title": "NASA FIRMS Active Fire Detections"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Catalog README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Catalog agent guide"
+    },
+    {
+      "rel": "vcs",
+      "href": "https://github.com/portolan-mirrors/firms-catalog",
+      "title": "Source repository"
+    },
+    {
+      "rel": "issues",
+      "href": "https://github.com/portolan-mirrors/firms-catalog/issues",
+      "title": "Issue tracker"
+    },
+    {
+      "rel": "via",
+      "href": "https://firms.modaps.eosdis.nasa.gov/",
+      "type": "text/html",
+      "title": "NASA FIRMS"
+    },
+    {
+      "rel": "child",
+      "href": "./detections/collection.json",
+      "type": "application/json",
+      "title": "Active Fire Detections (MODIS and VIIRS)"
+    },
+    {
+      "rel": "preview",
+      "href": "https://portolan-mirrors.github.io/firms-catalog/",
+      "type": "text/html",
+      "title": "Interactive fire map"
+    }
+  ],
+  "updated": "2026-09-08T06:49:50Z",
+  "providers": [
+    {
+      "name": "NASA LANCE FIRMS",
+      "description": "Fire Information for Resource Management System, part of NASA's Earth Observing System Data and Information System (EOSDIS).",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://firms.modaps.eosdis.nasa.gov/"
+    },
+    {
+      "name": "Portolan Mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/portolan-mirrors/firms-catalog"
+    }
+  ]
+}

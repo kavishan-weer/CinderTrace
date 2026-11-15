@@ -1,0 +1,137 @@
+{
+  "scope": "Sri Lanka 2023 observed-data pilot; frontend unchanged",
+  "bundle_sha256": "11184caea4d9ca669e4f7f455d120d8f4d898db0bf2086f5c86cb9b47650e49e",
+  "observations": 13366,
+  "daily_grid_rows": 1460,
+  "native_filter_grid_rows": 9984,
+  "monthly_grid_rows": 48,
+  "missing_standard_dates_2023": [
+    {
+      "date": "2023-09-30",
+      "satellite": "NOAA-20",
+      "quality": "sp",
+      "evidence": "upstream_lists_missing_standard_data",
+      "source_url": "https://firms.modaps.eosdis.nasa.gov/api/missing_data/?action=fetch_data"
+    },
+    {
+      "date": "2023-07-22",
+      "satellite": "NOAA-20",
+      "quality": "sp",
+      "evidence": "upstream_lists_missing_standard_data",
+      "source_url": "https://firms.modaps.eosdis.nasa.gov/api/missing_data/?action=fetch_data"
+    },
+    {
+      "date": "2023-07-21",
+      "satellite": "NOAA-20",
+      "quality": "sp",
+      "evidence": "upstream_lists_missing_standard_data",
+      "source_url": "https://firms.modaps.eosdis.nasa.gov/api/missing_data/?action=fetch_data"
+    },
+    {
+      "date": "2023-07-20",
+      "satellite": "NOAA-20",
+      "quality": "sp",
+      "evidence": "upstream_lists_missing_standard_data",
+      "source_url": "https://firms.modaps.eosdis.nasa.gov/api/missing_data/?action=fetch_data"
+    },
+    {
+      "date": "2023-07-19",
+      "satellite": "NOAA-20",
+      "quality": "sp",
+      "evidence": "upstream_lists_missing_standard_data",
+      "source_url": "https://firms.modaps.eosdis.nasa.gov/api/missing_data/?action=fetch_data"
+    }
+  ],
+  "global_outage_intervals_2023": 35,
+  "outage_table_intervals_with_local_records": 0,
+  "listed_missing_dates_with_local_records": 0,
+  "zero_satellite_months": [
+    {
+      "month": "2023-12",
+      "satellite": "Terra"
+    },
+    {
+      "month": "2023-12",
+      "satellite": "Aqua"
+    }
+  ],
+  "published_type_totals": {
+    "0": 13264,
+    "2": 77,
+    "3": 25
+  },
+  "coverage_verified": false,
+  "independent_NASA_row_reconciliation": "not_run; next notebook needs a free FIRMS MAP_KEY",
+  "noaa20_replacement_validated": false,
+  "cross_sensor_harmonization_validated": false,
+  "decisions": [
+    "Retain raw recorded zeros; never infer complete observing coverage from them.",
+    "Tag upstream missing dates and global gap overlaps as evidence, without replacing or discarding raw records.",
+    "Do not expand historical calibration or compute new reference-equivalent medians/seasons yet.",
+    "NOAA-21 is outside this four-satellite mirror pilot; NASA and mirror historical availability differ."
+  ],
+  "sources": {
+    "snpp": {
+      "url": "https://modaps.modaps.eosdis.nasa.gov/services/production/outages_suomi_npp.html",
+      "filename": "snpp.html",
+      "bytes": 50540,
+      "sha256": "98459a2b0e3b33eec80a8f2070eab2b4ca59094f2757961903eaf94dd98a02c9",
+      "retrieved_utc": "2026-11-14T19:18:20.625348+00:00"
+    },
+    "terra": {
+      "url": "https://modaps.modaps.eosdis.nasa.gov/services/production/outages_terra.html",
+      "filename": "terra.html",
+      "bytes": 139914,
+      "sha256": "2d0ed8450498ae5d2df444ea2eec35de8bb1432849ffe7cf82920c5633153c85",
+      "retrieved_utc": "2026-11-14T19:18:22.677534+00:00"
+    },
+    "firms": {
+      "url": "https://firms2.modaps.eosdis.nasa.gov/content/notifications/firms/outages.html",
+      "filename": "firms.html",
+      "bytes": 26340,
+      "sha256": "f2019e21b916657c7ed9d83b06ff8521cea9b691a4bfe4946b88f5453553d703",
+      "retrieved_utc": "2026-11-14T19:18:24.132253+00:00"
+    },
+    "missing_data": {
+      "url": "https://firms.modaps.eosdis.nasa.gov/api/missing_data/?action=fetch_data",
+      "filename": "missing_data.json",
+      "bytes": 24401,
+      "sha256": "60ab8a4d35394d116378ba11747f6a4286d7303c9a8a77b8ec7ac01757f1b3e1",
+      "retrieved_utc": "2026-11-14T19:19:21.622990+00:00"
+    }
+  },
+  "files": {
+    "daily_observed_counts.parquet": {
+      "rows": 1460,
+      "sha256": "1001851c4128ab1067f1ea2c617f6d08d55c90361094e56f8701178609646f91"
+    },
+    "monthly_diagnostics.parquet": {
+      "rows": 48,
+      "sha256": "4cd160610a334e45632b456b0aa6d2fd93ef53c212a568c6e9688d1373b4b4da"
+    },
+    "native_filter_grid.parquet": {
+      "rows": 9984,
+      "sha256": "140fbe608229ed7d62824c2c5f39f6578b4ad534aa93b44c88a88234610913c2"
+    },
+    "native_daynight_frp_qa.parquet": {
+      "rows": 80,
+      "sha256": "073ca2f3dc56033293f2a73efc74f0ebc063b03ee141f032d672ddbb012c97bb"
+    },
+    "source_evidence_conflicts.parquet": {
+      "rows": 0,
+      "sha256": "25b93debbf9ef3698d22459e0425653d0837c332d30a0ca207c12e55048e4b88"
+    },
+    "outage_inventory_2023.parquet": {
+      "rows": 35,
+      "sha256": "bab25248985cc87fc76c4a65a786cc8624fbd3a536f13380ca4164bfff6aada2"
+    },
+    "upstream_missing_standard_dates_2023.parquet": {
+      "rows": 5,
+      "sha256": "0de662c7ba1dd21ff6ac71d3929b0d73a88a1b50c0d9d52952ea33da45722899"
+    },
+    "outage_notice_evidence.parquet": {
+      "rows": 2,
+      "sha256": "90fc30f1f2c1e45fa279996232108504fafd797ee5c1689fa375133ee4b24336"
+    }
+  }
+}

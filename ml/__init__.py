@@ -1,1 +1,1 @@
-"""EMBERLINE experimental fire-event and outlook pipelines."""
+"""CINDERTRACE experimental fire-event and outlook pipelines."""

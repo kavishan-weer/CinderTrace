@@ -1,0 +1,25 @@
+---
+license: cc-by-4.0
+pretty_name: Fire Harmony, one consistent global fire record
+tags: [wildfire, remote-sensing, nasa, modis, viirs, firms, h3]
+---
+# Fire Harmony data (version 1.0)
+
+One consistent record of vegetation fire hotspots for the whole world, November 2000 to 2026-11, on the NOAA-20 VIIRS
+scale: MODIS (Terra, Aqua) and VIIRS (Suomi NPP, NOAA-20, NOAA-21) hotspots from NASA FIRMS, harmonized so that the
+switch of satellites leaves no jump. Built for the NASA Space Apps Challenge 2026.
+
+Files (in `v1.0/`): `area_monthly.parquet` (world, continents, countries and states per month), `map_l3` and
+`map_l4` (hexagon maps per month), `cell_l3`, `cell_l4` and `l5/` (hexagon series), `clim_*` (normal seasons),
+`drivers*.parquet`, `outlook.parquet`, `haze.parquet`, and `meta.json` / `dashboard.json` / `areas.json` / `haze.json`.
+
+Units: hotspots per month on the NOAA-20 VIIRS scale. Modelled months (before 2012) come with 90% ranges (meta.json).
+
+`hotspots/`: every NASA FIRMS hotspot, 640,601,590 of them, one file per H3 level 1 region (`l1=<hex>.parquet`, listed in
+`hotspots/index.json`), sorted by date in small row groups. Columns: `date` and `time` (UTC, HHMM), `lat`, `lon`,
+`satellite`, `daynight`, `frp` (MW), `confidence` (low, nominal, high), `type` (NASA's label, science quality only),
+`quality` (sp or nrt), `h3_5` (the level 5 hexagon) and `counted` (true when the harmonized record counts it).
+
+Please cite the project and NASA FIRMS: "MODIS Collection 6.1 and VIIRS 375 m active fire data from NASA FIRMS
+(https://firms.modaps.eosdis.nasa.gov/)". We acknowledge the use of data from NASA's Fire Information for Resource
+Management System (FIRMS), part of NASA's Earth Science Data and Information System (ESDIS).

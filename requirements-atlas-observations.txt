@@ -1,0 +1,9 @@
+# Install in the observation notebook environment; final ZIP records runtime versions.
+numpy
+pandas
+pyarrow
+shapely>=2
+h3>=4
+netCDF4
+earthaccess
+scipy

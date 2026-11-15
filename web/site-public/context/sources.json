@@ -1,0 +1,158 @@
+[
+  {
+    "region": "lk",
+    "sha256": "80227d64143e4680b74518e77d4b5f147108896833024d8abe58792efdc36a68",
+    "counts": {
+      "health": 891,
+      "response": 33,
+      "settlement": 12,
+      "protected": 113
+    },
+    "sources": [
+      {
+        "kind": "health",
+        "provider": "OpenStreetMap contributors",
+        "url": "https://www.openstreetmap.org/copyright",
+        "license": "ODbL 1.0",
+        "source_date": "2026-11-15",
+        "status": "partial",
+        "detail": "Only published hospital or fire-station tags in the captured regional extract. Volunteer mapping can be incomplete; positions may be site centroids.",
+        "count": 891
+      },
+      {
+        "kind": "response",
+        "provider": "OpenStreetMap contributors",
+        "url": "https://www.openstreetmap.org/copyright",
+        "license": "ODbL 1.0",
+        "source_date": "2026-11-15",
+        "status": "partial",
+        "detail": "Only published hospital or fire-station tags in the captured regional extract. Volunteer mapping can be incomplete; positions may be site centroids.",
+        "count": 33
+      },
+      {
+        "kind": "protected",
+        "provider": "Sri Lanka NSDI / Protected Area Network",
+        "url": "https://gisapps.nsdi.gov.lk/server/rest/services/SLNSDI/Educational/MapServer/1/query?where=1%3D1&outFields=objectid%2Cname%2Ctype&returnGeometry=true&outSR=4326&maxAllowableOffset=.001&f=geojson",
+        "license": "Provider terms / attribution retained",
+        "source_date": null,
+        "status": "partial",
+        "detail": "Published protected-area network polygons. Source vintage is not supplied by the service; this is not a certification of current legal status.",
+        "count": 113
+      },
+      {
+        "kind": "settlement",
+        "provider": "Natural Earth / populated places",
+        "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/",
+        "license": "Public domain",
+        "source_date": null,
+        "status": "partial",
+        "detail": "Cartographic major-place subset, not a complete settlement inventory or population grid. Many small towns and villages are omitted.",
+        "count": 12
+      }
+    ]
+  },
+  {
+    "region": "ca",
+    "sha256": "e97e44924b8ca6ebc411a60cc2dac17b6f2e575735f5a838d1dd599ca486fe8f",
+    "counts": {
+      "health": 508,
+      "response": 1560,
+      "settlement": 48,
+      "protected": 29
+    },
+    "sources": [
+      {
+        "kind": "health",
+        "provider": "California Department of Public Health",
+        "url": "https://services.arcgis.com/RmCCgQtiZLDCtblq/arcgis/rest/services/CDPH_Healthcare_Facilities/FeatureServer/0/query?where=FAC_STATUS_TYPE_CODE+%3D+%27OPEN%27+AND+FAC_TYPE_CODE+IN+%28%27GACH%27%2C%27APH%27%2C%27CHEM%27%2C%27SNF%27%29&outFields=OBJECTID%2CFACNAME%2CFAC_TYPE_CODE%2CFAC_STATUS_TYPE_CODE%2CDATA_DATE&returnGeometry=true&outSR=4326&f=geojson",
+        "license": "Provider terms / attribution retained",
+        "source_date": "2026-10-16",
+        "status": "partial",
+        "detail": "Open GACH, APH, CHEM and SNF facilities from the published licensing table; includes hospitals and skilled nursing facilities. Not all health-service categories.",
+        "count": 508
+      },
+      {
+        "kind": "response",
+        "provider": "CAL FIRE facilities inventory",
+        "url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/ArcGIS/rest/services/CAL_FIRE_Facilities_for_Wildland_Fire_Protection_-_Public_View/FeatureServer/0/query?where=1%3D1&outFields=%2A&returnGeometry=true&outSR=4326&f=geojson",
+        "license": "Provider terms / attribution retained",
+        "source_date": null,
+        "status": "partial",
+        "detail": "Active facilities in the published wildland-fire protection inventory. Includes response/support facility types; not every municipal station is necessarily represented.",
+        "count": 1560
+      },
+      {
+        "kind": "protected",
+        "provider": "US National Park Service / park boundaries",
+        "url": "https://geo.dot.gov/server/rest/services/hosted/NPS_Park_Boundary/FeatureServer/0/query?where=1%3D1&geometry=-124.6%2C32.0%2C-113.8%2C42.2&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=objectid_1%2Cpark_alpha%2Cpark_name%2Cunit_type%2Cstate%2Chyperlink&returnGeometry=true&outSR=4326&maxAllowableOffset=0.001&f=geojson",
+        "license": "Provider terms / attribution retained",
+        "source_date": null,
+        "status": "partial",
+        "detail": "National Park Service units intersecting California only. State parks, local reserves and other protected lands are not included.",
+        "count": 29
+      },
+      {
+        "kind": "settlement",
+        "provider": "Natural Earth / populated places",
+        "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/",
+        "license": "Public domain",
+        "source_date": null,
+        "status": "partial",
+        "detail": "Cartographic major-place subset, not a complete settlement inventory or population grid. Many small towns and villages are omitted.",
+        "count": 48
+      }
+    ]
+  },
+  {
+    "region": "nsw",
+    "sha256": "54d4a9fefdad556ae4efc16d4eaa2ee4c1a5205a59583adfe11cb5630c7ea8e6",
+    "counts": {
+      "health": 293,
+      "response": 333,
+      "settlement": 54,
+      "protected": 892
+    },
+    "sources": [
+      {
+        "kind": "health",
+        "provider": "NSW Spatial Services / Health Facilities",
+        "url": "https://portal.spatial.nsw.gov.au/server/rest/services/NSW_FOI_Health_Facilities/MapServer/1/query?where=1%3D1&outFields=objectid%2Cgeneralname%2Coperationalstatus%2Cfeaturereliabilitydate&returnGeometry=true&outSR=4326&f=geojson",
+        "license": "Provider terms / attribution retained",
+        "source_date": null,
+        "status": "partial",
+        "detail": "Published facility points with OperationalStatus=Operational. Feature reliability dates vary; this is not a complete historical inventory.",
+        "count": 293
+      },
+      {
+        "kind": "response",
+        "provider": "Fire and Rescue NSW",
+        "url": "https://portal.data.nsw.gov.au/arcgis/rest/services/Hosted/FRNSW_Locations/FeatureServer/0/query?where=1%3D1&outFields=fid%2Cstationnam%2Cstationno%2Ctown&returnGeometry=true&outSR=4326&f=geojson",
+        "license": "Provider terms / attribution retained",
+        "source_date": null,
+        "status": "partial",
+        "detail": "Published Fire and Rescue NSW locations. This does not represent all NSW Rural Fire Service brigades or every emergency resource.",
+        "count": 333
+      },
+      {
+        "kind": "protected",
+        "provider": "NSW National Parks and Wildlife Service / Estate",
+        "url": "https://mapprod.environment.nsw.gov.au/arcgis/rest/services/EDP/Estate/MapServer/0/query?where=1%3D1&outFields=OBJECTID%2CNAME%2CTYPE%2CGAZ_DATE&returnGeometry=true&outSR=4326&maxAllowableOffset=0.001&f=geojson",
+        "license": "Provider terms / attribution retained",
+        "source_date": null,
+        "status": "partial",
+        "detail": "NPWS reserved estate polygons, including parks, reserves and conservation areas. Other tenure types are outside this inventory.",
+        "count": 892
+      },
+      {
+        "kind": "settlement",
+        "provider": "Natural Earth / populated places",
+        "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/",
+        "license": "Public domain",
+        "source_date": null,
+        "status": "partial",
+        "detail": "Cartographic major-place subset, not a complete settlement inventory or population grid. Many small towns and villages are omitted.",
+        "count": 54
+      }
+    ]
+  }
+]

@@ -1,0 +1,471 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://schemas.portolan-sdi.org/incubating/partition/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "detections",
+  "title": "Active Fire Detections (MODIS and VIIRS)",
+  "description": "Global satellite active fire and thermal anomaly detections from NASA FIRMS, as one year-partitioned GeoParquet 2.0 table of 632,403,361 rows covering 2000 to 2026. Carries MODIS (Terra and Aqua, 1 km) and VIIRS (Suomi-NPP, NOAA-20, NOAA-21, 375 m). Near-real-time rows are appended hourly and replaced by science-quality rows as NASA finalizes them; the `quality` column says which is which. Rows are ordered by month and then by a Hilbert index, so a reader prunes on both time and space.\n\nA row is one PIXEL in one overpass that the algorithm flagged as hot -- not a fire, not a fire's location, and not its size. Three things mislead people most: raw detection counts are not comparable across years, because each new satellite adds overpasses (counts rose 5.5x when VIIRS joined MODIS in 2012, with no change in fire); `confidence` is an integer 0-100 for MODIS and l/n/h for VIIRS, with no published crosswalk; and `type` is NULL for every near-real-time row, so `type = 0` silently drops the most recent months. `frp` (fire radiative power, MW) is the column to sum when you want fire activity rather than a count of flagged pixels.\n\n[Explore it on a map](https://portolan-mirrors.github.io/firms-catalog/) - [README](README.md) - [agent guide](AGENTS.md) - [source and build](https://github.com/portolan-mirrors/firms-catalog)",
+  "license": "CC0-1.0",
+  "keywords": [
+    "fire",
+    "wildfire",
+    "active fire",
+    "thermal anomaly",
+    "MODIS",
+    "VIIRS",
+    "NASA",
+    "FIRMS",
+    "near real-time"
+  ],
+  "updated": "2026-11-14T23:08:17Z",
+  "providers": [
+    {
+      "name": "NASA LANCE FIRMS",
+      "description": "Fire Information for Resource Management System, part of NASA's Earth Observing System Data and Information System (EOSDIS).",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://firms.modaps.eosdis.nasa.gov/"
+    },
+    {
+      "name": "Portolan Mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/portolan-mirrors/firms-catalog"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.9999,
+          -89.6907,
+          179.9988,
+          87.4687
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2000-11-01T00:13:00Z",
+          "2026-11-14T20:55:00Z"
+        ]
+      ]
+    }
+  },
+  "partition:scheme": "hive",
+  "partition:strategy": "temporal",
+  "partition:keys": [
+    {
+      "name": "year",
+      "type": "int32",
+      "description": "Year of acquisition (UTC)."
+    }
+  ],
+  "partition:file_count": 27,
+  "partition:glob": "s3://portolan-mirrors/firms-catalog/detections/year=*/detections.parquet",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 632403361,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "geometry",
+      "description": "Detection centre point (CRS84). The centre of the flagged PIXEL, not the located fire: the true source can be anywhere inside the footprint that `scan` and `track` describe, and is often smaller than one pixel. Do not read the coordinate as a fire perimeter or a point ignition."
+    },
+    {
+      "name": "acq_datetime",
+      "type": "timestamp",
+      "description": "Acquisition time in UTC, composed here from the published acq_date and acq_time. This is the satellite OVERPASS time, so it records when the fire was seen, not when it started or ended."
+    },
+    {
+      "name": "acq_date",
+      "type": "date",
+      "description": "Acquisition date as published, UTC."
+    },
+    {
+      "name": "sensor",
+      "type": "string",
+      "description": "MODIS, VIIRS_SNPP, VIIRS_NOAA20 or VIIRS_NOAA21. The single most important grouping column: resolution, confidence encoding and the brightness columns all differ by sensor, so a query that mixes them without saying so is usually wrong. MODIS runs from November 2000, VIIRS from January 2012. See the [MODIS](https://www.earthdata.nasa.gov/data/instruments/modis) and [VIIRS](https://www.earthdata.nasa.gov/data/instruments/viirs) instrument pages."
+    },
+    {
+      "name": "satellite",
+      "type": "string",
+      "description": "Platform name: Terra, Aqua, Suomi-NPP, NOAA-20 or NOAA-21. Expanded here from the short codes FIRMS publishes. Each platform has its own overpass times, which is what makes detection counts a function of how many satellites were flying that year as much as of how much burned."
+    },
+    {
+      "name": "instrument",
+      "type": "string",
+      "description": "MODIS or VIIRS. The sensor family behind `sensor`."
+    },
+    {
+      "name": "quality",
+      "type": "string",
+      "description": "`sp` for science-quality, `nrt` for near-real-time. NRT rows are published within hours and are later replaced by SP rows, roughly three to four months behind. NRT geolocation is less accurate and NRT rows carry no `type`. Filter on this column whenever consistency matters more than freshness."
+    },
+    {
+      "name": "version",
+      "type": "string",
+      "description": "Collection and processing designation exactly as published, for example `2.0NRT` or `6.1`. Changes here mark upstream algorithm revisions, so a long time series can span more than one."
+    },
+    {
+      "name": "brightness",
+      "type": "double",
+      "description": "MODIS channel 21/22 brightness temperature, kelvin. NULL for VIIRS rows. Defined in the [MODIS fire user guide](https://modis-fire.umd.edu/files/MODIS_C6_C6.1_Fire_User_Guide_1.0.pdf)."
+    },
+    {
+      "name": "bright_t31",
+      "type": "double",
+      "description": "MODIS channel 31 brightness temperature, kelvin. NULL for VIIRS rows. Used with `brightness` in the MODIS detection algorithm; the contrast between the two is what separates a fire from a hot background."
+    },
+    {
+      "name": "bright_ti4",
+      "type": "double",
+      "description": "VIIRS I-4 channel brightness temperature, kelvin. NULL for MODIS rows. The VIIRS analogue of `brightness`, and NOT interchangeable with it."
+    },
+    {
+      "name": "bright_ti5",
+      "type": "double",
+      "description": "VIIRS I-5 channel brightness temperature, kelvin. NULL for MODIS rows. The VIIRS analogue of `bright_t31`."
+    },
+    {
+      "name": "scan",
+      "type": "double",
+      "description": "Along-scan footprint of the pixel at the detection. Kilometres for MODIS, metres for VIIRS -- the units differ by sensor. Grows away from nadir, so a detection at the swath edge covers several times the ground a nadir detection does."
+    },
+    {
+      "name": "track",
+      "type": "double",
+      "description": "Along-track footprint of the pixel. Kilometres for MODIS, metres for VIIRS, as `scan`. Multiply the two for the approximate ground area the detection represents."
+    },
+    {
+      "name": "frp",
+      "type": "double",
+      "description": "Fire radiative power in megawatts: the rate at which the pixel radiates energy, which scales with how much biomass is burning per unit time. It is the closest thing in this table to fire intensity, and it is what to sum when you want a measure of fire ACTIVITY rather than a count of flagged pixels. Integrate FRP over time to approximate total radiated energy and hence fuel consumed. Not comparable pixel-for-pixel across sensors of different resolution, and suppressed by cloud and heavy smoke. Derivation is in the [MODIS fire user guide](https://modis-fire.umd.edu/files/MODIS_C6_C6.1_Fire_User_Guide_1.0.pdf)."
+    },
+    {
+      "name": "daynight",
+      "type": "string",
+      "description": "`D` for a daytime overpass, `N` for night. Worth splitting on: night detections have a cleaner thermal background and behave differently from daytime ones, and the day/night mix shifts with latitude and season."
+    },
+    {
+      "name": "confidence",
+      "type": "string",
+      "description": "As published, and NOT comparable across instruments. MODIS gives an integer 0-100; VIIRS gives `l` (low), `n` (nominal) or `h` (high). No crosswalk is published here because none is documented upstream. It is a measure of how sure the ALGORITHM is that the pixel is a fire, not of how large or how real the fire is, and it is intended for filtering rather than for weighting. A common starting point is to drop `l` and MODIS below 30 for analysis. Defined in the [FIRMS FAQ](https://www.earthdata.nasa.gov/data/tools/firms/faq)."
+    },
+    {
+      "name": "confidence_pct",
+      "type": "int32",
+      "description": "Numeric confidence 0-100, added here so MODIS rows can be filtered arithmetically. MODIS rows only; NULL for VIIRS, which has no numeric equivalent. Never coalesce this with a VIIRS category to make one scale."
+    },
+    {
+      "name": "type",
+      "type": "int32",
+      "description": "0 vegetation fire, 1 active volcano, 2 other static land source (gas flares, industrial heat), 3 offshore. NULL for EVERY near-real-time row, because FIRMS does not attribute type in near-real-time -- so a filter on `type = 0` silently drops the most recent months unless you also allow NULL. Defined in the [FIRMS FAQ](https://www.earthdata.nasa.gov/data/tools/firms/faq)."
+    }
+  ],
+  "assets": {
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Fire detections, last 7 days (density)",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 2350,
+      "file:checksum": "12207155a921f1242cd5f09c8cba031dac011f0e71d2da686590c1d21fd3cea3463c"
+    },
+    "style-avg-frp": {
+      "href": "./styles/avg-frp.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Fire radiative power, last 7 days (average)",
+      "roles": [
+        "style"
+      ],
+      "file:size": 2351,
+      "file:checksum": "1220aec1f3f8fb573522148e9080eebfdbd8720ca51cadd565b96dbd31c4d5e9954b"
+    },
+    "pmtiles": {
+      "href": "./fire-latest.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Fire detections, aggregate bands plus raw points",
+      "roles": [
+        "visual",
+        "data"
+      ],
+      "pmtiles:layers": [
+        "aggregate",
+        "features"
+      ]
+    },
+    "aggregate-r5": {
+      "href": "./alltime-r5.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "All years aggregated to a5 r5, monthly columns",
+      "roles": [
+        "data",
+        "aggregate"
+      ],
+      "file:size": 3364679
+    },
+    "aggregate-r8": {
+      "href": "./alltime-r8.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "All years aggregated to a5 r8, monthly columns",
+      "roles": [
+        "data",
+        "aggregate"
+      ],
+      "file:size": 42756730
+    },
+    "aggregate-r10": {
+      "href": "./alltime-r10.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "All years aggregated to a5 r10, monthly columns",
+      "roles": [
+        "data",
+        "aggregate"
+      ],
+      "file:size": 319407523
+    },
+    "thumbnail": {
+      "href": "./detections.thumb.jpg",
+      "type": "image/jpeg",
+      "title": "Global fire detection density, rendered from the default style",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 64637,
+      "file:checksum": "1220d7a7dba00968a029dc360e5e41c8924c6caa8d5ae65cfe2c9e6a1b4f585aa490"
+    },
+    "logo": {
+      "href": "./detections.logo.png",
+      "type": "image/png",
+      "title": "FIRMS mirror logo",
+      "roles": [
+        "logo"
+      ],
+      "file:size": 68835,
+      "file:checksum": "12205244fa03544ed8c4ff4d8ef03ef27c8f3a8c98753a526ee3f4fed1eb84df1cc9"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "NASA FIRMS Active Fire Detections"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "NASA FIRMS Active Fire Detections"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Collection agent guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Collection README"
+    },
+    {
+      "rel": "via",
+      "href": "https://firms.modaps.eosdis.nasa.gov/",
+      "type": "text/html",
+      "title": "NASA FIRMS (upstream source)"
+    },
+    {
+      "rel": "preview",
+      "href": "https://portolan-mirrors.github.io/firms-catalog/",
+      "type": "text/html",
+      "title": "Interactive fire map"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./fire-latest.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Fire detections, aggregate bands plus raw points",
+      "pmtiles:layers": [
+        "aggregate",
+        "features"
+      ]
+    },
+    {
+      "rel": "item",
+      "href": "./year=2000/2000.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2000"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2001/2001.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2001"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2002/2002.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2002"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2003/2003.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2003"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2004/2004.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2004"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2005/2005.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2005"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2006/2006.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2006"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2007/2007.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2007"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2008/2008.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2008"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2009/2009.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2009"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2010/2010.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2010"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2011/2011.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2011"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2012/2012.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2012"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2013/2013.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2013"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2014/2014.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2014"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2015/2015.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2015"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2016/2016.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2016"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2017/2017.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2017"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2018/2018.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2018"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2019/2019.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2019"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2020/2020.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2020"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2021/2021.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2021"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2022/2022.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2022"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2023/2023.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2023"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2024/2024.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2024"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2025/2025.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2025"
+    },
+    {
+      "rel": "item",
+      "href": "./year=2026/2026.json",
+      "type": "application/geo+json",
+      "title": "Active fire detections, 2026"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "prepared_for_user_cache_only_run",
+  "real_cache_processed_locally": false,
+  "next_notebook": "notebooks/Emberline_Atlas_LK_Cached_Pixel_Pass_Audit.ipynb",
+  "previous_executed_notebook_preserved": true,
+  "prior_results_zip_preserved": true,
+  "observed_checkpoint_preserved": true,
+  "frontend_changed": false,
+  "earthdata_login_needed": false,
+  "new_science_downloads": 0,
+  "files": {
+    "pipeline/atlas_cached_pixel_audit.py": {
+      "bytes": 21577,
+      "sha256": "cd90b56e50c75f23c16eee5cdbbc4f6c4429152540984774303243a4640bc59d"
+    },
+    "scripts/prepare_atlas_cached_pixel_notebook.py": {
+      "bytes": 12563,
+      "sha256": "227144574fa78f1c6e65fb121adfe80fe0042be84385ed02a153a43c324a5a64"
+    },
+    "notebooks/Emberline_Atlas_LK_Cached_Pixel_Pass_Audit.ipynb": {
+      "bytes": 119760,
+      "sha256": "027d9535350060a4c04722cfa29a42380c6bafbae81cf3ab60d976e210f60594"
+    },
+    "docs/atlas_cached_pixel_pass_audit.md": {
+      "bytes": 6148,
+      "sha256": "ba0743e28df1144798a6db19fc888ff907c408bb0f63579020e47b3d3703a77d"
+    }
+  },
+  "environment_restart_required_after_install": true
+}

@@ -1,0 +1,383 @@
+{
+  "regions": [
+    {
+      "id": "lk",
+      "observations": 207310,
+      "last_recorded_date": "2026-11-04"
+    },
+    {
+      "id": "ca",
+      "observations": 2168313,
+      "last_recorded_date": "2026-11-12"
+    },
+    {
+      "id": "nsw",
+      "observations": 2696656,
+      "last_recorded_date": "2026-11-12"
+    }
+  ],
+  "provider_revision": "9c1c703472d727d9f9b42477df39440bb34b2b64",
+  "legacy_calibration_used": false,
+  "files": {
+    "lk/native-2000.json.gz": {
+      "bytes": 298,
+      "sha256": "8eccd8f6384258d704e3752abfb96fc4e6a65c6c0606ee3fac51c19b4f1ea338"
+    },
+    "lk/native-2001.json.gz": {
+      "bytes": 7119,
+      "sha256": "9cc3092bda07193871ddf16f52fe31a95ba8678c87d90a629bd2c72f68c556dc"
+    },
+    "lk/native-2002.json.gz": {
+      "bytes": 28241,
+      "sha256": "b444859bbdabf4f876b71d6dc89ec0b3de71e06b4faf67216b1056304e95303b"
+    },
+    "lk/native-2003.json.gz": {
+      "bytes": 26910,
+      "sha256": "a0d250c9169f9d6cda2a9aafd81c3e5f599f033875f639a5d25b6cd496888e3b"
+    },
+    "lk/native-2004.json.gz": {
+      "bytes": 34134,
+      "sha256": "37319efeb18df29d7a22c4457ad3ac7848a55f1777660e292d6ed592f1c88f6b"
+    },
+    "lk/native-2005.json.gz": {
+      "bytes": 32232,
+      "sha256": "d311bb6193bc88e70fda430d0336f58071fa36590f8a84c533c1690206836786"
+    },
+    "lk/native-2006.json.gz": {
+      "bytes": 24626,
+      "sha256": "d374e680f05c61c7095eb02f8c72676fc12c6ad7282f05ff3f2c3aaa9ad80aee"
+    },
+    "lk/native-2007.json.gz": {
+      "bytes": 22886,
+      "sha256": "22d24f6134cb81066503fe93f33ae8886c4534d29d1d9b8760551acc6fd53c88"
+    },
+    "lk/native-2008.json.gz": {
+      "bytes": 25445,
+      "sha256": "5db749dbb95ffaa318a300fffc21768e9597fa9ae64a3542349e5895a10da094"
+    },
+    "lk/native-2009.json.gz": {
+      "bytes": 34424,
+      "sha256": "c4135eaea5506987bdb9d0599f1acc4f86b9ad92655ce3b3656d33734f06c3c3"
+    },
+    "lk/native-2010.json.gz": {
+      "bytes": 20408,
+      "sha256": "391faa6931b5f39cf8bfe0672721c2744730a56a90a71f5bb4895c8dc800d8f4"
+    },
+    "lk/native-2011.json.gz": {
+      "bytes": 25417,
+      "sha256": "f7d7913666468a75f6b57544d98b1c6acfdef559da58499af348fbba426540bc"
+    },
+    "lk/native-2012.json.gz": {
+      "bytes": 216881,
+      "sha256": "5a30c02bb3b6d64b754550dfb22ad0e90086fc183ace828fd1aa93049152d3c9"
+    },
+    "lk/native-2013.json.gz": {
+      "bytes": 176131,
+      "sha256": "bb0249fe7a5b03479ca7a95795fdf73eeaa92859da4064b6ef4101b2d9ca44bb"
+    },
+    "lk/native-2014.json.gz": {
+      "bytes": 191558,
+      "sha256": "a4ab86d0751d0fc9c6e3b58afda2267cd185b37789d5eee329412ce6c7dafc35"
+    },
+    "lk/native-2015.json.gz": {
+      "bytes": 86468,
+      "sha256": "9b4923102dba4e97376076d5202a96815ffa40a489f9d36f3b719249ee1fe82e"
+    },
+    "lk/native-2016.json.gz": {
+      "bytes": 223572,
+      "sha256": "4852716ab34589c78bba1ebba28d0b33cfbf5c02f6095a7e20a3c4835cff93bf"
+    },
+    "lk/native-2017.json.gz": {
+      "bytes": 109022,
+      "sha256": "681a975083b60b19e57dc025d4f25902f755c98e091933a9f937a9e098550c27"
+    },
+    "lk/native-2018.json.gz": {
+      "bytes": 235563,
+      "sha256": "d83c06e05fc46c475aab6c170dd3733ae01c83e21414cffbd7de9a5516cd43f4"
+    },
+    "lk/native-2019.json.gz": {
+      "bytes": 269467,
+      "sha256": "97062af255161455af56af5a0ee84197c00da17aa7b324eb61db9b06a4c6e9a8"
+    },
+    "lk/native-2020.json.gz": {
+      "bytes": 274758,
+      "sha256": "c2afde12f4734f6e82230e20576f3e92421910df8e3189757d3fdd0b6437767b"
+    },
+    "lk/native-2021.json.gz": {
+      "bytes": 146636,
+      "sha256": "608c7ab8c4e24f4792124a5ae06dfb9764982876f64ef69c030bb6a08468aca1"
+    },
+    "lk/native-2022.json.gz": {
+      "bytes": 145198,
+      "sha256": "94e7eb9c24de5384cea0e145c0e0ada36281b8e42edfd7ae287015149e83f538"
+    },
+    "lk/native-2023.json.gz": {
+      "bytes": 221704,
+      "sha256": "e84da48c9e9dbaa2ec8ed42a60025c8c0679c4be29834dba87b99ee797abd838"
+    },
+    "lk/native-2024.json.gz": {
+      "bytes": 282420,
+      "sha256": "825eebf2cdabc03f81467c30943583c258a71f1d41620c290db00b9635e9476b"
+    },
+    "lk/native-2025.json.gz": {
+      "bytes": 293106,
+      "sha256": "727d79edb3b86df0159f62384cf21930b545d7de4b753fd69d667cec622ad784"
+    },
+    "lk/native-2026.json.gz": {
+      "bytes": 312566,
+      "sha256": "ffa9bb1f1566592cab98094ea1187262fe124e17890e094cd6f5263ae6e9e192"
+    },
+    "ca/native-2000.json.gz": {
+      "bytes": 9158,
+      "sha256": "8cb534b3a7b4c60d51cb522face92c758d35618bc2bf357abb23d0404f65fc84"
+    },
+    "ca/native-2001.json.gz": {
+      "bytes": 56067,
+      "sha256": "37fe95a2119d0b4702d26e85a170292b3615e0127df6626a0c62e0909c667607"
+    },
+    "ca/native-2002.json.gz": {
+      "bytes": 124182,
+      "sha256": "f1813857f4a778a2c89ea73f53fef3bcac346120d469bbd292b6787e03cfcade"
+    },
+    "ca/native-2003.json.gz": {
+      "bytes": 186224,
+      "sha256": "7a4d788446f267d00348284abd714c5d5832c2a8226ea3ddb9c3f196f314f39a"
+    },
+    "ca/native-2004.json.gz": {
+      "bytes": 111247,
+      "sha256": "b945b2b843d09fe7dc9f032ab539c3294537b40c04671aedbcf6229f39581666"
+    },
+    "ca/native-2005.json.gz": {
+      "bytes": 90802,
+      "sha256": "7752a3ace3809892ffd1d131775d943e1e279556d49b4a663691bf9e9e226e32"
+    },
+    "ca/native-2006.json.gz": {
+      "bytes": 184938,
+      "sha256": "8e0a67a8887f603e8a8633df8512fd36eb9c09a59fe7b40b2e8fb8a4c81ff235"
+    },
+    "ca/native-2007.json.gz": {
+      "bytes": 205146,
+      "sha256": "cd3a28ffab934caa4fa9f52f739576871e9628417bd6c4e0aa6796a600b34027"
+    },
+    "ca/native-2008.json.gz": {
+      "bytes": 354681,
+      "sha256": "bd89dd584c104060dbd875a60a98fadfc486d64d6c5bc371861e76d84501f263"
+    },
+    "ca/native-2009.json.gz": {
+      "bytes": 134997,
+      "sha256": "5fc3b923e30ecb2ee1923f09c4b64f7b8b17fc1b5074fe029fe3c351cbd35cff"
+    },
+    "ca/native-2010.json.gz": {
+      "bytes": 53790,
+      "sha256": "bb432f536e7c2aceca00c01915ceb67bc6ef90c1e64719bc3beaa57ba679ac23"
+    },
+    "ca/native-2011.json.gz": {
+      "bytes": 65226,
+      "sha256": "69f8c0b3af757b87efeccc2c221bc8628f64ce0aaf4d10238d68bde8d5fe66f0"
+    },
+    "ca/native-2012.json.gz": {
+      "bytes": 740392,
+      "sha256": "71270e64141d02f8f37cb8f93cdf98923bf2dab11370397b59dc6347631bd000"
+    },
+    "ca/native-2013.json.gz": {
+      "bytes": 817185,
+      "sha256": "b7efd258309636463a469fc0e837dc150a5e5fcbe9ef22b35ea378b700efb83f"
+    },
+    "ca/native-2014.json.gz": {
+      "bytes": 721420,
+      "sha256": "f0c327ff9ad4bd87f1ba4555e4d468205cdb46492952e377a7c95e88c7362917"
+    },
+    "ca/native-2015.json.gz": {
+      "bytes": 986055,
+      "sha256": "bf2d5d340169b68350295829cdfc4ad9abd1ad71c5e3e4171e1d928102c2d60a"
+    },
+    "ca/native-2016.json.gz": {
+      "bytes": 701659,
+      "sha256": "1a4d6545c66ee9b0a939ca12abc732437ba824d3060f4bf19958db9e2194bdf6"
+    },
+    "ca/native-2017.json.gz": {
+      "bytes": 1375847,
+      "sha256": "5dfa6907680bfe5b2e4535ec8401de4608483926b3632772bd05a4a71130633c"
+    },
+    "ca/native-2018.json.gz": {
+      "bytes": 2660670,
+      "sha256": "45f8efc04174389ad8e9d05125f735dbeae6522aeb5db2c31d3023e7a1f869dd"
+    },
+    "ca/native-2019.json.gz": {
+      "bytes": 895887,
+      "sha256": "a959cd9722067aef5e2db2c796049e934ffea54f2901cbe3483820d789c797ce"
+    },
+    "ca/native-2020.json.gz": {
+      "bytes": 7078191,
+      "sha256": "a376351726d287e303b9c406ace23d717d8d59f06843e736170c0cf464d1ab35"
+    },
+    "ca/native-2021.json.gz": {
+      "bytes": 6041267,
+      "sha256": "27afe8488168d2a9243b9c510b8bcd26536615beb873180a2442088fa5980294"
+    },
+    "ca/native-2022.json.gz": {
+      "bytes": 1073071,
+      "sha256": "5b5f239d25e38e9f089688a65f2b5188d62e203e6c8ba90a29d76dedba2389ba"
+    },
+    "ca/native-2023.json.gz": {
+      "bytes": 1188369,
+      "sha256": "c0ef8c66380a1ea092fe484c621f93431327f79c9ac32820f8ee22f0f4df5611"
+    },
+    "ca/native-2024.json.gz": {
+      "bytes": 2099176,
+      "sha256": "83a5ae877c661cd202a28b17661e134f45714086ef5313578a6225087465f94f"
+    },
+    "ca/native-2025.json.gz": {
+      "bytes": 1753117,
+      "sha256": "a06bae2f56f828a2b5eecd4436bff361940caf858e20fd280a756407dba63f7f"
+    },
+    "ca/native-2026.json.gz": {
+      "bytes": 1046466,
+      "sha256": "05c207d5e5a432dee1478101e05c88ad775798122fd65420a2859f7bab21b230"
+    },
+    "nsw/native-2000.json.gz": {
+      "bytes": 5092,
+      "sha256": "7dcb4c7d17e24291072cb25dc07accce69522a628bb2de81ccfa208e2420a080"
+    },
+    "nsw/native-2001.json.gz": {
+      "bytes": 108098,
+      "sha256": "ac3da4dbca377215c3b81edfac32ca0e256efef7a999e5fe6ceab1b1bbfc7196"
+    },
+    "nsw/native-2002.json.gz": {
+      "bytes": 357897,
+      "sha256": "da5bc59d5cb331eca53882ae3f66e32fbb0b7d495c48540fc55a9a3dcd8e245d"
+    },
+    "nsw/native-2003.json.gz": {
+      "bytes": 389161,
+      "sha256": "ce0062309a8ec7e03bad941dd5cbd64a39b41195d40e3bc102c416167aae19b8"
+    },
+    "nsw/native-2004.json.gz": {
+      "bytes": 279470,
+      "sha256": "207c6f0d4f8037bf3cfb2aff34a1a2b73497bf00de5d992220c38f63d5629a46"
+    },
+    "nsw/native-2005.json.gz": {
+      "bytes": 237979,
+      "sha256": "ae468cf8678c0e376a28cff1e54f1202bb3d89adb131e52789eea33a40bcee09"
+    },
+    "nsw/native-2006.json.gz": {
+      "bytes": 341750,
+      "sha256": "35bc0a9da6707370a19c6ac4f169e5e06b09ecfc1335efd63bd86ae3b0f50947"
+    },
+    "nsw/native-2007.json.gz": {
+      "bytes": 163682,
+      "sha256": "638947eaa164b1c6b84be6319a3709f99243f4e2ef36827d020a046a3134bd2b"
+    },
+    "nsw/native-2008.json.gz": {
+      "bytes": 119146,
+      "sha256": "fed83add4f3ca527183c8f6ba908af0aaa0c0e7c74e36fd57b681efbdd48ef18"
+    },
+    "nsw/native-2009.json.gz": {
+      "bytes": 199488,
+      "sha256": "2f9160412c7bbb59a6a776849e8fae1a2a0fe0b2e702fbf459f3070c8e5c30fa"
+    },
+    "nsw/native-2010.json.gz": {
+      "bytes": 105484,
+      "sha256": "438b52b8665b53f78e178fff3f0b21d94b4893b7421cafcc6e07f77619040620"
+    },
+    "nsw/native-2011.json.gz": {
+      "bytes": 265175,
+      "sha256": "87ad3c5b8d1045818c63f1c5c9d90f83773728665d8ce9ce31dc500679009035"
+    },
+    "nsw/native-2012.json.gz": {
+      "bytes": 977488,
+      "sha256": "09d8a28542b712e5686a75f003ad0b346587848898228303f6c0901cace902ca"
+    },
+    "nsw/native-2013.json.gz": {
+      "bytes": 1470239,
+      "sha256": "e95c417b68dad08f5b3f93ed760834dcb66d2c4d89da3e624dbb895ce3b6e644"
+    },
+    "nsw/native-2014.json.gz": {
+      "bytes": 1096108,
+      "sha256": "c5483357efa63c05cbb7772687f2567b176b0c9e59dc571615215a05194eecd8"
+    },
+    "nsw/native-2015.json.gz": {
+      "bytes": 898322,
+      "sha256": "475d2a51114d2fc9a47c6226f0ba8a05a1a5a893a2d62778a3add8cef8280907"
+    },
+    "nsw/native-2016.json.gz": {
+      "bytes": 1127745,
+      "sha256": "f5986f015846c237176e9b9da794bea5aada350966475744275ae40831f230d6"
+    },
+    "nsw/native-2017.json.gz": {
+      "bytes": 1543105,
+      "sha256": "ed9c35b184c7b752000397fe9de474dd2ac22bb4ca14cb91873fd745c99c6a28"
+    },
+    "nsw/native-2018.json.gz": {
+      "bytes": 2405343,
+      "sha256": "29b678b7924fbad39e0493a41564382b702b7d31ef78c82c3aef2cd4bc009269"
+    },
+    "nsw/native-2019.json.gz": {
+      "bytes": 12594048,
+      "sha256": "0eb1d45a6bf98ec9cae06f611b0b1178764b4494914bc71037d1e04d53a69532"
+    },
+    "nsw/native-2020.json.gz": {
+      "bytes": 3217296,
+      "sha256": "c21431cdee9f4a01cbe974cc377d2c02da80ff4122abcb58634682ab53282f13"
+    },
+    "nsw/native-2021.json.gz": {
+      "bytes": 1628120,
+      "sha256": "945e45c64ded3ba52cdf634c784dc990d47725c9d4d189eed3181799f16a029d"
+    },
+    "nsw/native-2022.json.gz": {
+      "bytes": 1039235,
+      "sha256": "b0f176b62ab7d1af77825eb2da1e01e9d12165d0a40d61dc590051bb2bd26a98"
+    },
+    "nsw/native-2023.json.gz": {
+      "bytes": 2639676,
+      "sha256": "ef5ae0a2e9d5fcfc34406f1f0933168aa2a7ed8b2c11e12e37ebc0d0281acc1f"
+    },
+    "nsw/native-2024.json.gz": {
+      "bytes": 2095549,
+      "sha256": "33f9e270ed09114bf26de16148c5464f3a7b4e035e0280f7f7f1eaa15a9e5bcc"
+    },
+    "nsw/native-2025.json.gz": {
+      "bytes": 2495960,
+      "sha256": "7bd222dd22c79c742c859543532ad320f405ce8f9a47277b8ad9465366ecd62b"
+    },
+    "nsw/native-2026.json.gz": {
+      "bytes": 2341606,
+      "sha256": "2ff6e58bdc18bd419cf644cbfbf9e48e4c689497f29aacc01dabb24dfe81f9d4"
+    },
+    "ca/administrative.json.gz": {
+      "bytes": 64335,
+      "sha256": "b123e78ee5ddde745e9f456d11b19dde69c4e42faa19f1c943eb069408a8cbc0"
+    },
+    "ca/boundary.json": {
+      "bytes": 45769,
+      "sha256": "0912d4fb6acefd26a9e7aed5b0c276ed75579967cf28dbc53f0a5ebe8a62c2ea"
+    },
+    "ca/provider.json": {
+      "bytes": 54965,
+      "sha256": "6cce2ad82cf9b2599581e5743014a90d49002661521ee680d769fde09714d8fb"
+    },
+    "lk/administrative.json.gz": {
+      "bytes": 28049,
+      "sha256": "7c512a75a7792d2675277c07eaa99db61355b75cc2ff9e58f77eddfb9e2f095f"
+    },
+    "lk/boundary.json": {
+      "bytes": 30208,
+      "sha256": "1f8517b5f6d5a774cf26d7b0f5bdb5abc53e29b6e17b9ecc6197d2048d5146db"
+    },
+    "lk/provider.json": {
+      "bytes": 1232732,
+      "sha256": "ec661205b357aee27b7ce7b725ee4b723912b35a2fdec307878622741b27d82c"
+    },
+    "nsw/administrative.json.gz": {
+      "bytes": 360897,
+      "sha256": "197d3344d8f968200e636980a6218f38c49f07745b16b5ff2e4aa6ed375193d4"
+    },
+    "nsw/boundary.json": {
+      "bytes": 213590,
+      "sha256": "5cb03525514971e2ff9d5374c4b19ab5962f27fcbb12004f5d97bd9c62f0750c"
+    },
+    "nsw/provider.json": {
+      "bytes": 52012,
+      "sha256": "d8e6529f1580514414f786f25f74ef923ccb31e6e54c02cf8e5f0f66ec990151"
+    }
+  }
+}

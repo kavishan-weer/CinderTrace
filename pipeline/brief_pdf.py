@@ -141,7 +141,7 @@ def render_brief(value, output):
             text(right_x, 7, 'Orange: peak / season window: 10%-90%',6.7)
             text(right_x, -5, f"Duration: {profile['duration']} months, inclusive",6.7)
 
-    story = [p('EMBERLINE / LOCAL FIRE OBSERVATORY', eyebrow), p('Situation brief.', title), Spacer(1, 5), p(brief['area'], area_style), Spacer(1, 5), p(brief['filters'], small), p(brief['spatial'], small), Spacer(1, 6), p(f"SELECTED MONTH: {brief['selected_label']} / {brief['status']}   |   HISTORY: {brief['window']}", eyebrow)]
+    story = [p('CINDERTRACE / LOCAL FIRE OBSERVATORY', eyebrow), p('Situation brief.', title), Spacer(1, 5), p(brief['area'], area_style), Spacer(1, 5), p(brief['filters'], small), p(brief['spatial'], small), Spacer(1, 6), p(f"SELECTED MONTH: {brief['selected_label']} / {brief['status']}   |   HISTORY: {brief['window']}", eyebrow)]
     card_cells = []
     for card in brief['cards']:
         val_style = ParagraphStyle('value', parent=style, fontName='Helvetica-Bold', fontSize=20 if len(card['value']) < 14 else 14, leading=25)
@@ -162,10 +162,10 @@ def render_brief(value, output):
         c.saveState();c.setFillColor(colors.HexColor(paper));c.rect(0,0,*A4,fill=1,stroke=0)
         c.setStrokeColor(colors.HexColor('#cad4bd'));c.line(32,27,A4[0]-32,27)
         c.setFillColor(colors.HexColor(muted));c.setFont('Helvetica',6.5)
-        c.drawString(32,16,'EMBERLINE / Historical evidence for review / Not an operational warning or forecast')
+        c.drawString(32,16,'CINDERTRACE / Historical evidence for review / Not an operational warning or forecast')
         c.drawRightString(A4[0]-32,16,'1 / 1');c.restoreState()
 
-    doc = SimpleDocTemplate(str(output),pagesize=A4,rightMargin=32,leftMargin=32,topMargin=29,bottomMargin=36,title=ascii_text(f"EMBERLINE situation brief - {brief['area']} - {brief['selected']}"),author='EMBERLINE',pageCompression=1)
+    doc = SimpleDocTemplate(str(output),pagesize=A4,rightMargin=32,leftMargin=32,topMargin=29,bottomMargin=36,title=ascii_text(f"CINDERTRACE situation brief - {brief['area']} - {brief['selected']}"),author='CINDERTRACE',pageCompression=1)
     doc.build(story,onFirstPage=page,onLaterPages=page)
     if doc.page != 1:
         raise ValueError('The brief must contain exactly one page.')

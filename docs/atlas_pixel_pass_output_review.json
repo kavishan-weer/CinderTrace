@@ -1,0 +1,44 @@
+{
+  "status": "returned_pixel_and_pass_evidence_verified",
+  "zip_name": "emberline_atlas_lk_pixel_pass_audit_20261115T004550Z.zip",
+  "zip_sha256": "dea71170261cd155b5ff7515b12b3078bba08b280cd2204c48dd23ca5ac46de3",
+  "manifested_members": 17,
+  "science_files_reportedly_rehashed": 68,
+  "raw_science_independently_reread_locally": false,
+  "clear_centre_cache_included": false,
+  "nearest_neighbour_counts_independently_recomputed": false,
+  "verification_limit": "Original/derived caches remain in user Drive; file hashes, exact method/input provenance, individual archive matches, QA, summaries and pass assignments checked; nearest-neighbour summary consistency checked without raw centre arrays.",
+  "native_fire_pixels": 335,
+  "unique_archive_matches": 335,
+  "archive_match_max_metres": 0.7472413466024581,
+  "grid_sparse_max_error_degrees": 0.0,
+  "view_geometry_max_difference_degrees": 0.0,
+  "solar_geometry_max_difference_degrees": 0.0,
+  "retained_by_quality_screen": 288,
+  "screen_exclusion_counts": {
+    "retained": 288,
+    "non_nominal_input": 29,
+    "residual_bowtie": 14,
+    "non_nominal_input,residual_bowtie": 4
+  },
+  "passes": 27,
+  "unique_pass_pairs": 8,
+  "sensitivity_rows": 108,
+  "unique_sensitivity_rows": 48,
+  "pairs_by_window": {
+    "30": 2,
+    "60": 8,
+    "90": 8
+  },
+  "nonzero_support_sensitivities_by_view": {
+    "40.0": 0,
+    "60.0": 10,
+    "nan": 14
+  },
+  "notebook_sha256": "896728c83881c9c74c805d26fd0ab151909ea36071b9d23db2a25bf741b6ed90",
+  "notebook_error_outputs": [],
+  "coverage_verified": false,
+  "replacement_validated": false,
+  "uncertainty_validated": false,
+  "frontend_changed": false
+}

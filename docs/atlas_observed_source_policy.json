@@ -1,0 +1,22 @@
+{
+  "policy_id": "lk_observed_standard_benchmark_v1",
+  "years": [
+    2022,
+    2023,
+    2024
+  ],
+  "canonical_quality": "sp",
+  "canonical_source": "NASA FIRMS standard-product responses independently verified from raw request bytes",
+  "mirror_role": "validated extraction cache; historical NRT is not a substitute for an available verified standard stream",
+  "source_precedence_unit": "platform and verified standard-product UTC archive interval",
+  "nrt_rule": "retain the original NRT stream separately for audit; never stack or row-wise coalesce with standard records",
+  "missing_standard_rule": "preserve a recorded zero or unavailable state; do not insert NRT or another platform to fill it",
+  "deduplication_rule": "preserve native multiplicity and reject duplicate identities for review; never combine platforms into unique incidents",
+  "zero_definition": "zero matching standard detections in a successfully verified query, not verified no-fire conditions",
+  "coverage_verified": false,
+  "harmonization_applied": false,
+  "cross_year_raw_totals_comparable": false,
+  "fleet_note": "four declared platforms in 2022/2023 and five in 2024; raw annual totals are not a calibrated trend",
+  "production_export_enabled": false,
+  "frontend_changed": false
+}

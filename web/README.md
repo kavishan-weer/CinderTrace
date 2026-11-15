@@ -1,150 +1,88 @@
-# EMBERLINE Observatory
+# CinderTrace Observatory
 
-React + TypeScript + Vite, MapLibre with CARTO Dark Matter, deck.gl H3 columns,
-Three.js contour art, and GSAP entrance animation. Honors reduced-motion settings.
+A static observed-data explorer and attributed published fire-history reference for Sri Lanka, California and New South Wales. The original CinderTrace visual theme is retained. No user-run Colab processing, Earthdata authentication or API key is needed to use this release.
 
-## Run
+## Published app
 
-Use Node.js 22.6 or newer (tested with 22.16).
+https://cindertrace-fire-observatory.haleoak66.chatgpt.site — owner-private publication. Sign in with the owning ChatGPT account when prompted.
 
-From the repository root, with the existing generated pipeline datasets available:
+## Open locally
 
-```sh
-.venv/bin/python -m pipeline.export_web
-cd web
-npm install
-npm run dev
-```
+From `web/`, run `npm run dev` and open the printed URL. `npm run build` creates `dist/`; `npm run preview` serves the production build. Node 22.6+ is required. No Python query service is used by the active frontend. The finished `dist/` directory can be hosted as a static site. Keep the `.json.gz` files intact; the browser detects and decompresses them, whether the host supplies a gzip content-encoding header or not.
 
-The dev command starts both the web app and its loopback-only Python area/download service. No source or fire data is uploaded.
+## Data included
 
-Open the printed local URL. Use **Map settings → CARTO Basemaps key** to connect your
-Basemaps key for the browser session. Alternatively copy `.env.example` to
-`.env.local` and populate `VITE_CARTO_BASEMAP_KEY`. This is a browser-visible key:
-restrict it to approved origins. Never use a private CARTO platform token here.
-Without a key the app renders the local boundary and real H3 fire layer on a dark
-background; it does not make unauthenticated CARTO requests.
+The versioned native snapshot has **5,072,279 pixel observations**, 2000–2026, loaded one year/region at a time:
 
-`npm run build` creates `dist/`; `npm run preview` serves that build with the same local area/download service. A standalone static host will need an equivalent query service for custom areas and raw downloads; no hosting is configured by this change.
-`npm test` checks missing values, filter aggregation, and historical comparisons.
-Web datasets are generated and ignored by Git. Regenerate them before building on
-a new machine; the build intentionally does not fabricate sample data.
+| Region | Native observations | Last recorded detection |
+| --- | ---: | --- |
+| Sri Lanka | 207,310 | 2026-11-04 |
+| California | 2,168,313 | 2026-11-12 |
+| New South Wales | 2,696,656 | 2026-11-12 |
 
-## First app slice
+These dates describe the snapshot's records, not evidence of complete observing coverage. The archive begins November 2000; individual sensors begin later. Sri Lanka 2000–2024 uses the official-source-reconciled standard-data checkpoint (171,244 observations). Later Sri Lanka and California/NSW use local Portolan FIRMS mirror snapshots, clipped to reference region polygons. Missing category/type values remain explicitly unattributed. Standard and NRT records remain distinguishable. Exact duplicate source records are removed; observations from different satellites remain separate.
 
-- Whole-region side-by-side comparison for Sri Lanka, California and NSW: harmonized activity per 1,000 km² of actual H3 grid area, common selected month/filters, explicit missing/provisional states and a comparison CSV. See [comparison method](../docs/region_comparison.md).
+The map, brush, sidebar calendar, record inspector and **Observed CSV** use one selection: region, year, inclusive UTC date window, satellite, published type, native confidence, quality and administrative/custom area. Administrative selections use point-centre membership, not estimated allocation. Unassigned/coastal points remain selectable. Custom polygons and coordinate-radius areas intersect the selected regional archive. Dense maps group observations into H3 resolution-6 cells for display only; the colour scale saturates at 1,000 observations per cell. CSV exports preserve individual records and source fingerprints. The optional place-label layer uses OpenStreetMap; the local boundary/observations work without it.
 
-- Three regions and all administrative selections, preserving no-grid-coverage states.
-- Polygon drawing with undo/finish/cancel, click-first-point closure, Enter/Escape/Backspace map shortcuts, plus latitude/longitude with a configurable 0.5–250 km radius.
-- Region-calibrated custom-area history and exact-coordinate polygon raw downloads.
-- Original hotspot CSV export, streamed from a temporary local file, and high-resolution calendar/Seam Test PNGs with area/filter/date/provenance labels.
-- Category and confidence filters shared by calendar, selected-month statistics, map and Seam Test.
-- Observed H3 map with pan/zoom, fit-region, height view, hover values and CARTO connection settings.
-- Month selection and history year window; calendar activity/anomaly/percentile modes.
-- NSW July–June fire year, with the label identifying the starting year.
-- Annual Raw versus Harmonized Seam Test, incomplete-year flags, and regional held-out validation error.
-- Harmonized monthly CSV export, method dialog, loading, retry and empty-filter feedback.
-- Fire-season onset/peak/end, inclusive duration in months, interactive season
-  history and monthly-share/cumulative profile. NSW seasons use July–June.
-- Robust timing trends (months per decade) with VIIRS-era/full-record controls,
-  complete-year rules, tied-peak/boundary safeguards and a season CSV.
-- Local one-page Situation Brief PDF: selected-month comparison, calculated
-  findings, compact burning calendar, latest complete season and uncertainty.
-- Experimental Events map: single-satellite candidate markers, paged accessible
-  list, full observation timelines, observed duration, peak individual-detection
-  fire power, daily sampled footprints and agency-review cautions.
+The observed count is **not unique fires, burned area, normalized activity or proof of observing completeness**. Zero means no matching records in the extract. Unsupported sensor periods and loading failures remain unavailable. MODIS and VIIRS changes affect observed counts. FRP means and nighttime shares require selecting a single satellite.
 
-The map deliberately labels **observed** sensor activity, rather than presenting
-uncalibrated cell counts as local harmonized estimates. Area calendars and CSVs use
-the pipeline’s region-calibrated allocation. Inference/uncertainty limits remain in
-the method dialog. The archive snapshot is not described as a live warning service.
+## Published historical reference
 
-This slice uses compact precomputed JSON instead of loading DuckDB-WASM and the raw
-archive on first paint. Region-year map files load on demand. Event clustering is available through the experimental Events map. Outlook research runs separately and is not integrated into the app. Custom-area requests read the local Parquet archive through the local query service; raw point data is not bundled into the web’s static assets.
-The time window applies to the calendar, annual chart and CSV; the map has its own
-explicit month selection.
+Ready-made **Fire Harmony v1.0** monthly data is pinned to Hugging Face revision `9c1c703472d727d9f9b42477df39440bb34b2b64`. The activity field is a third-party derived estimate on the publisher's NOAA-20 scale, including months whose inputs are observed VIIRS. It is not an CinderTrace model or independently validated uncertainty estimate.
 
-## Verification
+This section includes a historical calendar (activity/anomaly/percentile), seasonal median/IQR/P10–P90 envelope and year overlay, complete-year totals, peak activity month, top-three-month share, historical extremes, available administrative rankings, and sensor-history context. NSW supports January–December or July–June starting years. Annual summaries require all twelve non-null provider values. Incomplete periods are excluded.
 
-Production TypeScript/Vite build, frontend tests, and Python pipeline/export tests passed. Browser
-checks covered actual H3 rendering, region/category changes, an administrative
-selection, the Raw/Harmonized toggle, CARTO settings, method notes, missing-month
-comparisons, and a 390-pixel mobile viewport. The CARTO basemap itself awaits your
-key. The map uses deck.gl PolygonLayer over H3 cell boundaries, avoiding unused
-3D-tile decoders. A captured local preview is saved as `preview.jpg`.
+Provider scope is fixed: its vegetation/confidence selection and coarse H3 allocation **do not inherit the native observation filters or arbitrary polygons**. Sri Lanka has 25 published administrative units. California county and NSW LGA modelled values are not supplied; no values are invented. Coarse provider support does not justify exact-boundary density rankings.
 
-The app is currently local. External source/data upload requires authorization;
-no hosted version has been uploaded or deployed.
+Anomaly and percentile baselines use matching months from 2001–2025, excluding the selected year, with at least five reference values. Zero-median anomalies remain unavailable. Anomaly colours centre at 1× median and saturate at ≤0.25× / ≥4×. Browser and PNG use the same colour function. Seasonal envelopes describe historical variability of provider estimates, not prediction confidence. Peak monthly activity is not a confirmed wildfire-season peak. No automatic significance or causal burning-type claims are made.
 
-## Select an area and download
+## Downloads
 
-- **Draw area:** click vertices on the map, then click the first vertex or **Finish polygon**. Use **Undo point** to correct a boundary. Self-intersections are rejected. The map and all monthly charts update after the local query finishes.
-- **Lat / lon:** enter coordinates and radius. The boundary uses 64 geodesic segments. The area is restricted to the selected regional archive; a wholly outside selection gets a clear error. Areas with no H3 centres show unavailable charts but can still export raw points.
-- **Monthly CSV:** exports the harmonized series for the current category/confidence filters and history year window.
-- **Raw hotspot CSV:** exports original rows across all five satellites for that same window, not just the selected map month. Polygon/circle exports clip exact coordinates. Regional/admin exports use existing H3 membership. Original columns remain intact, with added H3, category, display confidence, cell-day confidence and selection-method fields. Confidence selection uses the full sensor-family cell-day maximum, matching the aggregate convention; individual rows can therefore retain a lower original confidence.
-- **Calendar PNG / Seam Test PNG:** exports the current chart metric/view with legends, selected area, filter/date labels, archive date and limitations. Calendar PNG includes every year in the window, including rows outside the scroll viewport. Missing/provisional states are preserved. Ready links allow a second download when a browser blocks an automatic download; image links last ten minutes.
+- **Observed CSV:** exact selected point records with acquisition UTC, satellite, native confidence, type, quality, FRP, record IDs and source-file SHA256.
+- **Historical CSV:** selected provider area's complete November 2000–November 2026 month index, retaining published zeros, missing rows and unavailable observations as distinct states, with provenance.
+- **Calendar PNG:** currently chosen provider area, year range, calendar basis and metric, with baseline/scale labels.
+- **Area brief PDF:** observed selection and filters, followed by a separately labelled whole-region provider reference; unavailable values stay unavailable.
+- **Manifest:** downloadable under Data & method, containing source revisions and 90 dataset-file fingerprints.
 
-Raw points and H3 chart counts are different units and different spatial selections: do not interpret a CSV row as a harmonized cell-day or a distinct fire event. Local calibration remains unvalidated at individual AOI scale.
+## Sources and credit
 
-Temporary raw CSVs expire after ten minutes and are periodically removed. They are stored in a private temporary directory and cleared at normal service shutdown. Downloads stream to disk rather than into a large browser Blob. The service binds only to 127.0.0.1, rejects foreign browser origins, and serves only generated-token exports. Restart the local app after regenerating the Parquet datasets to clear its in-memory cache.
+NASA FIRMS observations via [Portolan's FIRMS catalogue](https://github.com/portolan-mirrors/firms-catalog); Portolan publishes the data as CC0. Boundaries are the supplied geoBoundaries reference files.
 
-## Fire-season insights
+Fire Harmony data: **Kopi and Cosmos — Saw Yong Quan and Yap Yong Son**, **CC BY 4.0**. [Method/code](https://github.com/Warren-530/fire-harmony), [pinned dataset](https://huggingface.co/datasets/warrensaw530/fire-harmony/tree/9c1c703472d727d9f9b42477df39440bb34b2b64/v1.0). Underlying observations: NASA FIRMS. CinderTrace extracts three regions, aggregates descriptions and presents the data; it does not change or impute provider activity values. The source code's Apache license and the dataset's CC BY license are distinct.
 
-The new panel follows the burning calendar. Select a year or a timeline row to
-inspect onset (10% cumulative activity), peak month(s), end (90%) and inclusive
-duration in months. All 12 months must be eligible; missing/provisional years and
-zero-activity years have no timing estimates. Low-data seasons are shown but
-excluded from trends. The history window controls starting fire years for NSW,
-so the final January–June can fall in the following calendar year.
+## Reproduce and verify
 
-Trends default to seasons starting in 2013 or later within that window. Full-record
-trends also include calibrated MODIS history. Median pairwise slopes require at
-least 10 seasons spanning 10 years. Peak trends exclude ties and suppress wide
-month spans where linear timing can cross the year boundary. Month resolution is
-explicit; no daily dates, significance claims or continuous-burning duration are
-inferred. See `../docs/season_insights.md` for the full method and limitations.
+Existing generated inputs are included locally; the browser requires only `site-public/ready/`. To regenerate static files from the existing downloaded/checkpoint inputs, run `.venv/bin/python -m pipeline.export_ready_site` from the repository root, then `npm run build` in `web/`. The exporter checks downloaded provider and canonical input hashes before preparing files. `npm test` includes actual 2023 dataset counts and selection/export consistency, missing-data semantics, annual completeness, baseline and PDF checks. The data receipt is `../docs/ready_site_data_receipt.json`.
 
-## Situation Brief PDF
+## Research status
 
-Use the **Situation Brief PDF** button above the calendar. The one-page report
-uses the current selected area, month, filters and history window. It includes
-the latest up to eight chart years and the latest complete active season in that
-window, plus data-derived findings and separate uncertainty notes. Its historical
-month comparison uses all eligible prior matching months, as the app does.
+Earlier calibration components and notebooks are retained as research references and are not imported by the active app. The old `/data/` archive and local `/api/` routes are excluded from this production build. Previous validation scores remain results of the earlier dataset. This release does **not** resolve or claim completion of independent observation-coverage, satellite-outage, replacement-model or allocation-uncertainty validation. It avoids relying on that unfinished calibration by using native observations and explicitly attributed published reference estimates.
 
-PDFs are rendered by the local Python service; install the updated repository
-`requirements.txt` and restart `npm run dev` after updating. There is no external
-upload. Temporary report links last ten minutes. See `../docs/situation_brief.md`.
+### Mapbox observation atlas
 
-## Events map
+Set `VITE_MAPBOX_ACCESS_TOKEN` in `.env.local` before starting or building the app (see `.env.example`). The token is a public browser token. The observed explorer uses a recoloured Mapbox Dark basemap; Mapbox attribution stays visible. Detection records remain in the local archive.
 
-Choose **Event candidates** above the map, then select a marker or a candidate in
-the list below. The selected map month and area require actual member detections;
-details use the candidate's full regional history. Switch reference satellites
-without combining their counts. Single detections are optional and labelled weak.
+The optional 3D view uses one Three.js mesh in Mapbox's WebGL context. Hexagon height is a logarithmic display of recorded observation count, capped at 1,000 observations, and does not represent physical fire height or intensity. GSAP animates the camera and column reveal, respects reduced motion, and stops rendering animations when they finish. Both flat and raised hexagons support record inspection. Drawing automatically returns to a flat view for precise point placement.
 
-Events use fixed vegetation / individual nominal+high / 2 km / 48 h catalogues,
-independently of the activity-chart filters. An observation-date selector updates
-the sampled H3 footprint. The view labels clusters as experimental, explains the
-duration/FRP/footprint limits and exposes available agency-reference associations
-and fragmentation cautions. See `../docs/events_view.md` for the complete contract.
-The existing offline catalogue files are required; restart the local app after
-updating the Python query service or rebuilding data. No event data is uploaded.
+## Interactive investigations and visual reports
 
-## Outlook research (outside the app)
+The extended experience retains the sage, forest and ember palette. Three.js powers a pointer-responsive terrain illustration and the map's raised observation hexagons. GSAP handles entrance motion, the reading-progress line, map camera transitions and a bounded orbit; reduced-motion preferences disable decorative movement. The terrain stops rendering outside the viewport or in a hidden document.
 
-The separate local pipeline uses NASA POWER weather and NOAA ONI/DMI climate
-history to produce three monthly research outlooks. Expanding-window historical
-tests compare a seasonal baseline, fire-history ML and weather/climate ML on
-identical origins, with explicit availability lags and missing-data rules.
+- Three guided investigations set a region/date and keep a sticky chapter guide available.
+- Monthly playback follows supported archive dates, has three speeds, and pauses when the date window is manually changed.
+- Compare years shows two native geographic patterns and a shared-scale published-history chart. Maps use all published native records for each selected period; they do not inherit explorer filters. NSW supports July–June across both input files. Missing values break the chart and invalidate annual totals.
+- Emphasized roads/parks are optional geographic context. A separate NASA GIBS dated-imagery workspace supports Terra/Aqua daily mosaics, an accessible swipe divider, selected-record overlays and branded PNG export. Six actual example frames are bundled; live dates require NASA connectivity. Date gaps, no-data responses and request failures remain explicit.
+- Explain selection uses deterministic calculations, including an inspectable peak UTC date, rather than a language model inventing estimates.
+- Field notes and saved selections live in browser storage. Evidence packs export notes, selection metadata, selected CSV, a full-year daily SVG, the detailed visual PDF, validation receipt, current context snapshot, proximity receipt and any loaded imagery with exact source requests.
+- PDF generation is dynamically loaded. The one-page brief contains a vector map, daily bars, metrics and findings. The detailed report adds a separately attributed historical calendar, loaded source imagery, geographic-context summaries, independent-case charts and complete notes/provenance; long notes continue onto branded pages.
+- Production builds include an offline app shell. Up to four visited native archives and visited reference/boundary files are cached locally; unvisited data and external basemap tiles require connectivity. Saved investigations do not guarantee their underlying archives remain in the bounded cache.
 
-The initial 2019–2025 benchmark does not pass the combined skill gate for any
-region/lead. No outlook panel or forecast endpoint has been added. See
-[method, results and reproduction commands](../docs/fire_outlook.md) before using
-the outputs; they are revised-archive hindcasts, not validated operational warnings.
+Run `npm test` and `npm run build`. `node --experimental-strip-types scripts/check-visual-report.mts` generates real-data layout fixtures in the repository's `tmp/pdfs/` and a review report under `output/pdf/`; render these with Poppler for visual checks.
 
-A subsequent frozen probability-calibration experiment tests the previously
-unscored January–September 2026 period. Calibration helps Sri Lanka/NSW compared
-with raw ML, worsens California, and still loses to seasonal history in seven of
-nine region/lead comparisons. See [calibration and fresh holdout results](../docs/outlook_calibration.md).
-The outlook remains outside the app.
+## Context layers and validation lab
+
+Health facilities, response facilities, major settlements and protected areas are included for all three regions. Sources and licences differ: Sri Lanka OSM hospitals/fire stations and NSDI protected areas; California CDPH, CAL FIRE and NPS; NSW Health, Fire and Rescue NSW and NPWS; Natural Earth major places. Each layer declares its bounded coverage. Inventories are contemporary snapshots, not historical exposure inventories. Site-centre proximity uses great-circle distance, counts sites once and does not establish damage. Protected polygons are clipped/simplified only for display, with repair/exclusion counts retained.
+
+The validation lab separates exact source reconciliation (171,244 Sri Lanka standard-data records, 2000–2024; zero missing/extra on nine native fields) from a geographic reference case against the official CAL FIRE Creek Fire final perimeter. That case measures concordance, not detection accuracy, observing completeness, harmonization quality or forecast performance. The NOAA-21 NRT/standard discrepancy remains visible.
+
+Generated context and imagery are in `site-public/context/`; validation is in `site-public/validation/`. `scripts/export_verified_context.py` in the parent repository builds from local checksummed raw captures; `scripts/export_imagery_presets.py` retrieves the bundled NASA frames. `scripts/export_validation_showcase.py` rebuilds the benchmark from the local checkpoint and official reference capture. Exact source queries, hashes, dates and limitations are included in the generated receipts. Tests validate real snapshots, source reconciliation, imagery dates/requests, proximity calculations and receipt integrity.

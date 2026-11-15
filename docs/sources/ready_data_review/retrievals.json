@@ -1,0 +1,44 @@
+{
+  "portolan_catalog": {
+    "url": "https://data.source.coop/portolan-mirrors/firms-catalog/catalog.json",
+    "status": 200,
+    "bytes": 2736,
+    "sha256": "bca3acfac52fc0e066b1718ad0d7df3098ac391c085041545c64c4284bd8e119",
+    "preview": "{\n  \"type\": \"Catalog\",\n  \"stac_version\": \"1.1.0\",\n  \"stac_extensions\": [\n    \"https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json\"\n  ],\n  \"id\": \"nasa-firms-active-fire\",\n  \"title\": \"NASA FIRMS Active Fire Detections\",\n  \"description\": \"Global satellite active fire and thermal anomaly detections from NASA's Fire Information for Resource Management System (FIRMS), mirrored as cloud-native GeoParquet. Covers MODIS (Terra and Aqua, 1 km, from November 2000) and VIIRS (Suomi-NPP, NOAA-20 and NOAA-21, 375 m, from January 2012) in a single queryable table partitioned by year. Near-real-time detections refresh hourly and are replaced by science-quality data as NASA finalizes it. This is a mirror; NASA LANCE FIRMS is the authoritative source. Read the [agent guide](AGENTS.md) before you query it.\",\n  \"links\": [\n    {\n      \"rel\": \"self\",\n      \"href\": \"https://data.source.coop/portolan-mirrors/firms-catalog/catalog.json\",\n      \"type\": \"application/json\",\n      \"title\": \"NASA FIRMS Active Fire Detections\"\n    },\n    {\n      \"rel\": \"root\",\n      \"href\": \"./catalog.json\",\n      \"type\":"
+  },
+  "portolan_collection": {
+    "url": "https://data.source.coop/portolan-mirrors/firms-catalog/detections/collection.json",
+    "status": 200,
+    "bytes": 17559,
+    "sha256": "c7f6454d4e33e109832fe01f22e929533241ddcb599c0f03b0fcacb1241937a1",
+    "preview": "{\n  \"type\": \"Collection\",\n  \"stac_version\": \"1.1.0\",\n  \"stac_extensions\": [\n    \"https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json\",\n    \"https://schemas.portolan-sdi.org/incubating/partition/v1.0.0/schema.json\",\n    \"https://stac-extensions.github.io/table/v1.2.0/schema.json\",\n    \"https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json\",\n    \"https://stac-extensions.github.io/file/v2.1.0/schema.json\"\n  ],\n  \"id\": \"detections\",\n  \"title\": \"Active Fire Detections (MODIS and VIIRS)\",\n  \"description\": \"Global satellite active fire and thermal anomaly detections from NASA FIRMS, as one year-partitioned GeoParquet 2.0 table of 632,403,361 rows covering 2000 to 2026. Carries MODIS (Terra and Aqua, 1 km) and VIIRS (Suomi-NPP, NOAA-20, NOAA-21, 375 m). Near-real-time rows are appended hourly and replaced by science-quality rows as NASA finalizes them; the `quality` column says which is which. Rows are ordered by month and then by a Hilbert index, so a reader prunes on both time and space.\\n\\nA row is one PIXEL in one overpass that the algorithm flagged as hot -- not a "
+  },
+  "harmony_dataset": {
+    "url": "https://huggingface.co/api/datasets/warrensaw530/fire-harmony",
+    "status": 200,
+    "bytes": 700705,
+    "sha256": "7f470323c5e28f98d6b1a25d1b530eb14854cd80f055a58e151d5b009ac75cdc",
+    "preview": "{\"_id\":\"6af068900c67034b1a92e269\",\"id\":\"warrensaw530/fire-harmony\",\"author\":\"warrensaw530\",\"sha\":\"9c1c703472d727d9f9b42477df39440bb34b2b64\",\"lastModified\":\"2026-11-13T09:56:08.000Z\",\"private\":false,\"gated\":false,\"disabled\":false,\"tags\":[\"license:cc-by-4.0\",\"modality:geospatial\",\"region:us\",\"wildfire\",\"remote-sensing\",\"nasa\",\"modis\",\"viirs\",\"firms\",\"h3\"],\"description\":\"\\n\\t\\n\\t\\t\\n\\t\\n\\t\\n\\t\\tFire Harmony data (version 1.0)\\n\\t\\n\\nOne consistent record of vegetation fire hotspots for the whole world, November 2000 to 2026-11, on the NOAA-20 VIIRS\\nscale: MODIS (Terra, Aqua) and VIIRS (Suomi NPP, NOAA-20, NOAA-21) hotspots from NASA FIRMS, harmonized so that the\\nswitch of satellites leaves no jump. Built for the NASA Space Apps Challenge 2026.\\nFiles (in v1.0/): area_monthly.parquet (world, continents, countries and states per month), map_l3 and\\nmap_l4 (hexagon maps per month)\u2026 See the full description on the dataset page: https://huggingface.co/datasets/warrensaw530/fire-harmony.\",\"downloads\":406,\"likes\":0,\"cardData\":{\"license\":\"cc-by-4.0\",\"pretty_name\":\"Fire Harmony, one consistent"
+  },
+  "harmony_tree": {
+    "url": "https://huggingface.co/api/datasets/warrensaw530/fire-harmony/tree/main",
+    "status": 200,
+    "bytes": 385,
+    "sha256": "86f452a718bc5c81d527d69d2c145d676929c0fd2ca69e0105868089e831b5f9",
+    "preview": "[{\"type\":\"directory\",\"oid\":\"d18af14c17e0d8945c06dc5dfcd630ce06feb99c\",\"size\":0,\"path\":\"media\"},{\"type\":\"directory\",\"oid\":\"577fd229df79c76ad2ac11cbc8929fe2aba83813\",\"size\":0,\"path\":\"v1.0\"},{\"type\":\"file\",\"oid\":\"bed0738c7eeb449bca98b5d2f33c89a1ee56349a\",\"size\":2504,\"path\":\".gitattributes\"},{\"type\":\"file\",\"oid\":\"ddee1e0446a8980758c4260b9b3b5a3f05d5bb44\",\"size\":1749,\"path\":\"README.md\"}]"
+  },
+  "harmony_config": {
+    "url": "https://raw.githubusercontent.com/Warren-530/fire-harmony/main/config.yaml",
+    "status": 200,
+    "bytes": 1667,
+    "sha256": "bfa742fa0ed0293af36b1d01a07c953e9f6a7b20a88c87fcca0b8289402fb3bf",
+    "preview": "# Fire Harmony pipeline configuration (all paths outside the repo)\npaths:\n  raw: ~/nasa_work/data/raw\n  work: ~/nasa_work/data/work          # silver / gold layers (large, local only)\n  products: ~/nasa_work/data/products  # files published to the app\n  duckdb_temp: ~/nasa_work/data/tmp_duckdb\n\nduckdb:\n  memory_limit: 2GB                     # machine has 7 GB with ~3 GB used by other apps; DuckDB spills to disk beyond this\n  threads: 4\n  max_temp_size: 5GB                    # spill files are capped, so one query can never fill the disk\n\ndisk:                                   # WSL's virtual disk lives on Windows C:, so every GB written here uses C:\n  watch: /mnt/c\n  min_free_gb: 10                       # pipeline commands refuse to start below this\n\nyears: [2000, 2026]\n\nh3_levels: [3, 4, 5, 6, 7, 8]           # 8 (~0.74 km2) is only used for the static-source mask\nanalysis_level: 5                       # ~253 km2 hexagons\n\nconfidence:\n  modis_low_below: 30                   # MODIS percent < 30 -> low\n  modis_high_from: 80                   # MODIS percent >= 80 -> high\n  main_p"
+  },
+  "harmony_data_card": {
+    "url": "https://huggingface.co/datasets/warrensaw530/fire-harmony/raw/main/README.md",
+    "status": 200,
+    "bytes": 1749,
+    "sha256": "cfa1c238271022a9fb9ed53fa0e6df9e2fa3ec6909e8397f7d18c86d8683eb2d",
+    "preview": "---\nlicense: cc-by-4.0\npretty_name: Fire Harmony, one consistent global fire record\ntags: [wildfire, remote-sensing, nasa, modis, viirs, firms, h3]\n---\n# Fire Harmony data (version 1.0)\n\nOne consistent record of vegetation fire hotspots for the whole world, November 2000 to 2026-11, on the NOAA-20 VIIRS\nscale: MODIS (Terra, Aqua) and VIIRS (Suomi NPP, NOAA-20, NOAA-21) hotspots from NASA FIRMS, harmonized so that the\nswitch of satellites leaves no jump. Built for the NASA Space Apps Challenge 2026.\n\nFiles (in `v1.0/`): `area_monthly.parquet` (world, continents, countries and states per month), `map_l3` and\n`map_l4` (hexagon maps per month), `cell_l3`, `cell_l4` and `l5/` (hexagon series), `clim_*` (normal seasons),\n`drivers*.parquet`, `outlook.parquet`, `haze.parquet`, and `meta.json` / `dashboard.json` / `areas.json` / `haze.json`.\n\nUnits: hotspots per month on the NOAA-20 VIIRS scale. Modelled months (before 2012) come with 90% ranges (meta.json).\n\n`hotspots/`: every NASA FIRMS hotspot, 640,601,590 of them, one file per H3 level 1 region (`l1=<hex>.parquet`, listed in\n`hotspots/ind"
+  }
+}

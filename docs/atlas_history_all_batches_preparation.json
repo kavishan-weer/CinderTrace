@@ -1,0 +1,49 @@
+{
+  "notebook": "notebooks/Emberline_Atlas_LK_History_2000_2021_All_Batches.ipynb",
+  "sha256": "766072cd069b1a392cbb5ca70f8f653251162e69c55f35b871e2ecd74fc2af3e",
+  "original_executed_notebook_sha256": "2945e01fa01e23cffa982849ef39db8ecd8c95564c73cad335a965241811c7fd",
+  "fixed_batch_cells": [
+    [
+      2000,
+      2001,
+      2002
+    ],
+    [
+      2003,
+      2004,
+      2005
+    ],
+    [
+      2006,
+      2007,
+      2008
+    ],
+    [
+      2009,
+      2010,
+      2011
+    ],
+    [
+      2012,
+      2013,
+      2014
+    ],
+    [
+      2015,
+      2016,
+      2017
+    ],
+    [
+      2018,
+      2019,
+      2020
+    ],
+    [
+      2021
+    ]
+  ],
+  "download_calls_at_end": 1,
+  "supports_explicit_partial_bundle": true,
+  "data_contract_changed": false,
+  "frontend_changed": false
+}

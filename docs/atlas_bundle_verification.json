@@ -1,0 +1,33 @@
+{
+  "status": "verified_extract",
+  "bundle_sha256": "11184caea4d9ca669e4f7f455d120d8f4d898db0bf2086f5c86cb9b47650e49e",
+  "run_id": "20261114T183601Z_07884c3d",
+  "rows": 13366,
+  "satellite_totals": {
+    "Aqua": 642,
+    "NOAA-20": 6094,
+    "Suomi-NPP": 6432,
+    "Terra": 198
+  },
+  "year": 2023,
+  "checks": [
+    "ZIP identity and member list",
+    "inner byte sizes and SHA256",
+    "unchanged source fingerprint",
+    "row/month/satellite reconciliation",
+    "no exact duplicates",
+    "UTC acquisition dates",
+    "native WKB coordinates and region membership",
+    "native confidence and quality"
+  ],
+  "scope": "Sri Lanka, 2023; recorded detection observations per satellite",
+  "observing_coverage_verified": false,
+  "harmonization_applied": false,
+  "source_url": "https://data.source.coop/portolan-mirrors/firms-catalog/detections/year=2023/detections.parquet",
+  "source_fingerprint": {
+    "ETag": "\"c562351c6b12caa1aa14a894b123318b-100\"",
+    "Content-Length": "832198293",
+    "Last-Modified": "Thu, 10 Sep 2026 09:13:13 GMT"
+  },
+  "boundary_sha256": "838db6bf67cb4d21df585d32483c64c9d56556d4fc216564bf4aa982c659382e"
+}

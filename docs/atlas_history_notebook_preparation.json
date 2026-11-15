@@ -1,0 +1,63 @@
+{
+  "artifact": "notebooks/Emberline_Atlas_LK_History_2000_2021_Rebuild.ipynb",
+  "sha256": "db8e1678dfd932ac53455b8ef5a523d90830acdd2e0026c95946b5e3ac9bebe7",
+  "target_years": [
+    2000,
+    2021
+  ],
+  "first_batch": [
+    2000,
+    2001,
+    2002
+  ],
+  "batch_limit": 3,
+  "source_policy": {
+    "policy_id": "lk_observed_standard_history_v1",
+    "target_years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "canonical_source": "NASA FIRMS standard-product responses with raw checksums and native row provenance",
+    "coordinate_reference": "OGC:CRS84",
+    "nrt_rule": "audit-only; never append/coalesce with standard or use as missing-standard fallback",
+    "unavailable_rule": "null count before supported platform/archive intervals or when source is not advertised",
+    "zero_rule": "zero recorded detections requires a completed verified query; not physical fire absence",
+    "aqua_lower_bound": "2002-07-04",
+    "aqua_lower_bound_source": "https://modaps.modaps.eosdis.nasa.gov/services/about/",
+    "aqua_lower_bound_interpretation": "reported first light; local observing completeness remains unverified",
+    "coverage_verified": false,
+    "harmonization_applied": false,
+    "production_export_enabled": false,
+    "frontend_changed": false,
+    "benchmark_years_excluded": [
+      2022,
+      2023,
+      2024
+    ],
+    "raw_annual_totals_comparable_across_fleets": false
+  },
+  "validation": "40 tests passed; includes interrupted and resumed execution of the generated notebook with simulated responses",
+  "live_history_retrieval_run": false,
+  "benchmark_changed": false,
+  "frontend_changed": false
+}

@@ -1,0 +1,12 @@
+{
+  "endpoint": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0",
+  "query_url": "https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/California_Historic_Fire_Perimeters/FeatureServer/0/query?where=YEAR_+%3D+2020+AND+UPPER%28FIRE_NAME%29+%3D+%27CREEK%27&outFields=OBJECTID%2CYEAR_%2CFIRE_NAME%2CALARM_DATE%2CCONT_DATE%2CGIS_ACRES%2CAGENCY%2CUNIT_ID%2CCOMMENTS%2CCOMPLEX_NAME&outSR=4326&f=geojson&returnGeometry=true",
+  "parameters": {
+    "where": "YEAR_ = 2020 AND UPPER(FIRE_NAME) = 'CREEK'",
+    "outFields": "OBJECTID,YEAR_,FIRE_NAME,ALARM_DATE,CONT_DATE,GIS_ACRES,AGENCY,UNIT_ID,COMMENTS,COMPLEX_NAME",
+    "outSR": "4326",
+    "f": "geojson",
+    "returnGeometry": "true"
+  },
+  "response_sha256": "27d4a8812053d16f105fb8a75ad324a954ac37e51cb48393058a17515e67f258"
+}

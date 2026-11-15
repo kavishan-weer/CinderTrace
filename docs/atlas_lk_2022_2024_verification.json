@@ -1,0 +1,81 @@
+{
+  "status": "verified_checkpoint_with_documented_NOAA21_quality_mismatch",
+  "zip_sha256": "6203a50c88921de8c29757192fbcbd9ee2af3ee06bd7f923e5dcf50cc34deea5",
+  "zip_members": 1065,
+  "manifested_files_verified": 1064,
+  "verified_requests": 515,
+  "official_standard_observations": 25629,
+  "year_results": {
+    "2022": {
+      "status": "matched_native_records",
+      "mirror_rows": 8593,
+      "official_rows": 8593,
+      "shared_rows": 8593,
+      "official_rows_missing_in_mirror": 0,
+      "mirror_rows_not_in_official": 0,
+      "duplicate_keys_need_review": false,
+      "native_attribute_differences": 0,
+      "coordinate_comparison_decimals": 5,
+      "numeric_comparison_abs_tolerance": 1e-05,
+      "coverage_verified": false,
+      "scope_completeness": "full_declared_year",
+      "mirror_rows_not_reconciled": 0,
+      "mirror_nrt_rows": 0,
+      "scientific_coverage_verified": false
+    },
+    "2024": {
+      "status": "review_required",
+      "mirror_rows": 11382,
+      "official_rows": 17036,
+      "shared_rows": 11382,
+      "official_rows_missing_in_mirror": 5654,
+      "mirror_rows_not_in_official": 0,
+      "duplicate_keys_need_review": false,
+      "native_attribute_differences": 0,
+      "coordinate_comparison_decimals": 5,
+      "numeric_comparison_abs_tolerance": 1e-05,
+      "coverage_verified": false,
+      "scope_completeness": "full_declared_year",
+      "mirror_rows_not_reconciled": 5775,
+      "mirror_nrt_rows": 5775,
+      "scientific_coverage_verified": false
+    }
+  },
+  "NOAA21_NRT_vs_standard": {
+    "status": "review_required",
+    "mirror_rows": 5775,
+    "official_rows": 5654,
+    "shared_rows": 1848,
+    "official_rows_missing_in_mirror": 3806,
+    "mirror_rows_not_in_official": 3927,
+    "duplicate_keys_need_review": false,
+    "native_attribute_differences": 3730,
+    "coordinate_comparison_decimals": 5,
+    "numeric_comparison_abs_tolerance": 1e-05,
+    "coverage_verified": false
+  },
+  "NOAA21_shared_key_attribute_difference_counts": {
+    "type": 1848,
+    "version": 1848,
+    "frp": 32,
+    "confidence": 2
+  },
+  "production_gap_intervals": 122,
+  "listed_missing_standard_dates": 63,
+  "daily_rows": 3290,
+  "monthly_rows": 108,
+  "native_standard_grid_rows": 20112,
+  "coverage_verified": false,
+  "harmonization_validated": false,
+  "frontend_changed": false,
+  "checks": [
+    "Outer ZIP and every inner hash/byte size",
+    "All source snapshots and 515 request receipts",
+    "Native CSV schema/date/platform validation",
+    "Re-clipping to original geometry",
+    "Saved official fields reconstructed from raw responses",
+    "Mirror geometry/confidence/quality/snapshot reconciliation",
+    "Recomputed source comparisons and discrepancies",
+    "Recomputed daily/monthly/filter grids and outage controls"
+  ]
+}

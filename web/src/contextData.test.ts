@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {distanceKm,nearbySites,contextGeoJSON,validateContextData,type ContextFeature} from './contextData.ts';
+import type {NativeRow} from './observatoryData.ts';
+const row=(lon:number,lat:number):NativeRow=>[0,lon,lat,2,1,'n',0,0,0,0,'D',0];
+const site=(id:string,lon:number,lat:number,kind='health')=>({type:'Feature',properties:{id:'node/'+id,name:'Site '+id,kind,url:'https://www.openstreetmap.org/node/'+id,coordinate_basis:'mapped site centre'},geometry:{type:'Point',coordinates:[lon,lat]}} as ContextFeature);
+test('proximity uses distance in kilometres and counts each site only once',()=>{assert.ok(Math.abs(distanceKm([0,0],[0,1])-111.195)<.01);const sites=[site('1',80,7),site('2',80,7.02),site('3',80,7.1)];const selected=[row(80,7),row(80,7),row(80.0001,7)];assert.equal(nearbySites(selected,sites,1).length,1);assert.equal(nearbySites(selected,sites,5).length,2);assert.equal(nearbySites([],sites,5).length,0);assert.throws(()=>nearbySites(selected,sites,NaN));});
+test('distance search handles negative coordinates and longitude scaling',()=>{const sites=[site('1',-120,38),site('2',-119.99,38),site('3',-120.03,38)];const near=nearbySites([row(-120,38)],sites,1);assert.deepEqual(near.map(s=>s.id),['node/1','node/2']);assert.ok(near[1].distance_km<1);});
+test('protected area centres are not misrepresented as facility exposure',()=>{assert.equal(nearbySites([row(80,7)],[site('1',80,7,'protected')],1).length,0);});
+test('context feature filtering and source validation reject unsafe or mismatched data',()=>{const data={version:1,region:'lk',type:'FeatureCollection',features:[site('1',80,7)],provenance:{osm_base:'2026-11-15'}};assert.equal(validateContextData(data,'lk').features.length,1);assert.throws(()=>validateContextData(data,'ca'));assert.throws(()=>validateContextData({...data,features:[{...site('1',80,7),properties:{...site('1',80,7).properties,url:'javascript:alert(1)'}}]},'lk'));assert.equal(contextGeoJSON(validateContextData(data,'lk'),['response']).features.length,0);});
+import {readFileSync} from 'node:fs';
+import {gunzipSync} from 'node:zlib';
+test('all three shipped context snapshots contain real attributed layers with valid counts and source links',()=>{for(const id of ['lk','ca','nsw']){const data=validateContextData(JSON.parse(gunzipSync(readFileSync(new URL(`../site-public/context/${id}.json.gz`,import.meta.url))).toString()),id);assert.ok(data.features.length>100);for(const kind of ['health','response','settlement','protected']){assert.ok(data.provenance.sources?.find(s=>s.kind===kind));assert.equal(data.features.filter(f=>f.properties.kind===kind).length,data.provenance.counts[kind]);assert.ok(data.provenance.counts[kind]>0);}}});

@@ -1,0 +1,48 @@
+{
+  "review_type": "executed notebook output review; year ZIP contents not yet independently verified",
+  "notebook": "notebooks/Emberline_Atlas_LK_History_2000_2021_Rebuild.ipynb",
+  "notebook_sha256": "2945e01fa01e23cffa982849ef39db8ecd8c95564c73cad335a965241811c7fd",
+  "run_id": "20261114T211825Z_97d5550a",
+  "completed_years": [
+    2000,
+    2001,
+    2002
+  ],
+  "completed_requests_reported": 159,
+  "standard_observations_reported": 1935,
+  "year_zip_receipts": [
+    {
+      "year": 2000,
+      "zip_name": "emberline_atlas_lk_history_2000_20261114T211825Z_97d5550a.zip",
+      "standard_observations": 4,
+      "reported_sha256": "696e32fe776e7181459fc092a288114a31f5f49a160b481a8b26bdaa68ca034f",
+      "zip_in_project": false
+    },
+    {
+      "year": 2001,
+      "zip_name": "emberline_atlas_lk_history_2001_20261114T211825Z_97d5550a.zip",
+      "standard_observations": 354,
+      "reported_sha256": "8b6837fb2aebd0cdcc07248365f96757cdf8a1dc6192a5891df12762a2f8989b",
+      "zip_in_project": false
+    },
+    {
+      "year": 2002,
+      "zip_name": "emberline_atlas_lk_history_2002_20261114T211825Z_97d5550a.zip",
+      "standard_observations": 1577,
+      "reported_sha256": "216529c03b863cc8eda31d91d8e5a96a8b6381a46e6aab53ac106820b7c08990",
+      "zip_in_project": false
+    }
+  ],
+  "progress_zip": {
+    "name": "emberline_atlas_lk_history_progress_20261114T211825Z_97d5550a.zip",
+    "reported_sha256": "a33743b67606c53cc01b3ef5cfd65b6bd4c2fd2c65fe6e5514e5e4f63b40fc13",
+    "zip_in_project": false
+  },
+  "observed_archive_start": "2000-11-01",
+  "2000_archive_days_queried": 61,
+  "mirror_comparisons": "not displayed in saved outputs; inspect year ZIP JSON before claiming matches",
+  "source_coverage_verified": false,
+  "harmonization_validated": false,
+  "frontend_changed": false,
+  "next_gate": "Verify returned 2000/2001/2002 year ZIPs and progress ZIP; inspect raw receipts, early-period unavailable states, Aqua transition and source comparisons before 2003\u20132005."
+}
